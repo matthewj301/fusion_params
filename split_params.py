@@ -89,8 +89,10 @@ def main():
     OUT_DIR.mkdir(exist_ok=True)
 
     buckets = {}
+    fieldnames = None
     with open(CSV_PATH, "r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames
         for row in reader:
             name = row["Name"].strip()
             if not name:
@@ -101,7 +103,7 @@ def main():
     for theme, rows in sorted(buckets.items()):
         out_path = OUT_DIR / f"{theme}.csv"
         with open(out_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["Name", "Expression", "Unit", "Comment"])
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
         desc = THEME_DESCRIPTIONS.get(theme, theme)

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Validate the master parameter CSV for name format, duplicates, units, and references.
 
+Supports both the 6-column Fusion native format (Name, Unit, Expression, Value, Comment, Favorite)
+and the legacy 4-column format (Name, Expression, Unit, Comment).
+
 Usage:
     python3 validate_params.py [--csv PATH]
 
@@ -19,6 +22,9 @@ FUSION_NATIVE_UNITS = {"mm", "cm", "in", "deg", "rad", ""}
 DIMENSIONLESS_UNITS = {"count", "x", "%", "ratio", "°C", "A", "µm/mm"}
 VALID_UNITS = FUSION_NATIVE_UNITS | DIMENSIONLESS_UNITS
 UNIT_SUFFIXES = {"mm", "cm", "deg", "rad"}
+
+FUSION_6COL_HEADER = ["Name", "Unit", "Expression", "Value", "Comment", "Favorite"]
+LEGACY_4COL_HEADER = ["Name", "Expression", "Unit", "Comment"]
 
 
 def extract_references(expression):
@@ -43,18 +49,29 @@ def main():
     errors = []
     seen = {}
 
-    with open(csv_path, "r", newline="") as f:
-        reader = csv.reader(f)
-        header = next(reader)
-        if header[:4] != ["Name", "Expression", "Unit", "Comment"]:
-            errors.append(f"Unexpected header: {header}")
+    with open(csv_path, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        header = reader.fieldnames
+
+        if header[:6] == FUSION_6COL_HEADER:
+            fmt = "fusion6"
+        elif header[:4] == LEGACY_4COL_HEADER:
+            fmt = "legacy4"
+        else:
+            print(f"ERROR: unrecognized header: {header}", file=sys.stderr)
+            sys.exit(1)
 
         for row_num, row in enumerate(reader, start=2):
-            if not row or not row[0].strip():
+            name = row["Name"].strip()
+            if not name:
                 continue
-            name = row[0].strip()
-            expr = row[1].strip() if len(row) > 1 else ""
-            unit = row[2].strip() if len(row) > 2 else ""
+
+            if fmt == "fusion6":
+                expr = row["Expression"].strip()
+                unit = row["Unit"].strip()
+            else:
+                expr = row["Expression"].strip()
+                unit = row["Unit"].strip()
 
             if not PARAM_NAME_RE.match(name):
                 errors.append(f"  Row {row_num}: invalid name '{name}'")
@@ -87,7 +104,7 @@ def main():
 
     base = sum(1 for p in params if not extract_references(p["expression"]))
     derived = len(params) - base
-    print(f"OK — {len(params)} parameters ({base} base, {derived} derived)")
+    print(f"OK — {len(params)} parameters ({base} base, {derived} derived) [{fmt} format]")
 
 
 if __name__ == "__main__":

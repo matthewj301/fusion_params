@@ -1,466 +1,466 @@
-Name,Expression,Unit,Comment
-printer_accuracy_hole_shrink_compensation,0.15 mm,mm,FDM holes always print smaller than modeled due to filament expansion and layer resolution. Add to all hole sketch diameters or apply via Offset Face. Measure a 10 mm test circle: shrink = 10.0 − actual_diameter. Update per machine.
-printer_accuracy_outer_dimension_oversize,0.10 mm,mm,FDM outer surfaces print 0.05–0.20 mm larger than modeled due to extrusion pressure. Subtract from shaft and boss ODs for precise fits. Measure a 20 mm calibration cube in X and Y.
-printer_accuracy_standard_layer_height,0.20 mm,mm,"Default layer height. Base unit for teardrop compensation, bridge sag, and fillet minimums. Update when switching profiles — all derived params follow."
-printer_accuracy_first_layer_height,0.25 mm,mm,First layer printed thicker for bed adhesion. Relevant for total Z stack height calculations.
-printer_accuracy_extrusion_line_width,0.45 mm,mm,Actual deposited extrusion line width — typically nozzle_dia × 1.10–1.15. All wall thickness and bridge span calcs derive from this. Re-measure after any nozzle change.
-printer_accuracy_elephant_foot_compensation,0.15 mm,mm,"First-layer squish bulge on outer perimeter — typically 0.10–0.20 mm. Subtract from bottom-surface mating features (flanges, bases) so they sit flush. Dial in with a single-layer calibration square."
-printer_accuracy_seam_zseam_protrusion,0.05 mm,mm,"Small Z-seam protrusion at layer start. Matters on outer mating surfaces. Either orient seam to a non-mating edge, or add this allowance to surface-critical fits."
-printer_accuracy_minimum_infill_bridging_width,2*printer_accuracy_extrusion_line_width,mm,"Below this pocket width, infill skips entirely and bridges. Account for this in thin pocket features — infill may not fill them at all."
-printer_accuracy_solid_top_layers_for_mating_surface,3,,Number of solid top layers before a press-fit or heat-set mating surface for best dimensional accuracy. Fewer layers = rougher surface = worse fit.
-tolerance_standard_fine_iso2768_f,0.10 mm,mm,ISO 2768 fine class (f) — general linear tolerance ±0.05 mm per side for 3–30 mm features. Requires a well-calibrated machine.
-tolerance_standard_medium_iso2768_m,0.20 mm,mm,ISO 2768 medium class (m) — ±0.10 mm per side for 3–30 mm. Default starting point for most functional FDM parts.
-tolerance_standard_coarse_iso2768_c,0.40 mm,mm,ISO 2768 coarse class (c) — ±0.20 mm per side. For non-critical features or lower-accuracy machines.
-tolerance_angular_general_degrees,1.0 deg,deg,General angular tolerance. Matches ISO 2768 medium angular class for 0–10 mm leg length. Critical angles (e.g. 45° for no-support printing) should be exactly constrained.
-tolerance_fit_class_fdm_sliding_per_surface,0.15 mm,mm,"FDM-practical sliding fit clearance per mating surface (total gap = 0.30 mm). Equivalent to coarse H8/e8 adapted for FDM variation. Use for lids, sliding panels, guide channels."
-tolerance_fit_class_fdm_press_per_surface,0.05 mm,mm,FDM light press fit per mating surface (total gap = 0.10 mm). Requires deliberate hand force. Good for retained pins and press-in bushings.
-tolerance_fit_class_fdm_interference_per_surface,-0.05 mm,mm,FDM interference fit — hole modeled smaller than shaft by this per side. Requires significant force or press. Most reliable with TPU or small features.
-tolerance_fit_class_iso_h7_g6_running_clearance,0.025 mm,mm,ISO H7/g6 running clearance fit reference. Only achievable by post-machining or reaming in FDM context. Provided as a design target.
-hole_geometry_minimum_printable_diameter,2.00 mm,mm,Minimum FDM hole diameter without post-processing. Smaller holes are often malformed — model at 1.5 mm and drill to final size.
-hole_geometry_horizontal_teardrop_z_offset,printer_accuracy_standard_layer_height,mm,"Upward Z offset for horizontal holes to compensate overhang droop. Shift hole center up by this, or use teardrop profile."
-hole_geometry_fdm_diameter_compensation,printer_accuracy_hole_shrink_compensation,mm,"Add to all circle sketch diameters, or Offset Face after modeling. References printer_accuracy_hole_shrink_compensation."
-hole_geometry_self_tap_m3_into_plastic_diameter,2.70 mm,mm,"Hole diameter for direct M3 screw into plastic (self-tapping, no insert). Use for low-load non-serviceable joints. Engagement length ≥ 8 mm recommended."
-hole_geometry_self_tap_m4_into_plastic_diameter,3.50 mm,mm,Hole diameter for direct M4 self-tapping into plastic.
-hole_geometry_thread_engagement_minimum_length,6.00 mm,mm,"Minimum thread engagement length for reliable printed threads under moderate load. Rule of thumb: 1× bolt diameter minimum, 2× for structural. At M3 that is 3–6 mm."
-hole_geometry_m2_screw_clearance_diameter,2.40 mm,mm,M2 bolt clearance through-hole. ISO M2 shank = 2.0 mm + 0.40 mm FDM clearance.
-hole_geometry_m2_close_fit_diameter,2.20 mm,mm,M2 close-fit location hole — for alignment and indexed dowels.
-boss_geometry_m2_outer_diameter,4.00 mm,mm,M2 boss OD — cylindrical pad surrounding M2 hole. 2× screw diameter rule.
-hole_geometry_m2p5_screw_clearance_diameter,2.90 mm,mm,M2.5 bolt clearance through-hole. ISO M2.5 shank = 2.5 mm + 0.40 mm. Raspberry Pi / SBC standard fastener.
-hole_geometry_m2p5_close_fit_diameter,2.70 mm,mm,M2.5 close-fit location hole.
-boss_geometry_m2p5_outer_diameter,5.00 mm,mm,M2.5 boss OD — standard for SBC and PCB mounting posts.
-hole_geometry_m3_screw_clearance_diameter,3.40 mm,mm,M3 bolt clearance through-hole. Voron project standard. ISO M3 shank = 3.0 mm + 0.40 mm.
-hole_geometry_m3_close_fit_diameter,3.20 mm,mm,M3 close-fit location hole.
-boss_geometry_m3_outer_diameter,6.40 mm,mm,M3 boss OD — Voron standard. ~1.5 mm wall around clearance hole.
-hole_geometry_m4_screw_clearance_diameter,4.50 mm,mm,M4 bolt clearance through-hole. ISO M4 = 4.0 mm + 0.50 mm.
-hole_geometry_m4_close_fit_diameter,4.20 mm,mm,M4 close-fit location hole.
-boss_geometry_m4_outer_diameter,8.00 mm,mm,"M4 boss OD — 2× screw diameter, ~1.75 mm wall."
-hole_geometry_m5_screw_clearance_diameter,5.50 mm,mm,M5 bolt clearance through-hole. ISO M5 = 5.0 mm + 0.50 mm.
-hole_geometry_m5_close_fit_diameter,5.20 mm,mm,M5 close-fit location hole.
-boss_geometry_m5_outer_diameter,9.50 mm,mm,M5 boss OD.
-hole_geometry_m6_screw_clearance_diameter,6.60 mm,mm,M6 bolt clearance through-hole.
-hole_geometry_m6_close_fit_diameter,6.20 mm,mm,M6 close-fit location hole.
-boss_geometry_m6_outer_diameter,11.00 mm,mm,M6 boss OD.
-heatset_insert_m2_recommended_hole_id,3.20 mm,mm,M2 heat-set hole ID. ~98% of insert OD. Measure your batch.
-heatset_insert_m2_recess_depth,3.20 mm,mm,M2 recess depth = insert length + 0.20 mm.
-heatset_insert_m3_recommended_hole_id,4.40 mm,mm,M3 heat-set hole ID — Voron standard Ruthex M3×5×4 (OD=4.5 mm). 98% of OD.
-heatset_insert_m3_recess_depth,4.20 mm,mm,M3 recess depth — 4.0 mm insert + 0.20 mm flush margin.
-heatset_insert_m3_boss_outer_diameter,7.00 mm,mm,M3 heat-set boss OD — slightly larger than plain M3 boss to handle insert knurling pressure.
-heatset_insert_m4_recommended_hole_id,5.40 mm,mm,M4 heat-set hole ID (Ruthex RX-M4×6 OD≈5.6 mm). Always measure batch.
-heatset_insert_m4_recess_depth,6.20 mm,mm,M4 recess depth = 6.0 mm insert + 0.20 mm.
-heatset_insert_m5_recommended_hole_id,6.40 mm,mm,M5 heat-set hole ID. Verify OD of your specific insert brand.
-heatset_insert_install_temp_pla_celsius,180,,Soldering iron tip temp for PLA heat-set installation. Use a dedicated brass insert tip.
-heatset_insert_install_temp_petg_celsius,220,,Iron tip temp for PETG heat-set installation.
-heatset_insert_install_temp_abs_asa_celsius,240,,Iron tip temp for ABS/ASA heat-set installation.
-hardware_m2_button_head_iso7380_head_diameter,3.80 mm,mm,M2 button-head (ISO 7380) head OD.
-hardware_m2_button_head_iso7380_head_height,0.90 mm,mm,M2 button-head head height.
-hardware_m2p5_button_head_iso7380_head_diameter,4.70 mm,mm,M2.5 button-head head OD.
-hardware_m2p5_button_head_iso7380_head_height,1.30 mm,mm,M2.5 button-head head height.
-hardware_m3_button_head_iso7380_head_diameter,5.70 mm,mm,M3 button-head head OD. Most common fastener in 3D printer assemblies.
-hardware_m3_button_head_iso7380_head_height,1.65 mm,mm,M3 button-head head height.
-hardware_m4_button_head_iso7380_head_diameter,7.60 mm,mm,M4 button-head head OD.
-hardware_m4_button_head_iso7380_head_height,2.20 mm,mm,M4 button-head head height.
-hardware_m5_button_head_iso7380_head_diameter,9.50 mm,mm,M5 button-head head OD.
-hardware_m5_button_head_iso7380_head_height,2.75 mm,mm,M5 button-head head height.
-hardware_m2_socket_cap_din912_head_diameter,3.80 mm,mm,M2 socket cap head (DIN 912) OD.
-hardware_m2_socket_cap_din912_head_height,2.00 mm,mm,M2 socket cap head height.
-hardware_m2p5_socket_cap_din912_head_diameter,4.50 mm,mm,M2.5 socket cap head OD.
-hardware_m2p5_socket_cap_din912_head_height,2.50 mm,mm,M2.5 socket cap head height.
-hardware_m3_socket_cap_din912_head_diameter,5.50 mm,mm,M3 socket cap head OD. Slightly narrower than button — useful where lateral clearance is tight.
-hardware_m3_socket_cap_din912_head_height,3.00 mm,mm,M3 socket cap head height. Taller than button head — verify stack height in assemblies.
-hardware_m4_socket_cap_din912_head_diameter,7.00 mm,mm,M4 socket cap head OD.
-hardware_m4_socket_cap_din912_head_height,4.00 mm,mm,M4 socket cap head height.
-hardware_m5_socket_cap_din912_head_diameter,8.50 mm,mm,M5 socket cap head OD.
-hardware_m5_socket_cap_din912_head_height,5.00 mm,mm,M5 socket cap head height.
-hardware_m3_flat_head_din7991_head_diameter,5.50 mm,mm,M3 flat-head socket screw (DIN 7991 / ISO 10642) head OD.
-hardware_m3_flat_head_din7991_head_height,1.70 mm,mm,M3 flat-head head height (below flush surface).
-hardware_m4_flat_head_din7991_head_diameter,7.00 mm,mm,M4 flat-head head OD.
-hardware_m5_flat_head_din7991_head_diameter,8.50 mm,mm,M5 flat-head head OD.
-hardware_m3_grub_screw_common_length_mm,3.0 mm,mm,M3 grub/set screw most common length (3 mm). Also available in 4 and 5 mm. For shaft collar and pulley lock recess depth.
-hardware_m4_grub_screw_common_length_mm,5.0 mm,mm,M4 grub/set screw most common length (5 mm). Also available in 4 and 6 mm.
-hardware_m2_hex_nut_iso4032_across_flats,4.00 mm,mm,M2 hex nut AF (ISO 4032).
-hardware_m2_hex_nut_iso4032_height,1.60 mm,mm,M2 hex nut height.
-hardware_m2p5_hex_nut_iso4032_across_flats,5.00 mm,mm,M2.5 hex nut AF.
-hardware_m2p5_hex_nut_iso4032_height,2.00 mm,mm,M2.5 hex nut height.
-hardware_m3_hex_nut_iso4032_across_flats,5.50 mm,mm,M3 hex nut AF. Standard for Voron nut traps. FDM pocket: model at 5.70 mm.
-hardware_m3_hex_nut_iso4032_height,2.40 mm,mm,M3 hex nut height. FDM pocket depth: model at 2.60 mm.
-hardware_m4_hex_nut_iso4032_across_flats,7.00 mm,mm,M4 hex nut AF.
-hardware_m4_hex_nut_iso4032_height,3.20 mm,mm,M4 hex nut height.
-hardware_m5_hex_nut_iso4032_across_flats,8.00 mm,mm,M5 hex nut AF.
-hardware_m5_hex_nut_iso4032_height,4.00 mm,mm,M5 hex nut height.
-hardware_m3_square_nut_din557_width,5.50 mm,mm,M3 square nut (DIN 557) width. FDM trap: 5.70 mm slot.
-hardware_m3_square_nut_din557_height,1.80 mm,mm,M3 square nut height. FDM trap depth: 2.00 mm.
-hardware_m4_square_nut_din557_width,7.00 mm,mm,M4 square nut width.
-hardware_m4_square_nut_din557_height,2.40 mm,mm,M4 square nut height.
-hardware_m3_washer_iso7089_outer_diameter,7.00 mm,mm,M3 flat washer OD (ISO 7089 normal series).
-hardware_m3_washer_iso7089_thickness,0.50 mm,mm,M3 flat washer thickness.
-hardware_m4_washer_iso7089_outer_diameter,9.00 mm,mm,M4 flat washer OD.
-hardware_m5_washer_iso7089_outer_diameter,10.00 mm,mm,M5 flat washer OD.
-hardware_dowel_pin_m3_nominal_diameter_h6,3.00 mm,mm,"ISO 8734 dowel pin h6 class — 3 mm nominal. For precision alignment features. FDM receiver hole: 3.10–3.15 mm for clearance fit, or post-ream for press fit."
-hardware_dowel_pin_m4_nominal_diameter_h6,4.00 mm,mm,4 mm ISO dowel pin nominal diameter.
-hardware_dowel_pin_m5_nominal_diameter_h6,5.00 mm,mm,5 mm ISO dowel pin nominal diameter.
-hardware_dowel_pin_fdm_clearance_receiver_hole,0.15 mm,mm,"Add to dowel pin nominal diameter for a printed clearance receiver hole — part self-aligns but pin is not retained. For retention, drill and ream to H7."
-hardware_m3_hex_standoff_outer_diameter,5.50 mm,mm,M3 hex standoff OD — standard brass or aluminum spacers. Used for PCB mount boss sizing and clearance calculations.
-hardware_m2p5_hex_standoff_outer_diameter,4.50 mm,mm,M2.5 hex standoff OD.
-hardware_zip_tie_2p5mm_slot_width,2.80 mm,mm,Standard 2.5 mm zip tie slot width with FDM clearance. For cable management routing channels.
-hardware_zip_tie_2p5mm_slot_thickness,1.40 mm,mm,Standard 2.5 mm zip tie slot thickness with FDM clearance.
-hardware_zip_tie_3p5mm_slot_width,3.80 mm,mm,Standard 3.5 mm zip tie slot width with FDM clearance.
-hardware_zip_tie_3p5mm_slot_thickness,2.00 mm,mm,Standard 3.5 mm zip tie slot thickness with FDM clearance.
-nut_trap_m3_hex_pocket_across_flats_fdm,5.70 mm,mm,M3 hex nut pocket AF for FDM. ISO = 5.50 mm + 0.20 mm clearance.
-nut_trap_m3_hex_pocket_depth_fdm,2.60 mm,mm,M3 hex nut pocket depth. ISO height 2.40 + 0.20 mm.
-nut_trap_m3_hex_circumscribed_diameter_fdm,6.60 mm,mm,M3 hex nut circumscribed circle + clearance for polygon-pocket method.
-nut_trap_m3_square_pocket_width_fdm,5.70 mm,mm,M3 square nut pocket width. ISO 5.50 + 0.20 mm.
-nut_trap_m3_square_pocket_depth_fdm,2.00 mm,mm,M3 square nut pocket depth. ISO 1.80 + 0.20 mm.
-nut_trap_m4_hex_pocket_across_flats_fdm,7.20 mm,mm,M4 hex nut pocket AF. ISO 7.00 + 0.20 mm.
-nut_trap_m4_hex_pocket_depth_fdm,3.40 mm,mm,M4 hex nut pocket depth. ISO 3.20 + 0.20 mm.
-nut_trap_m5_hex_pocket_across_flats_fdm,8.20 mm,mm,M5 hex nut pocket AF. ISO 8.00 + 0.20 mm.
-nut_trap_m5_hex_pocket_depth_fdm,4.20 mm,mm,M5 hex nut pocket depth. ISO 4.00 + 0.20 mm.
-counterbore_m2_button_head_pocket_diameter,4.20 mm,mm,M2 button-head counterbore dia. ISO head 3.80 + 0.40 mm FDM.
-counterbore_m2_button_head_pocket_depth,1.20 mm,mm,M2 button-head counterbore depth. ISO head 0.90 + 0.30 mm.
-counterbore_m2p5_button_head_pocket_diameter,5.10 mm,mm,M2.5 button-head counterbore dia. ISO head 4.70 + 0.40 mm.
-counterbore_m2p5_button_head_pocket_depth,1.60 mm,mm,M2.5 button-head counterbore depth. ISO head 1.30 + 0.30 mm.
-counterbore_m3_button_head_pocket_diameter,6.10 mm,mm,M3 button-head counterbore dia. ISO head 5.70 + 0.40 mm. Voron standard.
-counterbore_m3_button_head_pocket_depth,1.95 mm,mm,M3 button-head counterbore depth. ISO head 1.65 + 0.30 mm.
-counterbore_m3_socket_cap_pocket_diameter,5.90 mm,mm,M3 socket cap counterbore dia. ISO head 5.50 + 0.40 mm.
-counterbore_m3_socket_cap_pocket_depth,3.30 mm,mm,M3 socket cap counterbore depth. ISO head 3.00 + 0.30 mm.
-counterbore_m4_button_head_pocket_diameter,8.00 mm,mm,M4 button-head counterbore dia. ISO head 7.60 + 0.40 mm.
-counterbore_m4_button_head_pocket_depth,2.50 mm,mm,M4 button-head counterbore depth. ISO head 2.20 + 0.30 mm.
-counterbore_m5_button_head_pocket_diameter,9.90 mm,mm,M5 button-head counterbore dia.
-countersink_metric_flat_head_angle_degrees,90 deg,deg,ISO metric flat-head included angle. 90° — NOT 82° (that is inch/UNC).
-countersink_m3_flat_head_top_diameter,6.00 mm,mm,M3 flat-head countersink top opening. ISO head 5.50 + 0.50 mm.
-countersink_m4_flat_head_top_diameter,8.00 mm,mm,M4 flat-head countersink top opening.
-thread_fdm_offset_face_per_flank_petg_abs,-0.20 mm,mm,Offset Face per thread flank for PETG/ABS printed threads. Apply to both bolt and nut/hole.
-thread_fdm_offset_face_per_flank_pla,-0.15 mm,mm,Offset Face per flank for PLA. PLA prints tighter; slightly less clearance needed.
-thread_fdm_addon_tolerance_profile_petg,0.50 mm,mm,ISO Metric Thread Profile add-in tolerance for PETG/ABS. Sweet spot 0.40–0.60 mm.
-thread_fdm_addon_tolerance_profile_pla,0.40 mm,mm,ISO Metric Thread Profile add-in tolerance for PLA.
-thread_iso_metric_pitch_m2,0.40 mm,mm,M2 coarse thread pitch. Reference for thread tool.
-thread_iso_metric_pitch_m2p5,0.45 mm,mm,M2.5 coarse thread pitch.
-thread_iso_metric_pitch_m3,0.50 mm,mm,M3 coarse thread pitch.
-thread_iso_metric_pitch_m4,0.70 mm,mm,M4 coarse thread pitch.
-thread_iso_metric_pitch_m5,0.80 mm,mm,M5 coarse thread pitch.
-thread_iso_metric_pitch_m6,1.00 mm,mm,M6 coarse thread pitch.
-wall_thickness_minimum_functional_2_perimeters,2*printer_accuracy_extrusion_line_width,mm,Minimum functional wall — 2 perimeters. Non-structural enclosures only.
-wall_thickness_recommended_structural_4_perims,4*printer_accuracy_extrusion_line_width,mm,Standard structural wall — 4 perimeters. Voron default for load-bearing features.
-wall_thickness_heavy_duty_6_perimeters,6*printer_accuracy_extrusion_line_width,mm,"Heavy-duty — 6 perimeters. Motor mounts, idler towers, sustained dynamic loads."
-fillet_radius_minimum_internal_stress_relief,printer_accuracy_standard_layer_height*2,mm,Minimum internal fillet to prevent delamination. 2× layer height.
-fillet_radius_standard_external_cosmetic,1.00 mm,mm,Standard external edge fillet — aesthetics and chipping resistance.
-fillet_radius_large_structural_gusset,3.00 mm,mm,"Large gusset fillet for high-stress junctions (toolhead arms, motor mounts)."
-chamfer_depth_standard_45_degree,0.50 mm,mm,Standard 45° chamfer for edge breaking and hole lead-ins.
-chamfer_depth_lead_in_for_pin_insertion,0.80 mm,mm,Larger lead-in chamfer for pin/shaft insertion guidance.
-overhang_maximum_angle_from_vertical_standard,50 deg,deg,Max unsupported overhang from vertical on standard machines.
-overhang_maximum_angle_high_perf_cpap,70 deg,deg,Max overhang with aggressive cooling (CPAP). K3 with SLM XY can reliably hit 65–70°.
-bridge_maximum_reliable_span_with_tuning,60 mm,mm,Max bridge span on well-tuned FDM at 30–60 mm/s bridging speed. Highly material-dependent.
-bridge_long_span_sag_z_compensation,printer_accuracy_standard_layer_height*2,mm,Z compensation for bridge sag on long spans — raise ceiling by this amount.
-magnet_disc_6x2mm_outer_diameter,6.00 mm,mm,6×2 mm N52 neodymium disc magnet OD. Very common for panel clips and small latches.
-magnet_disc_6x2mm_height,2.00 mm,mm,6×2 mm magnet height.
-magnet_disc_6x3mm_outer_diameter,6.00 mm,mm,6×3 mm disc magnet OD.
-magnet_disc_6x3mm_height,3.00 mm,mm,6×3 mm disc magnet height.
-magnet_disc_8x2mm_outer_diameter,8.00 mm,mm,"8×2 mm N52 disc magnet OD. Common for toolhead docking (Tap, Klicky, etc.)."
-magnet_disc_8x2mm_height,2.00 mm,mm,8×2 mm magnet height.
-magnet_disc_10x2mm_outer_diameter,10.00 mm,mm,10×2 mm N52 disc magnet OD. Common for enclosure door catches and panel latches.
-magnet_disc_10x2mm_height,2.00 mm,mm,10×2 mm magnet height.
-magnet_disc_10x3mm_outer_diameter,10.00 mm,mm,10×3 mm disc magnet OD.
-magnet_disc_10x3mm_height,3.00 mm,mm,10×3 mm magnet height.
-magnet_pocket_press_fit_clearance_per_side,-0.10 mm,mm,Magnet pocket press-fit clearance per side. Model pocket SMALLER than magnet OD by this. Magnet will require a press — use a flat surface and tap gently.
-magnet_pocket_glue_gap_clearance_per_side,0.15 mm,mm,Magnet pocket clearance per side for CA/epoxy retention. Magnet drops in freely; adhesive fills the gap. Do not use press fit if gluing.
-magnet_pocket_depth_flush_recess,0.20 mm,mm,Recess magnet below surface by this amount so it doesn't protrude. Protruding magnets interfere with flush mating surfaces.
-magnet_warhammer_base_transport_6x2_pocket_id,6.10 mm,mm,6×2 mm magnet pocket ID for Warhammer base transport trays — slight clearance for reliable drop-in placement with glue.
-motion_mgn7h_rail_nominal_width,7.00 mm,mm,MGN7H linear rail nominal width. Lightweight option for low-mass toolheads.
-motion_mgn9h_rail_nominal_width,9.00 mm,mm,MGN9H rail nominal width.
-motion_mgn12h_rail_nominal_width,12.00 mm,mm,MGN12H rail nominal width. Standard on V-Core 3.1 AWD Y and Z.
-motion_mgn15h_rail_nominal_width,15.00 mm,mm,MGN15H rail nominal width. Heavy-duty gantry / Z axes.
-motion_mgn12h_carriage_block_length,45.00 mm,mm,MGN12H H-type carriage block length. Used for toolhead plate sizing and hole pattern layout.
-motion_mgn12h_carriage_hole_pitch_along_rail,20.00 mm,mm,MGN12H carriage mounting hole pitch — along rail axis.
-motion_mgn12h_carriage_hole_pitch_across_rail,20.00 mm,mm,MGN12H carriage mounting hole pitch — perpendicular to rail axis.
-motion_mgn9h_carriage_hole_pitch_along_rail,15.00 mm,mm,MGN9H carriage mounting hole pitch along rail.
-motion_mgn9h_carriage_hole_pitch_across_rail,10.00 mm,mm,MGN9H carriage mounting hole pitch across rail.
-motion_gt2_belt_pitch,2.00 mm,mm,"GT2 / 3MGT belt tooth pitch. Standard for K3, V-Core, Voron."
-motion_gt2_belt_nominal_width,6.00 mm,mm,GT2 / 3MGT belt nominal width.
-motion_gt2_belt_clamp_slot_extra_width,0.20 mm,mm,Extra width in belt clamp slot for insertion and tensioning clearance.
-motion_gt2_pulley_16t_outer_diameter,11.00 mm,mm,GT2 16-tooth pulley OD (approximate). Verify per brand — varies ±0.3 mm.
-motion_gt2_pulley_20t_outer_diameter,13.00 mm,mm,GT2 20-tooth pulley OD (approximate). Most common idler/drive pulley size.
-motion_gt2_pulley_80t_outer_diameter,51.00 mm,mm,GT2 80-tooth pulley OD. Used in some AWD / geared arrangements.
-motion_gt2_pulley_bore_standard_5mm_shaft,5.00 mm,mm,Standard GT2 pulley shaft bore — 5 mm. Add 0.05 mm clearance for FDM shaft receivers.
-motion_gt2_idler_bearing_od_f695,13.00 mm,mm,F695 flanged bearing OD — standard GT2 idler bearing in Voron/K3/V-Core.
-motion_gt2_idler_bearing_id_f695,5.00 mm,mm,F695 bearing ID — fits M5 shoulder bolt.
-motion_gt2_idler_bearing_width_f695,4.00 mm,mm,F695 bearing width.
-motion_nema17_motor_body_width,42.30 mm,mm,NEMA17 motor body width (square). Standard across all NEMA17 motors.
-motion_nema17_motor_bolt_pattern_center_to_center,31.00 mm,mm,NEMA17 mounting bolt pattern — center to center (square pattern).
-motion_nema17_motor_bolt_size,3.00 mm,mm,NEMA17 mounting bolt — M3. Model clearance holes at hole_geometry_m3_screw_clearance_diameter.
-motion_nema17_motor_shaft_diameter,5.00 mm,mm,NEMA17 output shaft diameter. Standard 5 mm.
-motion_nema17_motor_shaft_flat_depth,0.50 mm,mm,NEMA17 shaft D-flat depth. Used for set screw / grub screw engagement geometry.
-motion_nema17_motor_shaft_length_standard,20.00 mm,mm,"NEMA17 standard shaft length — 20 mm. Some variants: 22, 24 mm. Verify your specific motor."
-motion_nema17_motor_face_boss_diameter,22.00 mm,mm,NEMA17 front face centering boss diameter. Used for precision motor registration in mounts.
-motion_nema14_motor_body_width,35.20 mm,mm,"NEMA14 motor body width — used in compact extruder motors (Orbiter, Sherpa Mini)."
-motion_nema14_motor_bolt_pattern_center_to_center,26.00 mm,mm,NEMA14 mounting bolt pattern C-C.
-motion_nema14_motor_shaft_diameter,5.00 mm,mm,NEMA14 output shaft diameter.
-motion_vslot_2020_extrusion_width,20.00 mm,mm,2020 V-slot extrusion nominal width.
-motion_vslot_2040_extrusion_width,40.00 mm,mm,2040 extrusion nominal width.
-motion_tslot_m3_nut_slot_clearance_width,5.70 mm,mm,M3 T-slot nut / hammerhead sliding width in 2020 extrusion. ISO slot = 5.50 + 0.20 mm clearance.
-motion_beacon_probe_body_outer_diameter,12.00 mm,mm,Beacon eddy-current probe body OD. Used for mount bore and retention clip geometry.
-motion_beacon_probe_body_total_length,20.50 mm,mm,Beacon probe body total length. Verify against your Beacon revision.
-motion_orbiter_v25_motor_mount_bolt_pattern,26.00 mm,mm,Orbiter v2.5 extruder mounting bolt pattern C-C (NEMA14 pattern).
-motion_orbiter_v25_filament_path_offset_from_mount,15.00 mm,mm,Orbiter v2.5 filament centerline offset from mount face. Used for toolhead geometry validation.
-motion_chube_hotend_collet_outer_diameter,12.00 mm,mm,Chube Conduction hotend collet OD. Used for retention clip bore and mount pocket. Verify with your unit.
-motion_can_bus_cable_chain_slot_width,10.00 mm,mm,CAN bus toolhead umbilical cable chain slot minimum width. Accounts for cable bundle + connector bodies.
-motion_toolhead_carriage_plate_thickness_5mm,5.00 mm,mm,V-Core toolhead carriage CNC plate thickness — 5 mm 6061-T6 as used in Wishbone toolhead architecture.
-motion_toolhead_carriage_plate_thickness_4mm,4.00 mm,mm,K3 / secondary toolhead plate thickness — 4 mm 6061-T6.
-cnc_aluminum_6061_stock_plate_thickness_tolerance,0.10 mm,mm,Mill tolerance on 6061-T6 stock plate thickness — typically ±0.05–0.10 mm. Account for this in stack height calculations when combining printed and machined parts.
-cnc_aluminum_drilled_hole_oversize,0.05 mm,mm,"Drilled hole tolerance in aluminum — typically +0.05/−0.00 mm. For precision fits, always ream to H7 class after drilling."
-cnc_aluminum_reamed_hole_h7_tolerance_at_5mm,0.012 mm,mm,H7 reamed hole tolerance for a 5 mm hole — ±0.006 mm. Reference for press-fit dowel pins and bearing seats in 6061.
-cnc_aluminum_tap_drill_m2_diameter,1.60 mm,mm,M2×0.4 tap drill diameter in aluminum — ISO standard pre-tap hole for ~75% thread engagement.
-cnc_aluminum_tap_drill_m2p5_diameter,2.05 mm,mm,M2.5×0.45 tap drill diameter in aluminum.
-cnc_aluminum_tap_drill_m3_diameter,2.50 mm,mm,M3×0.5 tap drill diameter in aluminum — standard for all M3 tapped holes in 6061 toolhead plates.
-cnc_aluminum_tap_drill_m4_diameter,3.30 mm,mm,M4×0.7 tap drill diameter in aluminum.
-cnc_aluminum_tap_drill_m5_diameter,4.20 mm,mm,M5×0.8 tap drill diameter in aluminum.
-cnc_aluminum_tap_drill_m6_diameter,5.00 mm,mm,M6×1.0 tap drill diameter in aluminum.
-cnc_aluminum_thread_engagement_minimum_diameter_ratio,1.50,,Minimum thread engagement length = bolt_diameter × this ratio. M3 in 4 mm plate = 4.0 mm engagement > 1.5× = OK. Below 1× risks strip-out under load.
-cnc_aluminum_thread_engagement_recommended_ratio,2.00,,Recommended thread engagement for structural joints = 2× bolt diameter. M3 structural: 6 mm minimum engagement.
-cnc_aluminum_minimum_wall_for_tapped_hole,3.00 mm,mm,Minimum material wall thickness surrounding a tapped hole in aluminum. Thinner risks thread pullout and wall blowout.
-cnc_aluminum_countersink_m3_flat_head_4mm_plate,1.70 mm,mm,Countersink depth for a flush M3 flat-head screw in a 4 mm plate. ISO M3 flat head height = 1.70 mm.
-cnc_aluminum_countersink_m3_flat_head_5mm_plate,1.70 mm,mm,Same countersink depth for 5 mm plate — flat head fully recessed with 3.30 mm of uncut material remaining.
-cnc_aluminum_pocket_depth_tolerance_typical_service,0.05 mm,mm,Typical pocket depth tolerance achievable from most CNC services — ±0.05 mm. Tighter than this requires premium machining.
-cnc_aluminum_press_fit_pin_h7_in_6061_5mm,4.994 mm,mm,5 mm H7 press-fit dowel hole in 6061 — nominal 5.000 mm −0.006 mm = 4.994 mm lower bound. Requires reaming.
-cnc_aluminum_6061_thermal_expansion_per_degree_c,0.080,,6061-T6 linear thermal expansion coefficient — ~23.6 µm/m/°C ≈ 0.08 µm/mm/°C. Relevant for chamber-heated assemblies where aluminum and plastic expand at different rates.
-material_pla_print_shrink_percent,0.30,,PLA linear shrinkage — approximately 0.2–0.4%. Typically accounted for by printer calibration. Reference for large parts.
-material_petg_print_shrink_percent,0.30,,PETG linear shrinkage — approximately 0.2–0.4%. Very similar to PLA; well-behaved.
-material_abs_print_shrink_percent,0.60,,ABS linear shrinkage — approximately 0.4–0.8%. Significantly more than PLA/PETG; chamber heating helps consistency.
-material_asa_print_shrink_percent,0.50,,ASA linear shrinkage — similar to ABS but slightly less. Preferred over ABS for UV resistance in external parts.
-material_abs_minimum_chamber_temp_celsius,45,,Minimum chamber temperature for reliable ABS/ASA inter-layer adhesion and warp resistance. 50–60°C is better for functional parts.
-material_pc_minimum_chamber_temp_celsius,70,,Minimum chamber temperature for reliable PC (polycarbonate) layer bonding. PC requires aggressive chamber heating.
-material_tpu_95a_shore_hardness,95,,"TPU 95A shore hardness — firm but flexible. Good for gaskets, bump stops, and strain reliefs where some flex is needed."
-material_tpu_85a_shore_hardness,85,,"TPU 85A — softer, more compliant. Useful for cable boots, vibration isolation feet."
-material_6061_fdm_diff_expansion_per_deg_c,0.055,,Differential thermal expansion between 6061-T6 aluminum and ABS/ASA per °C. Aluminum expands ~23.6 µm/m/°C; ABS ~90 µm/m/°C. Relevant for hybrid toolhead assemblies in heated chambers.
-electronics_m2p5_screw_clearance_hole,2.90 mm,mm,M2.5 bolt clearance through-hole — Raspberry Pi / SBC standard fastener. Model at this diameter.
-electronics_m2p5_hex_standoff_od,4.50 mm,mm,M2.5 hex standoff OD — standard brass spacer for SBC mounting. Used for boss sizing.
-electronics_raspberry_pi_4_5_mount_hole_pitch_x,58.00 mm,mm,Raspberry Pi 4 / Pi 5 mounting hole pitch — X axis (long side).
-electronics_raspberry_pi_4_5_mount_hole_pitch_y,49.00 mm,mm,Raspberry Pi 4 / Pi 5 mounting hole pitch — Y axis.
-electronics_raspberry_pi_board_width,56.00 mm,mm,Raspberry Pi PCB width.
-electronics_raspberry_pi_board_length,85.00 mm,mm,Raspberry Pi PCB length.
-electronics_btt_octopus_mount_hole_pitch_x,109.00 mm,mm,BTT Octopus / Octopus Pro board mounting hole pitch — X.
-electronics_btt_octopus_mount_hole_pitch_y,81.50 mm,mm,BTT Octopus board mounting hole pitch — Y.
-electronics_btt_skr_mini_e3_mount_hole_pitch_x,85.00 mm,mm,BTT SKR Mini E3 V3 mounting hole pitch — X. BabyBelt Pro mainboard.
-electronics_btt_skr_mini_e3_mount_hole_pitch_y,55.00 mm,mm,BTT SKR Mini E3 V3 mounting hole pitch — Y.
-electronics_pcb_edge_clearance_to_wall_minimum,2.00 mm,mm,Minimum clearance from PCB edge to enclosure wall — allows for component overhang and manufacturing tolerance.
-electronics_din_rail_standard_width,35.00 mm,mm,Standard DIN EN 50022 rail width. Used for clip geometry in electrical panel and control box designs.
-electronics_din_rail_clip_engagement_depth,5.00 mm,mm,Typical DIN rail clip engagement depth for reliable snap-on retention.
-electronics_jst_xh_2p54_connector_body_width_2pin,6.00 mm,mm,JST-XH 2-pin connector body width. 2.54 mm pitch. Used for cutout and slot sizing in terminal blocks.
-electronics_jst_xh_2p54_connector_body_height,7.00 mm,mm,JST-XH connector body height.
-electronics_usb_a_panel_cutout_width,14.00 mm,mm,Standard USB-A panel cutout width.
-electronics_usb_a_panel_cutout_height,7.00 mm,mm,Standard USB-A panel cutout height.
-electronics_usb_c_panel_cutout_width,10.00 mm,mm,Standard USB-C panel cutout width.
-electronics_usb_c_panel_cutout_height,4.50 mm,mm,Standard USB-C panel cutout height.
-electronics_xt30_panel_cutout_diameter,10.50 mm,mm,XT30 connector panel cutout hole diameter. Used on 48V toolhead and Doomcube power distribution.
-electronics_xt60_panel_cutout_diameter,12.00 mm,mm,XT60 connector panel cutout hole diameter.
-electronics_wago_221_lever_nut_body_width_2way,11.00 mm,mm,WAGO 221-412 (2-conductor) lever nut body width. For printed mounting clips and wire management blocks.
-electronics_wago_221_lever_nut_body_height,16.00 mm,mm,WAGO 221 lever nut body height.
-electronics_wago_221_lever_nut_body_depth,14.00 mm,mm,WAGO 221 lever nut body depth.
-electronics_esp32_devkit_board_width,28.00 mm,mm,ESP32 DevKit V1 PCB width. Common ESPHome BLE proxy board.
-electronics_esp32_devkit_board_length,52.00 mm,mm,ESP32 DevKit V1 PCB length.
-electronics_d1_mini_esp8266_board_width,25.60 mm,mm,Wemos D1 Mini board width.
-electronics_d1_mini_esp8266_board_length,34.20 mm,mm,Wemos D1 Mini board length.
-home_auto_us_single_gang_box_internal_width,33.30 mm,mm,Standard US single-gang electrical box internal width. Used for custom insert and bracket designs.
-home_auto_us_single_gang_box_internal_height,44.45 mm,mm,Standard US single-gang electrical box internal height.
-home_auto_us_decora_faceplate_cutout_width,44.50 mm,mm,Decora / paddle-style faceplate cutout width. For custom switch plates and smart home inserts.
-home_auto_us_decora_faceplate_cutout_height,69.85 mm,mm,Decora faceplate cutout height.
-home_auto_conduit_half_inch_knockout_diameter,22.20 mm,mm,½ inch conduit knockout diameter in standard US electrical boxes.
-home_auto_conduit_three_quarter_inch_knockout_dia,27.80 mm,mm,¾ inch conduit knockout diameter.
-home_auto_sonoff_zbdongle_p_body_width,20.00 mm,mm,Sonoff Zigbee Dongle Plus body width — for printed mount and bracket design.
-home_auto_sonoff_zbdongle_p_body_length,75.00 mm,mm,Sonoff Zigbee Dongle Plus body length.
-foam_dart_half_dart_body_outer_diameter,13.00 mm,mm,Half-dart body outer diameter standard. Base reference for barrel and breech clearances.
-foam_dart_half_dart_tip_outer_diameter,13.00 mm,mm,Half-dart foam tip OD — approximately same as body for most half-dart designs.
-foam_dart_half_dart_body_length,36.00 mm,mm,Standard half-dart overall length.
-foam_dart_full_dart_body_outer_diameter,11.50 mm,mm,Full-dart foam body OD — narrower than tip.
-foam_dart_full_dart_tip_outer_diameter,13.00 mm,mm,Full-dart foam tip OD.
-foam_dart_full_dart_overall_length,72.00 mm,mm,Standard full-dart overall length.
-foam_dart_barrel_bore_half_dart_performance,13.20 mm,mm,Half-dart barrel bore for performance — tight for good seal and range. +0.20 mm over dart OD.
-foam_dart_barrel_bore_half_dart_slam_fire,13.70 mm,mm,Half-dart barrel bore for slam-fire / rapid cycling — loose enough for reliable feeding under fast operation.
-foam_dart_flywheel_gap_half_dart_standard,9.00 mm,mm,Flywheel gap for half-dart at standard wheel OD. Tune 8.5–9.5 mm depending on wheel OD and dart compression preference.
-foam_dart_flywheel_motor_can_worker_artifact_od,22.10 mm,mm,Worker / Artifact 130/180-size flywheel motor can OD — for motor cage bore sizing. Verify per motor brand.
-foam_dart_spring_guide_rod_diameter_standard,4.00 mm,mm,Standard spring guide rod diameter — 4 mm for most semi-auto plunger designs. 5 mm for high-draw builds.
-foam_dart_plunger_tube_id_19mm,19.00 mm,mm,Small plunger tube ID — 19 mm PVC / CPVC. Common in compact semi-auto designs.
-foam_dart_plunger_tube_id_25mm,25.00 mm,mm,Large plunger tube ID — 25 mm PVC. Common in high-volume springers.
-foam_dart_plunger_tube_wall_thickness,2.00 mm,mm,Standard PVC plunger tube wall thickness. Used for outer diameter calc: OD = ID + 2× wall.
-warhammer_base_25mm_outer_diameter,25.00 mm,mm,25 mm round base OD — legacy infantry standard. Tight clearance slot: 25.30 mm.
-warhammer_base_32mm_outer_diameter,32.00 mm,mm,32 mm round base OD — current infantry standard. Tight clearance slot: 32.30 mm.
-warhammer_base_40mm_outer_diameter,40.00 mm,mm,"40 mm round base OD — heavy infantry, small cavalry, some vehicles."
-warhammer_base_50mm_outer_diameter,50.00 mm,mm,"50 mm round base OD — large infantry, medium cavalry."
-warhammer_base_60mm_outer_diameter,60.00 mm,mm,"60 mm round base OD — large monsters, heavy cavalry."
-warhammer_base_slot_clearance_fdm,0.30 mm,mm,FDM clearance to add to base OD for tray / rack slot — base drops in freely without binding.
-warhammer_base_height_standard,3.00 mm,mm,Standard Citadel round base height — approximately 3 mm. Verify with your base batch.
-warhammer_flying_stand_post_diameter,3.00 mm,mm,Standard GW flying base post rod diameter — 3 mm. Clearance hole in model: 3.20 mm.
-warhammer_flying_stand_post_clearance_hole,3.20 mm,mm,Flying base post clearance hole — 3 mm post + 0.20 mm FDM.
-warhammer_magnetization_base_6x2mm_pocket_id,6.10 mm,mm,6×2 mm magnet pocket ID for base magnetization (transport tray use). Slight clearance for glue-in.
-warhammer_magnetization_base_6x2mm_pocket_depth,2.10 mm,mm,6×2 mm magnet pocket depth — 2.0 mm magnet + 0.10 mm for glue / flush margin.
-warhammer_terrain_wall_thickness_minimum_rigid,3.00 mm,mm,Minimum FDM terrain wall thickness for rigid scatter terrain — thin terrain flexes and delaminates under play.
-warhammer_terrain_wall_thickness_structural_building,4.00 mm,mm,Recommended wall thickness for structural terrain buildings — 4 mm provides good rigidity at tabletop scale.
-warhammer_kill_team_tile_standard_size,200.00 mm,mm,Kill Team game board tile standard size — 200 × 200 mm. Used for modular terrain planning.
-drill_imperial_fractional_1_64_inch_diameter_mm,0.397 mm,mm,"1/64"" drill bit = 0.397 mm exactly. Nearest stocked metric: 0.4 mm. Smallest common fractional bit. Pilot for #0-#1 screws, fine detail work."
-drill_imperial_fractional_1_32_inch_diameter_mm,0.794 mm,mm,"1/32"" drill bit = 0.794 mm exactly. Nearest stocked metric: 0.8 mm. Pilot for #1-#2 screws in softwood."
-drill_imperial_fractional_3_64_inch_diameter_mm,1.191 mm,mm,"3/64"" drill bit = 1.191 mm exactly. Nearest stocked metric: 1.2 mm. Pilot for #2-#3 screws in hardwood."
-drill_imperial_fractional_1_16_inch_diameter_mm,1.587 mm,mm,"1/16"" drill bit = 1.587 mm exactly. Nearest stocked metric: 1.6 mm. Pilot for #2-#3 screws in softwood; #3-#4 in hardwood. Common starter size."
-drill_imperial_fractional_5_64_inch_diameter_mm,1.984 mm,mm,"5/64"" drill bit = 1.984 mm exactly. Nearest stocked metric: 2.0 mm. Pilot for #4 screws in hardwood; #5 in softwood."
-drill_imperial_fractional_3_32_inch_diameter_mm,2.381 mm,mm,"3/32"" drill bit = 2.381 mm exactly. Nearest stocked metric: 2.4 mm. Pilot for #4-#5 in softwood; #6 in hardwood. Very common size."
-drill_imperial_fractional_7_64_inch_diameter_mm,2.778 mm,mm,"7/64"" drill bit = 2.778 mm exactly. Nearest stocked metric: 2.8 mm. Pilot for #6 in softwood; #8 in hardwood. Extremely common."
-drill_imperial_fractional_1_8_inch_diameter_mm,3.175 mm,mm,"1/8"" drill bit = 3.175 mm exactly. Nearest stocked metric: 3.2 mm. Pilot for #8 in softwood; #10 in hardwood. Most-used general pilot bit."
-drill_imperial_fractional_9_64_inch_diameter_mm,3.572 mm,mm,"9/64"" drill bit = 3.572 mm exactly. Nearest stocked metric: 3.6 mm. Pilot for #10 in hardwood; clearance for #6."
-drill_imperial_fractional_5_32_inch_diameter_mm,3.969 mm,mm,"5/32"" drill bit = 3.969 mm exactly. Nearest stocked metric: 4.0 mm. Clearance for #8; pilot for #10-#12 in softwood."
-drill_imperial_fractional_11_64_inch_diameter_mm,4.366 mm,mm,"11/64"" drill bit = 4.366 mm exactly. Nearest stocked metric: 4.4 mm. Pilot for #12 in hardwood."
-drill_imperial_fractional_3_16_inch_diameter_mm,4.762 mm,mm,"3/16"" drill bit = 4.762 mm exactly. Nearest stocked metric: 4.8 mm. Clearance for #10; pilot for #14 in softwood; M4 clearance equivalent."
-drill_imperial_fractional_13_64_inch_diameter_mm,5.159 mm,mm,"13/64"" drill bit = 5.159 mm exactly. Nearest stocked metric: 5.2 mm. Pilot for #14 in hardwood; lag bolt pilot (1/4in) in softwood."
-drill_imperial_fractional_7_32_inch_diameter_mm,5.556 mm,mm,"7/32"" drill bit = 5.556 mm exactly. Nearest stocked metric: 5.6 mm. Clearance for #12; pilot for 1/4in lag bolt."
-drill_imperial_fractional_15_64_inch_diameter_mm,5.953 mm,mm,"15/64"" drill bit = 5.953 mm exactly. Nearest stocked metric: 6.0 mm. Pilot for 1/4in lag bolt in hardwood."
-drill_imperial_fractional_1_4_inch_diameter_mm,6.35 mm,mm,"1/4"" drill bit = 6.35 mm exactly. Nearest stocked metric: 6.3 mm. Clearance for #14; pilot for 5/16in lag bolt. Dowel/rod reference."
-drill_imperial_fractional_17_64_inch_diameter_mm,6.747 mm,mm,"17/64"" drill bit = 6.747 mm exactly. Nearest stocked metric: 6.7 mm. Standard fractional drill bit 17/64 inch."
-drill_imperial_fractional_9_32_inch_diameter_mm,7.144 mm,mm,"9/32"" drill bit = 7.144 mm exactly. Nearest stocked metric: 7.1 mm. Pilot for 5/16in lag bolt; clearance for #16."
-drill_imperial_fractional_19_64_inch_diameter_mm,7.541 mm,mm,"19/64"" drill bit = 7.541 mm exactly. Nearest stocked metric: 7.5 mm. Standard fractional drill bit 19/64 inch."
-drill_imperial_fractional_5_16_inch_diameter_mm,7.938 mm,mm,"5/16"" drill bit = 7.938 mm exactly. Nearest stocked metric: 7.9 mm. Clearance for 1/4in bolts; pilot for 3/8in lag bolt."
-drill_imperial_fractional_21_64_inch_diameter_mm,8.334 mm,mm,"21/64"" drill bit = 8.334 mm exactly. Nearest stocked metric: 8.3 mm. Standard fractional drill bit 21/64 inch."
-drill_imperial_fractional_11_32_inch_diameter_mm,8.731 mm,mm,"11/32"" drill bit = 8.731 mm exactly. Nearest stocked metric: 8.7 mm. Standard fractional drill bit 11/32 inch."
-drill_imperial_fractional_23_64_inch_diameter_mm,9.128 mm,mm,"23/64"" drill bit = 9.128 mm exactly. Nearest stocked metric: 9.1 mm. Standard fractional drill bit 23/64 inch."
-drill_imperial_fractional_3_8_inch_diameter_mm,9.525 mm,mm,"3/8"" drill bit = 9.525 mm exactly. Nearest stocked metric: 9.5 mm. Clearance for 5/16in bolts; large anchor pilot holes."
-drill_imperial_fractional_25_64_inch_diameter_mm,9.922 mm,mm,"25/64"" drill bit = 9.922 mm exactly. Nearest stocked metric: 9.9 mm. Standard fractional drill bit 25/64 inch."
-drill_imperial_fractional_13_32_inch_diameter_mm,10.319 mm,mm,"13/32"" drill bit = 10.319 mm exactly. Nearest stocked metric: 10.3 mm. Standard fractional drill bit 13/32 inch."
-drill_imperial_fractional_27_64_inch_diameter_mm,10.716 mm,mm,"27/64"" drill bit = 10.716 mm exactly. Nearest stocked metric: 10.7 mm. Standard fractional drill bit 27/64 inch."
-drill_imperial_fractional_7_16_inch_diameter_mm,11.112 mm,mm,"7/16"" drill bit = 11.112 mm exactly. Nearest stocked metric: 11.1 mm. Clearance for 3/8in bolts."
-drill_imperial_fractional_29_64_inch_diameter_mm,11.509 mm,mm,"29/64"" drill bit = 11.509 mm exactly. Nearest stocked metric: 11.5 mm. Standard fractional drill bit 29/64 inch."
-drill_imperial_fractional_15_32_inch_diameter_mm,11.906 mm,mm,"15/32"" drill bit = 11.906 mm exactly. Nearest stocked metric: 11.9 mm. Standard fractional drill bit 15/32 inch."
-drill_imperial_fractional_31_64_inch_diameter_mm,12.303 mm,mm,"31/64"" drill bit = 12.303 mm exactly. Nearest stocked metric: 12.3 mm. Standard fractional drill bit 31/64 inch."
-drill_imperial_fractional_1_2_inch_diameter_mm,12.7 mm,mm,"1/2"" drill bit = 12.7 mm exactly. Nearest stocked metric: 12.7 mm. Clearance for 7/16in bolts; lock/hinge mortise reference."
-drill_imperial_fractional_33_64_inch_diameter_mm,13.097 mm,mm,"33/64"" drill bit = 13.097 mm exactly. Nearest stocked metric: 13.1 mm. Standard fractional drill bit 33/64 inch."
-drill_imperial_fractional_17_32_inch_diameter_mm,13.494 mm,mm,"17/32"" drill bit = 13.494 mm exactly. Nearest stocked metric: 13.5 mm. Standard fractional drill bit 17/32 inch."
-drill_imperial_fractional_35_64_inch_diameter_mm,13.891 mm,mm,"35/64"" drill bit = 13.891 mm exactly. Nearest stocked metric: 13.9 mm. Standard fractional drill bit 35/64 inch."
-drill_imperial_fractional_9_16_inch_diameter_mm,14.287 mm,mm,"9/16"" drill bit = 14.287 mm exactly. Nearest stocked metric: 14.3 mm. Clearance for 1/2in bolts."
-drill_imperial_fractional_37_64_inch_diameter_mm,14.684 mm,mm,"37/64"" drill bit = 14.684 mm exactly. Nearest stocked metric: 14.7 mm. Standard fractional drill bit 37/64 inch."
-drill_imperial_fractional_19_32_inch_diameter_mm,15.081 mm,mm,"19/32"" drill bit = 15.081 mm exactly. Nearest stocked metric: 15.1 mm. Standard fractional drill bit 19/32 inch."
-drill_imperial_fractional_39_64_inch_diameter_mm,15.478 mm,mm,"39/64"" drill bit = 15.478 mm exactly. Nearest stocked metric: 15.5 mm. Standard fractional drill bit 39/64 inch."
-drill_imperial_fractional_5_8_inch_diameter_mm,15.875 mm,mm,"5/8"" drill bit = 15.875 mm exactly. Nearest stocked metric: 15.9 mm. Large anchor and clearance work."
-drill_imperial_fractional_41_64_inch_diameter_mm,16.272 mm,mm,"41/64"" drill bit = 16.272 mm exactly. Nearest stocked metric: 16.3 mm. Standard fractional drill bit 41/64 inch."
-drill_imperial_fractional_21_32_inch_diameter_mm,16.669 mm,mm,"21/32"" drill bit = 16.669 mm exactly. Nearest stocked metric: 16.7 mm. Standard fractional drill bit 21/32 inch."
-drill_imperial_fractional_43_64_inch_diameter_mm,17.066 mm,mm,"43/64"" drill bit = 17.066 mm exactly. Nearest stocked metric: 17.1 mm. Standard fractional drill bit 43/64 inch."
-drill_imperial_fractional_11_16_inch_diameter_mm,17.462 mm,mm,"11/16"" drill bit = 17.462 mm exactly. Nearest stocked metric: 17.5 mm. Clearance for 5/8in bolts."
-drill_imperial_fractional_45_64_inch_diameter_mm,17.859 mm,mm,"45/64"" drill bit = 17.859 mm exactly. Nearest stocked metric: 17.9 mm. Standard fractional drill bit 45/64 inch."
-drill_imperial_fractional_23_32_inch_diameter_mm,18.256 mm,mm,"23/32"" drill bit = 18.256 mm exactly. Nearest stocked metric: 18.3 mm. Standard fractional drill bit 23/32 inch."
-drill_imperial_fractional_47_64_inch_diameter_mm,18.653 mm,mm,"47/64"" drill bit = 18.653 mm exactly. Nearest stocked metric: 18.7 mm. Standard fractional drill bit 47/64 inch."
-drill_imperial_fractional_3_4_inch_diameter_mm,19.05 mm,mm,"3/4"" drill bit = 19.05 mm exactly. Nearest stocked metric: 19.0 mm. Large clearance and boring work; common Forstner reference."
-drill_imperial_fractional_49_64_inch_diameter_mm,19.447 mm,mm,"49/64"" drill bit = 19.447 mm exactly. Nearest stocked metric: 19.4 mm. Standard fractional drill bit 49/64 inch."
-drill_imperial_fractional_25_32_inch_diameter_mm,19.844 mm,mm,"25/32"" drill bit = 19.844 mm exactly. Nearest stocked metric: 19.8 mm. Standard fractional drill bit 25/32 inch."
-drill_imperial_fractional_51_64_inch_diameter_mm,20.241 mm,mm,"51/64"" drill bit = 20.241 mm exactly. Nearest stocked metric: 20.2 mm. Standard fractional drill bit 51/64 inch."
-drill_imperial_fractional_13_16_inch_diameter_mm,20.637 mm,mm,"13/16"" drill bit = 20.637 mm exactly. Nearest stocked metric: 20.6 mm. Standard fractional drill bit 13/16 inch."
-drill_imperial_fractional_53_64_inch_diameter_mm,21.034 mm,mm,"53/64"" drill bit = 21.034 mm exactly. Nearest stocked metric: 21.0 mm. Standard fractional drill bit 53/64 inch."
-drill_imperial_fractional_27_32_inch_diameter_mm,21.431 mm,mm,"27/32"" drill bit = 21.431 mm exactly. Nearest stocked metric: 21.4 mm. Standard fractional drill bit 27/32 inch."
-drill_imperial_fractional_55_64_inch_diameter_mm,21.828 mm,mm,"55/64"" drill bit = 21.828 mm exactly. Nearest stocked metric: 21.8 mm. Standard fractional drill bit 55/64 inch."
-drill_imperial_fractional_7_8_inch_diameter_mm,22.225 mm,mm,"7/8"" drill bit = 22.225 mm exactly. Nearest stocked metric: 22.2 mm. Large boring; clearance for 3/4in bolts."
-drill_imperial_fractional_57_64_inch_diameter_mm,22.622 mm,mm,"57/64"" drill bit = 22.622 mm exactly. Nearest stocked metric: 22.6 mm. Standard fractional drill bit 57/64 inch."
-drill_imperial_fractional_29_32_inch_diameter_mm,23.019 mm,mm,"29/32"" drill bit = 23.019 mm exactly. Nearest stocked metric: 23.0 mm. Standard fractional drill bit 29/32 inch."
-drill_imperial_fractional_59_64_inch_diameter_mm,23.416 mm,mm,"59/64"" drill bit = 23.416 mm exactly. Nearest stocked metric: 23.4 mm. Standard fractional drill bit 59/64 inch."
-drill_imperial_fractional_15_16_inch_diameter_mm,23.812 mm,mm,"15/16"" drill bit = 23.812 mm exactly. Nearest stocked metric: 23.8 mm. Standard fractional drill bit 15/16 inch."
-drill_imperial_fractional_61_64_inch_diameter_mm,24.209 mm,mm,"61/64"" drill bit = 24.209 mm exactly. Nearest stocked metric: 24.2 mm. Standard fractional drill bit 61/64 inch."
-drill_imperial_fractional_31_32_inch_diameter_mm,24.606 mm,mm,"31/32"" drill bit = 24.606 mm exactly. Nearest stocked metric: 24.6 mm. Standard fractional drill bit 31/32 inch."
-drill_imperial_fractional_63_64_inch_diameter_mm,25.003 mm,mm,"63/64"" drill bit = 25.003 mm exactly. Nearest stocked metric: 25.0 mm. Standard fractional drill bit 63/64 inch."
-drill_imperial_fractional_1_1_inch_diameter_mm,25.4 mm,mm,"1/1"" drill bit = 25.4 mm exactly. Nearest stocked metric: 25.4 mm. Full 1 inch — large boring, lock cylinders, pipe holes."
-woodscrew_gauge_00_major_diameter_mm,1.52 mm,mm,"#0 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (0×0.013) = 0.06"". Tiny - electronics, fine woodwork."
-woodscrew_gauge_00_pilot_hole_softwood_mm,1.2 mm,mm,"#0 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Tiny - electronics, fine woodwork."
-woodscrew_gauge_00_pilot_hole_hardwood_mm,1.4 mm,mm,"#0 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Tiny - electronics, fine woodwork."
-woodscrew_gauge_00_clearance_hole_top_board_mm,1.8 mm,mm,#0 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_01_major_diameter_mm,1.85 mm,mm,"#1 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (1×0.013) = 0.073"". Jewelry boxes, small hinges."
-woodscrew_gauge_01_pilot_hole_softwood_mm,1.4 mm,mm,"#1 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Jewelry boxes, small hinges."
-woodscrew_gauge_01_pilot_hole_hardwood_mm,1.6 mm,mm,"#1 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Jewelry boxes, small hinges."
-woodscrew_gauge_01_clearance_hole_top_board_mm,2.1 mm,mm,#1 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_02_major_diameter_mm,2.18 mm,mm,"#2 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (2×0.013) = 0.086"". Cabinet hardware, thin stock. TPI=32."
-woodscrew_gauge_02_pilot_hole_softwood_mm,1.5 mm,mm,"#2 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Cabinet hardware, thin stock."
-woodscrew_gauge_02_pilot_hole_hardwood_mm,1.8 mm,mm,"#2 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Cabinet hardware, thin stock."
-woodscrew_gauge_02_clearance_hole_top_board_mm,2.4 mm,mm,#2 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_02_countersink_flat_head_diameter_mm,6.4 mm,mm,#2 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_03_major_diameter_mm,2.51 mm,mm,"#3 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (3×0.013) = 0.099"". Light joinery. TPI=28."
-woodscrew_gauge_03_pilot_hole_softwood_mm,1.6 mm,mm,"#3 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light joinery."
-woodscrew_gauge_03_pilot_hole_hardwood_mm,2.0 mm,mm,"#3 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light joinery."
-woodscrew_gauge_03_clearance_hole_top_board_mm,2.7 mm,mm,#3 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_03_countersink_flat_head_diameter_mm,6.4 mm,mm,#3 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_04_major_diameter_mm,2.84 mm,mm,"#4 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (4×0.013) = 0.112"". Small hinges, cabinet doors, thin plywood. TPI=24."
-woodscrew_gauge_04_pilot_hole_softwood_mm,1.8 mm,mm,"#4 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Small hinges, cabinet doors, thin plywood."
-woodscrew_gauge_04_pilot_hole_hardwood_mm,2.2 mm,mm,"#4 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Small hinges, cabinet doors, thin plywood."
-woodscrew_gauge_04_clearance_hole_top_board_mm,3.0 mm,mm,#4 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_04_countersink_flat_head_diameter_mm,6.4 mm,mm,#4 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_05_major_diameter_mm,3.17 mm,mm,"#5 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (5×0.013) = 0.125"". Light woodwork. TPI=20."
-woodscrew_gauge_05_pilot_hole_softwood_mm,2.0 mm,mm,"#5 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light woodwork."
-woodscrew_gauge_05_pilot_hole_hardwood_mm,2.4 mm,mm,"#5 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light woodwork."
-woodscrew_gauge_05_clearance_hole_top_board_mm,3.4 mm,mm,#5 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_05_countersink_flat_head_diameter_mm,7.1 mm,mm,#5 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_06_major_diameter_mm,3.51 mm,mm,"#6 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (6×0.013) = 0.138"". Face frames, drawer boxes, cabinetry - common. TPI=18."
-woodscrew_gauge_06_pilot_hole_softwood_mm,2.2 mm,mm,"#6 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Face frames, drawer boxes, cabinetry - common."
-woodscrew_gauge_06_pilot_hole_hardwood_mm,2.8 mm,mm,"#6 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Face frames, drawer boxes, cabinetry - common."
-woodscrew_gauge_06_clearance_hole_top_board_mm,3.6 mm,mm,#6 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_06_countersink_flat_head_diameter_mm,7.1 mm,mm,#6 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_07_major_diameter_mm,3.84 mm,mm,"#7 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (7×0.013) = 0.151"". Medium joinery. TPI=16."
-woodscrew_gauge_07_pilot_hole_softwood_mm,2.4 mm,mm,"#7 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Medium joinery."
-woodscrew_gauge_07_pilot_hole_hardwood_mm,3.0 mm,mm,"#7 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Medium joinery."
-woodscrew_gauge_07_clearance_hole_top_board_mm,4.0 mm,mm,#7 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_07_countersink_flat_head_diameter_mm,8.7 mm,mm,#7 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_08_major_diameter_mm,4.17 mm,mm,"#8 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (8×0.013) = 0.164"". MOST COMMON - furniture, general woodwork, shelving. TPI=15."
-woodscrew_gauge_08_pilot_hole_softwood_mm,2.8 mm,mm,"#8 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. MOST COMMON - furniture, general woodwork, shelving."
-woodscrew_gauge_08_pilot_hole_hardwood_mm,3.2 mm,mm,"#8 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. MOST COMMON - furniture, general woodwork, shelving."
-woodscrew_gauge_08_clearance_hole_top_board_mm,4.4 mm,mm,#8 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_08_countersink_flat_head_diameter_mm,8.7 mm,mm,#8 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_09_major_diameter_mm,4.5 mm,mm,"#9 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (9×0.013) = 0.177"". Heavy furniture. TPI=14."
-woodscrew_gauge_09_pilot_hole_softwood_mm,3.0 mm,mm,"#9 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy furniture."
-woodscrew_gauge_09_pilot_hole_hardwood_mm,3.4 mm,mm,"#9 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy furniture."
-woodscrew_gauge_09_clearance_hole_top_board_mm,4.8 mm,mm,#9 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_09_countersink_flat_head_diameter_mm,9.5 mm,mm,#9 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_10_major_diameter_mm,4.83 mm,mm,"#10 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (10×0.013) = 0.19"". Structural, decking, outdoor joinery - very common. TPI=13."
-woodscrew_gauge_10_pilot_hole_softwood_mm,3.2 mm,mm,"#10 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural, decking, outdoor joinery - very common."
-woodscrew_gauge_10_pilot_hole_hardwood_mm,3.6 mm,mm,"#10 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural, decking, outdoor joinery - very common."
-woodscrew_gauge_10_clearance_hole_top_board_mm,5.2 mm,mm,#10 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_10_countersink_flat_head_diameter_mm,11.1 mm,mm,#10 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_11_major_diameter_mm,5.16 mm,mm,"#11 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (11×0.013) = 0.203"". Heavy structural. TPI=12."
-woodscrew_gauge_11_pilot_hole_softwood_mm,3.4 mm,mm,"#11 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy structural."
-woodscrew_gauge_11_pilot_hole_hardwood_mm,4.0 mm,mm,"#11 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy structural."
-woodscrew_gauge_11_clearance_hole_top_board_mm,5.5 mm,mm,#11 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_11_countersink_flat_head_diameter_mm,11.1 mm,mm,#11 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_12_major_diameter_mm,5.49 mm,mm,"#12 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (12×0.013) = 0.216"". Heavy construction, door hanging. TPI=11."
-woodscrew_gauge_12_pilot_hole_softwood_mm,3.6 mm,mm,"#12 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy construction, door hanging."
-woodscrew_gauge_12_pilot_hole_hardwood_mm,4.4 mm,mm,"#12 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy construction, door hanging."
-woodscrew_gauge_12_clearance_hole_top_board_mm,5.8 mm,mm,#12 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_12_countersink_flat_head_diameter_mm,12.7 mm,mm,#12 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_14_major_diameter_mm,6.15 mm,mm,"#14 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (14×0.013) = 0.242"". Heavy framing, solid-core doors. TPI=10."
-woodscrew_gauge_14_pilot_hole_softwood_mm,4.4 mm,mm,"#14 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy framing, solid-core doors."
-woodscrew_gauge_14_pilot_hole_hardwood_mm,5.0 mm,mm,"#14 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy framing, solid-core doors."
-woodscrew_gauge_14_clearance_hole_top_board_mm,6.6 mm,mm,#14 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_14_countersink_flat_head_diameter_mm,14.3 mm,mm,#14 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).
-woodscrew_gauge_16_major_diameter_mm,6.81 mm,mm,"#16 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (16×0.013) = 0.268"". Timber framing. TPI=9."
-woodscrew_gauge_16_pilot_hole_softwood_mm,5.0 mm,mm,"#16 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Timber framing."
-woodscrew_gauge_16_pilot_hole_hardwood_mm,5.6 mm,mm,"#16 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Timber framing."
-woodscrew_gauge_16_clearance_hole_top_board_mm,7.2 mm,mm,#16 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_18_major_diameter_mm,7.47 mm,mm,"#18 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (18×0.013) = 0.294"". Heavy timber. TPI=8."
-woodscrew_gauge_18_pilot_hole_softwood_mm,5.4 mm,mm,"#18 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy timber."
-woodscrew_gauge_18_pilot_hole_hardwood_mm,6.0 mm,mm,"#18 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy timber."
-woodscrew_gauge_18_clearance_hole_top_board_mm,7.7 mm,mm,#18 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-woodscrew_gauge_20_major_diameter_mm,8.13 mm,mm,"#20 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (20×0.013) = 0.32"". Structural timber. TPI=8."
-woodscrew_gauge_20_pilot_hole_softwood_mm,5.8 mm,mm,"#20 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural timber."
-woodscrew_gauge_20_pilot_hole_hardwood_mm,6.4 mm,mm,"#20 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural timber."
-woodscrew_gauge_20_clearance_hole_top_board_mm,8.3 mm,mm,#20 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
-print_in_place_captive_sphere_clearance,0.30 mm,mm,Radial gap between captive sphere and socket for print-in-place FDM. Must exceed layer height to prevent fusion. Tested on 0.20 mm layers — reduce to 0.25 for 0.12 mm layers.
-print_in_place_captive_sphere_min_diameter,8.00 mm,mm,Minimum sphere diameter for reliable print-in-place captive joints. Below this the bridge spans become too short for clean FDM.
-print_in_place_socket_opening_ratio,0.65,,Socket opening diameter / sphere diameter (dimensionless ratio). Must allow sphere to be trapped but still rotate freely. 0.65 = equator is above the socket lip.
-print_in_place_hinge_pin_clearance,0.25 mm,mm,Radial clearance for print-in-place living hinge pins. Tighter than captive sphere since rotation axis is fixed.
-twist_lock_bayonet_tab_count,3,,Number of tabs/channels in a twist-lock lid (dimensionless count). 3 gives 120° spacing — good balance of engagement strength and rotation angle.
-twist_lock_bayonet_rotation_angle_deg,40,deg,Rotation angle to lock/unlock. Must be less than (360/tab_count - entry_slot_angle) to avoid tab running into next entry slot.
-twist_lock_bayonet_tab_height_mm,2.00 mm,mm,Radial height of each locking tab (how far it protrudes into the channel). Determines pull-off resistance.
-twist_lock_bayonet_channel_depth_mm,2.20 mm,mm,Depth of rotation channel in mating part. Tab height + clearance for smooth rotation.
-twist_lock_bayonet_entry_slot_width_deg,15,deg,Angular width of entry slot where tab drops in before rotating to lock. Must be wide enough for easy alignment.
-twist_lock_bayonet_ramp_angle_deg,5,deg,"Optional ramp angle at channel end — creates a detent that resists accidental unlocking. 0 = no detent, 5 = light snap, 10 = firm."
-twist_lock_bayonet_lid_engagement_depth_mm,4.00 mm,mm,How far the lid collar overlaps the container body. Deeper = more stable but harder to print overhangs internally.
-twist_lock_bayonet_clearance_radial_mm,0.15 mm,mm,Radial clearance between lid inner wall and container outer wall. Uses sliding fit class.
-dovetail_angle_deg,60,deg,Dovetail half-angle (from vertical). 60° is standard for FDM — provides retention without excessive overhang. 45° also printable but weaker lock.
-dovetail_width_base_mm,6.00 mm,mm,Width at narrow end (base) of dovetail tail. Scale up for larger load-bearing joints.
-dovetail_width_top_mm,8.00 mm,mm,Width at wide end (top) of dovetail tail. Difference from base determines lock strength.
-dovetail_depth_mm,4.00 mm,mm,Depth of dovetail slot/rail. Deeper = stronger retention but more material.
-dovetail_clearance_per_surface_mm,0.12 mm,mm,Per-surface clearance for sliding dovetail fit in FDM. Tighter than general sliding fit because dovetails self-align.
-dovetail_slide_entry_chamfer_mm,0.50 mm,mm,Lead-in chamfer at dovetail entry to ease assembly. Applied to both rail and slot.
-spring_clip_arm_thickness_mm,1.60 mm,mm,Flexure arm thickness for FDM spring clips (PLA). Thinner = more flex but weaker. 1.6 mm gives ~2 mm deflection before yield at 40 mm arm length.
-spring_clip_arm_width_mm,6.00 mm,mm,Width of spring clip arm. Wider = stiffer (scales linearly with width).
-spring_clip_deflection_max_mm,2.00 mm,mm,Maximum safe deflection for PLA spring clip arms at 1.6 mm thickness × 40 mm length. Beyond this risks permanent deformation.
-spring_clip_hook_depth_mm,1.50 mm,mm,How far the hook protrudes past the mating surface. Must be less than max deflection for the arm to flex over it.
-container_wall_thickness_food_safe_mm,2.50 mm,mm,"Minimum wall thickness for food-adjacent containers (treats, dry goods). Provides structural rigidity and prevents permeation. Not FDA-rated — for dry pet treats only."
-container_base_thickness_mm,2.00 mm,mm,Base/floor thickness for general containers. Thicker than walls because bottom bears load and is the first layer group.
-container_corner_radius_min_mm,3.00 mm,mm,Minimum corner radius for rounded-rectangle containers. Smaller radii create stress concentrations and thin-wall issues in FDM.
-container_lid_rim_width_mm,1.50 mm,mm,Width of the sealing rim/lip on container lids. Provides contact area for dust seal without excessive material.
+Name,Unit,Expression,Value,Comment,Favorite
+printer_accuracy_hole_shrink_compensation,mm,0.15 mm,0.015,FDM holes always print smaller than modeled due to filament expansion and layer resolution. Add to all hole sketch diameters or apply via Offset Face. Measure a 10 mm test circle: shrink = 10.0 − actual_diameter. Update per machine.,True
+printer_accuracy_outer_dimension_oversize,mm,0.10 mm,0.010000000000000002,FDM outer surfaces print 0.05–0.20 mm larger than modeled due to extrusion pressure. Subtract from shaft and boss ODs for precise fits. Measure a 20 mm calibration cube in X and Y.,True
+printer_accuracy_standard_layer_height,mm,0.20 mm,0.020000000000000004,"Default layer height. Base unit for teardrop compensation, bridge sag, and fillet minimums. Update when switching profiles — all derived params follow.",True
+printer_accuracy_first_layer_height,mm,0.25 mm,0.025,First layer printed thicker for bed adhesion. Relevant for total Z stack height calculations.,True
+printer_accuracy_extrusion_line_width,mm,0.45 mm,0.045000000000000005,Actual deposited extrusion line width — typically nozzle_dia × 1.10–1.15. All wall thickness and bridge span calcs derive from this. Re-measure after any nozzle change.,True
+printer_accuracy_elephant_foot_compensation,mm,0.15 mm,0.015,"First-layer squish bulge on outer perimeter — typically 0.10–0.20 mm. Subtract from bottom-surface mating features (flanges, bases) so they sit flush. Dial in with a single-layer calibration square.",True
+printer_accuracy_seam_zseam_protrusion,mm,0.05 mm,0.005000000000000001,"Small Z-seam protrusion at layer start. Matters on outer mating surfaces. Either orient seam to a non-mating edge, or add this allowance to surface-critical fits.",True
+printer_accuracy_minimum_infill_bridging_width,mm,2 * printer_accuracy_extrusion_line_width,0.09000000000000001,"Below this pocket width, infill skips entirely and bridges. Account for this in thin pocket features — infill may not fill them at all.",True
+printer_accuracy_solid_top_layers_for_mating_surface,,3,3.0,Number of solid top layers before a press-fit or heat-set mating surface for best dimensional accuracy. Fewer layers = rougher surface = worse fit.,True
+tolerance_standard_fine_iso2768_f,mm,0.10 mm,0.010000000000000002,ISO 2768 fine class (f) — general linear tolerance ±0.05 mm per side for 3–30 mm features. Requires a well-calibrated machine.,True
+tolerance_standard_medium_iso2768_m,mm,0.20 mm,0.020000000000000004,ISO 2768 medium class (m) — ±0.10 mm per side for 3–30 mm. Default starting point for most functional FDM parts.,True
+tolerance_standard_coarse_iso2768_c,mm,0.40 mm,0.04000000000000001,ISO 2768 coarse class (c) — ±0.20 mm per side. For non-critical features or lower-accuracy machines.,True
+tolerance_angular_general_degrees,deg,1.0 deg,0.017453292519943295,General angular tolerance. Matches ISO 2768 medium angular class for 0–10 mm leg length. Critical angles (e.g. 45° for no-support printing) should be exactly constrained.,True
+tolerance_fit_class_fdm_sliding_per_surface,mm,0.15 mm,0.015,"FDM-practical sliding fit clearance per mating surface (total gap = 0.30 mm). Equivalent to coarse H8/e8 adapted for FDM variation. Use for lids, sliding panels, guide channels.",True
+tolerance_fit_class_fdm_press_per_surface,mm,0.05 mm,0.005000000000000001,FDM light press fit per mating surface (total gap = 0.10 mm). Requires deliberate hand force. Good for retained pins and press-in bushings.,True
+tolerance_fit_class_fdm_interference_per_surface,mm,-0.05 mm,-0.005000000000000001,FDM interference fit — hole modeled smaller than shaft by this per side. Requires significant force or press. Most reliable with TPU or small features.,True
+tolerance_fit_class_iso_h7_g6_running_clearance,mm,0.025 mm,0.0025000000000000005,ISO H7/g6 running clearance fit reference. Only achievable by post-machining or reaming in FDM context. Provided as a design target.,True
+hole_geometry_minimum_printable_diameter,mm,2.00 mm,0.2,Minimum FDM hole diameter without post-processing. Smaller holes are often malformed — model at 1.5 mm and drill to final size.,True
+hole_geometry_horizontal_teardrop_z_offset,mm,printer_accuracy_standard_layer_height,0.020000000000000004,"Upward Z offset for horizontal holes to compensate overhang droop. Shift hole center up by this, or use teardrop profile.",True
+hole_geometry_fdm_diameter_compensation,mm,printer_accuracy_hole_shrink_compensation,0.015,"Add to all circle sketch diameters, or Offset Face after modeling. References printer_accuracy_hole_shrink_compensation.",True
+hole_geometry_self_tap_m3_into_plastic_diameter,mm,2.70 mm,0.27,"Hole diameter for direct M3 screw into plastic (self-tapping, no insert). Use for low-load non-serviceable joints. Engagement length ≥ 8 mm recommended.",True
+hole_geometry_self_tap_m4_into_plastic_diameter,mm,3.50 mm,0.35000000000000003,Hole diameter for direct M4 self-tapping into plastic.,True
+hole_geometry_thread_engagement_minimum_length,mm,6.00 mm,0.6000000000000001,"Minimum thread engagement length for reliable printed threads under moderate load. Rule of thumb: 1× bolt diameter minimum, 2× for structural. At M3 that is 3–6 mm.",True
+hole_geometry_m2_screw_clearance_diameter,mm,2.40 mm,0.24,M2 bolt clearance through-hole. ISO M2 shank = 2.0 mm + 0.40 mm FDM clearance.,True
+hole_geometry_m2_close_fit_diameter,mm,2.20 mm,0.22000000000000003,M2 close-fit location hole — for alignment and indexed dowels.,True
+boss_geometry_m2_outer_diameter,mm,4.00 mm,0.4,M2 boss OD — cylindrical pad surrounding M2 hole. 2× screw diameter rule.,True
+hole_geometry_m2p5_screw_clearance_diameter,mm,2.90 mm,0.29,M2.5 bolt clearance through-hole. ISO M2.5 shank = 2.5 mm + 0.40 mm. Raspberry Pi / SBC standard fastener.,True
+hole_geometry_m2p5_close_fit_diameter,mm,2.70 mm,0.27,M2.5 close-fit location hole.,True
+boss_geometry_m2p5_outer_diameter,mm,5.00 mm,0.5,M2.5 boss OD — standard for SBC and PCB mounting posts.,True
+hole_geometry_m3_screw_clearance_diameter,mm,3.40 mm,0.34,M3 bolt clearance through-hole. Voron project standard. ISO M3 shank = 3.0 mm + 0.40 mm.,True
+hole_geometry_m3_close_fit_diameter,mm,3.20 mm,0.32000000000000006,M3 close-fit location hole.,True
+boss_geometry_m3_outer_diameter,mm,6.40 mm,0.6400000000000001,M3 boss OD — Voron standard. ~1.5 mm wall around clearance hole.,True
+hole_geometry_m4_screw_clearance_diameter,mm,4.50 mm,0.45,M4 bolt clearance through-hole. ISO M4 = 4.0 mm + 0.50 mm.,True
+hole_geometry_m4_close_fit_diameter,mm,4.20 mm,0.42000000000000004,M4 close-fit location hole.,True
+boss_geometry_m4_outer_diameter,mm,8.00 mm,0.8,"M4 boss OD — 2× screw diameter, ~1.75 mm wall.",True
+hole_geometry_m5_screw_clearance_diameter,mm,5.50 mm,0.55,M5 bolt clearance through-hole. ISO M5 = 5.0 mm + 0.50 mm.,True
+hole_geometry_m5_close_fit_diameter,mm,5.20 mm,0.52,M5 close-fit location hole.,True
+boss_geometry_m5_outer_diameter,mm,9.50 mm,0.9500000000000001,M5 boss OD.,True
+hole_geometry_m6_screw_clearance_diameter,mm,6.60 mm,0.66,M6 bolt clearance through-hole.,True
+hole_geometry_m6_close_fit_diameter,mm,6.20 mm,0.6200000000000001,M6 close-fit location hole.,True
+boss_geometry_m6_outer_diameter,mm,11.00 mm,1.1,M6 boss OD.,True
+heatset_insert_m2_recommended_hole_id,mm,3.20 mm,0.32000000000000006,M2 heat-set hole ID. ~98% of insert OD. Measure your batch.,True
+heatset_insert_m2_recess_depth,mm,3.20 mm,0.32000000000000006,M2 recess depth = insert length + 0.20 mm.,True
+heatset_insert_m3_recommended_hole_id,mm,4.40 mm,0.44000000000000006,M3 heat-set hole ID — Voron standard Ruthex M3×5×4 (OD=4.5 mm). 98% of OD.,True
+heatset_insert_m3_recess_depth,mm,4.20 mm,0.42000000000000004,M3 recess depth — 4.0 mm insert + 0.20 mm flush margin.,True
+heatset_insert_m3_boss_outer_diameter,mm,7.00 mm,0.7000000000000001,M3 heat-set boss OD — slightly larger than plain M3 boss to handle insert knurling pressure.,True
+heatset_insert_m4_recommended_hole_id,mm,5.40 mm,0.54,M4 heat-set hole ID (Ruthex RX-M4×6 OD≈5.6 mm). Always measure batch.,True
+heatset_insert_m4_recess_depth,mm,6.20 mm,0.6200000000000001,M4 recess depth = 6.0 mm insert + 0.20 mm.,True
+heatset_insert_m5_recommended_hole_id,mm,6.40 mm,0.6400000000000001,M5 heat-set hole ID. Verify OD of your specific insert brand.,True
+heatset_insert_install_temp_pla_celsius,,180,180.0,Soldering iron tip temp for PLA heat-set installation. Use a dedicated brass insert tip.,True
+heatset_insert_install_temp_petg_celsius,,220,220.0,Iron tip temp for PETG heat-set installation.,True
+heatset_insert_install_temp_abs_asa_celsius,,240,240.0,Iron tip temp for ABS/ASA heat-set installation.,True
+hardware_m2_button_head_iso7380_head_diameter,mm,3.80 mm,0.38,M2 button-head (ISO 7380) head OD.,True
+hardware_m2_button_head_iso7380_head_height,mm,0.90 mm,0.09000000000000001,M2 button-head head height.,True
+hardware_m2p5_button_head_iso7380_head_diameter,mm,4.70 mm,0.47000000000000003,M2.5 button-head head OD.,True
+hardware_m2p5_button_head_iso7380_head_height,mm,1.30 mm,0.13,M2.5 button-head head height.,True
+hardware_m3_button_head_iso7380_head_diameter,mm,5.70 mm,0.5700000000000001,M3 button-head head OD. Most common fastener in 3D printer assemblies.,True
+hardware_m3_button_head_iso7380_head_height,mm,1.65 mm,0.165,M3 button-head head height.,True
+hardware_m4_button_head_iso7380_head_diameter,mm,7.60 mm,0.76,M4 button-head head OD.,True
+hardware_m4_button_head_iso7380_head_height,mm,2.20 mm,0.22000000000000003,M4 button-head head height.,True
+hardware_m5_button_head_iso7380_head_diameter,mm,9.50 mm,0.9500000000000001,M5 button-head head OD.,True
+hardware_m5_button_head_iso7380_head_height,mm,2.75 mm,0.275,M5 button-head head height.,True
+hardware_m2_socket_cap_din912_head_diameter,mm,3.80 mm,0.38,M2 socket cap head (DIN 912) OD.,True
+hardware_m2_socket_cap_din912_head_height,mm,2.00 mm,0.2,M2 socket cap head height.,True
+hardware_m2p5_socket_cap_din912_head_diameter,mm,4.50 mm,0.45,M2.5 socket cap head OD.,True
+hardware_m2p5_socket_cap_din912_head_height,mm,2.50 mm,0.25,M2.5 socket cap head height.,True
+hardware_m3_socket_cap_din912_head_diameter,mm,5.50 mm,0.55,M3 socket cap head OD. Slightly narrower than button — useful where lateral clearance is tight.,True
+hardware_m3_socket_cap_din912_head_height,mm,3.00 mm,0.30000000000000004,M3 socket cap head height. Taller than button head — verify stack height in assemblies.,True
+hardware_m4_socket_cap_din912_head_diameter,mm,7.00 mm,0.7000000000000001,M4 socket cap head OD.,True
+hardware_m4_socket_cap_din912_head_height,mm,4.00 mm,0.4,M4 socket cap head height.,True
+hardware_m5_socket_cap_din912_head_diameter,mm,8.50 mm,0.8500000000000001,M5 socket cap head OD.,True
+hardware_m5_socket_cap_din912_head_height,mm,5.00 mm,0.5,M5 socket cap head height.,True
+hardware_m3_flat_head_din7991_head_diameter,mm,5.50 mm,0.55,M3 flat-head socket screw (DIN 7991 / ISO 10642) head OD.,True
+hardware_m3_flat_head_din7991_head_height,mm,1.70 mm,0.17,M3 flat-head head height (below flush surface).,True
+hardware_m4_flat_head_din7991_head_diameter,mm,7.00 mm,0.7000000000000001,M4 flat-head head OD.,True
+hardware_m5_flat_head_din7991_head_diameter,mm,8.50 mm,0.8500000000000001,M5 flat-head head OD.,True
+hardware_m2_hex_nut_iso4032_across_flats,mm,4.00 mm,0.4,M2 hex nut AF (ISO 4032).,True
+hardware_m2_hex_nut_iso4032_height,mm,1.60 mm,0.16000000000000003,M2 hex nut height.,True
+hardware_m2p5_hex_nut_iso4032_across_flats,mm,5.00 mm,0.5,M2.5 hex nut AF.,True
+hardware_m2p5_hex_nut_iso4032_height,mm,2.00 mm,0.2,M2.5 hex nut height.,True
+hardware_m3_hex_nut_iso4032_across_flats,mm,5.50 mm,0.55,M3 hex nut AF. Standard for Voron nut traps. FDM pocket: model at 5.70 mm.,True
+hardware_m3_hex_nut_iso4032_height,mm,2.40 mm,0.24,M3 hex nut height. FDM pocket depth: model at 2.60 mm.,True
+hardware_m4_hex_nut_iso4032_across_flats,mm,7.00 mm,0.7000000000000001,M4 hex nut AF.,True
+hardware_m4_hex_nut_iso4032_height,mm,3.20 mm,0.32000000000000006,M4 hex nut height.,True
+hardware_m5_hex_nut_iso4032_across_flats,mm,8.00 mm,0.8,M5 hex nut AF.,True
+hardware_m5_hex_nut_iso4032_height,mm,4.00 mm,0.4,M5 hex nut height.,True
+hardware_m3_square_nut_din557_width,mm,5.50 mm,0.55,M3 square nut (DIN 557) width. FDM trap: 5.70 mm slot.,True
+hardware_m3_square_nut_din557_height,mm,1.80 mm,0.18000000000000002,M3 square nut height. FDM trap depth: 2.00 mm.,True
+hardware_m4_square_nut_din557_width,mm,7.00 mm,0.7000000000000001,M4 square nut width.,True
+hardware_m4_square_nut_din557_height,mm,2.40 mm,0.24,M4 square nut height.,True
+hardware_m3_washer_iso7089_outer_diameter,mm,7.00 mm,0.7000000000000001,M3 flat washer OD (ISO 7089 normal series).,True
+hardware_m3_washer_iso7089_thickness,mm,0.50 mm,0.05,M3 flat washer thickness.,True
+hardware_m4_washer_iso7089_outer_diameter,mm,9.00 mm,0.9,M4 flat washer OD.,True
+hardware_m5_washer_iso7089_outer_diameter,mm,10.00 mm,1.0,M5 flat washer OD.,True
+hardware_dowel_pin_m3_nominal_diameter_h6,mm,3.00 mm,0.30000000000000004,"ISO 8734 dowel pin h6 class — 3 mm nominal. For precision alignment features. FDM receiver hole: 3.10–3.15 mm for clearance fit, or post-ream for press fit.",True
+hardware_dowel_pin_m4_nominal_diameter_h6,mm,4.00 mm,0.4,4 mm ISO dowel pin nominal diameter.,True
+hardware_dowel_pin_m5_nominal_diameter_h6,mm,5.00 mm,0.5,5 mm ISO dowel pin nominal diameter.,True
+hardware_dowel_pin_fdm_clearance_receiver_hole,mm,0.15 mm,0.015,"Add to dowel pin nominal diameter for a printed clearance receiver hole — part self-aligns but pin is not retained. For retention, drill and ream to H7.",True
+hardware_m3_hex_standoff_outer_diameter,mm,5.50 mm,0.55,M3 hex standoff OD — standard brass or aluminum spacers. Used for PCB mount boss sizing and clearance calculations.,True
+hardware_m2p5_hex_standoff_outer_diameter,mm,4.50 mm,0.45,M2.5 hex standoff OD.,True
+hardware_zip_tie_2p5mm_slot_width,mm,2.80 mm,0.27999999999999997,Standard 2.5 mm zip tie slot width with FDM clearance. For cable management routing channels.,True
+hardware_zip_tie_2p5mm_slot_thickness,mm,1.40 mm,0.13999999999999999,Standard 2.5 mm zip tie slot thickness with FDM clearance.,True
+hardware_zip_tie_3p5mm_slot_width,mm,3.80 mm,0.38,Standard 3.5 mm zip tie slot width with FDM clearance.,True
+hardware_zip_tie_3p5mm_slot_thickness,mm,2.00 mm,0.2,Standard 3.5 mm zip tie slot thickness with FDM clearance.,True
+nut_trap_m3_hex_pocket_across_flats_fdm,mm,5.70 mm,0.5700000000000001,M3 hex nut pocket AF for FDM. ISO = 5.50 mm + 0.20 mm clearance.,True
+nut_trap_m3_hex_pocket_depth_fdm,mm,2.60 mm,0.26,M3 hex nut pocket depth. ISO height 2.40 + 0.20 mm.,True
+nut_trap_m3_hex_circumscribed_diameter_fdm,mm,6.60 mm,0.66,M3 hex nut circumscribed circle + clearance for polygon-pocket method.,True
+nut_trap_m3_square_pocket_width_fdm,mm,5.70 mm,0.5700000000000001,M3 square nut pocket width. ISO 5.50 + 0.20 mm.,True
+nut_trap_m3_square_pocket_depth_fdm,mm,2.00 mm,0.2,M3 square nut pocket depth. ISO 1.80 + 0.20 mm.,True
+nut_trap_m4_hex_pocket_across_flats_fdm,mm,7.20 mm,0.7200000000000001,M4 hex nut pocket AF. ISO 7.00 + 0.20 mm.,True
+nut_trap_m4_hex_pocket_depth_fdm,mm,3.40 mm,0.34,M4 hex nut pocket depth. ISO 3.20 + 0.20 mm.,True
+nut_trap_m5_hex_pocket_across_flats_fdm,mm,8.20 mm,0.82,M5 hex nut pocket AF. ISO 8.00 + 0.20 mm.,True
+nut_trap_m5_hex_pocket_depth_fdm,mm,4.20 mm,0.42000000000000004,M5 hex nut pocket depth. ISO 4.00 + 0.20 mm.,True
+counterbore_m2_button_head_pocket_diameter,mm,4.20 mm,0.42000000000000004,M2 button-head counterbore dia. ISO head 3.80 + 0.40 mm FDM.,True
+counterbore_m2_button_head_pocket_depth,mm,1.20 mm,0.12,M2 button-head counterbore depth. ISO head 0.90 + 0.30 mm.,True
+counterbore_m2p5_button_head_pocket_diameter,mm,5.10 mm,0.51,M2.5 button-head counterbore dia. ISO head 4.70 + 0.40 mm.,True
+counterbore_m2p5_button_head_pocket_depth,mm,1.60 mm,0.16000000000000003,M2.5 button-head counterbore depth. ISO head 1.30 + 0.30 mm.,True
+counterbore_m3_button_head_pocket_diameter,mm,6.10 mm,0.61,M3 button-head counterbore dia. ISO head 5.70 + 0.40 mm. Voron standard.,True
+counterbore_m3_button_head_pocket_depth,mm,1.95 mm,0.195,M3 button-head counterbore depth. ISO head 1.65 + 0.30 mm.,True
+counterbore_m3_socket_cap_pocket_diameter,mm,5.90 mm,0.5900000000000001,M3 socket cap counterbore dia. ISO head 5.50 + 0.40 mm.,True
+counterbore_m3_socket_cap_pocket_depth,mm,3.30 mm,0.33,M3 socket cap counterbore depth. ISO head 3.00 + 0.30 mm.,True
+counterbore_m4_button_head_pocket_diameter,mm,8.00 mm,0.8,M4 button-head counterbore dia. ISO head 7.60 + 0.40 mm.,True
+counterbore_m4_button_head_pocket_depth,mm,2.50 mm,0.25,M4 button-head counterbore depth. ISO head 2.20 + 0.30 mm.,True
+counterbore_m5_button_head_pocket_diameter,mm,9.90 mm,0.9900000000000001,M5 button-head counterbore dia.,True
+countersink_metric_flat_head_angle_degrees,deg,90 deg,1.5707963267948966,ISO metric flat-head included angle. 90° — NOT 82° (that is inch/UNC).,True
+countersink_m3_flat_head_top_diameter,mm,6.00 mm,0.6000000000000001,M3 flat-head countersink top opening. ISO head 5.50 + 0.50 mm.,True
+countersink_m4_flat_head_top_diameter,mm,8.00 mm,0.8,M4 flat-head countersink top opening.,True
+thread_fdm_offset_face_per_flank_petg_abs,mm,-0.20 mm,-0.020000000000000004,Offset Face per thread flank for PETG/ABS printed threads. Apply to both bolt and nut/hole.,True
+thread_fdm_offset_face_per_flank_pla,mm,-0.15 mm,-0.015,Offset Face per flank for PLA. PLA prints tighter; slightly less clearance needed.,True
+thread_fdm_addon_tolerance_profile_petg,mm,0.50 mm,0.05,ISO Metric Thread Profile add-in tolerance for PETG/ABS. Sweet spot 0.40–0.60 mm.,True
+thread_fdm_addon_tolerance_profile_pla,mm,0.40 mm,0.04000000000000001,ISO Metric Thread Profile add-in tolerance for PLA.,True
+thread_iso_metric_pitch_m2,mm,0.40 mm,0.04000000000000001,M2 coarse thread pitch. Reference for thread tool.,True
+thread_iso_metric_pitch_m2p5,mm,0.45 mm,0.045000000000000005,M2.5 coarse thread pitch.,True
+thread_iso_metric_pitch_m3,mm,0.50 mm,0.05,M3 coarse thread pitch.,True
+thread_iso_metric_pitch_m4,mm,0.70 mm,0.06999999999999999,M4 coarse thread pitch.,True
+thread_iso_metric_pitch_m5,mm,0.80 mm,0.08000000000000002,M5 coarse thread pitch.,True
+thread_iso_metric_pitch_m6,mm,1.00 mm,0.1,M6 coarse thread pitch.,True
+wall_thickness_minimum_functional_2_perimeters,mm,2 * printer_accuracy_extrusion_line_width,0.09000000000000001,Minimum functional wall — 2 perimeters. Non-structural enclosures only.,True
+wall_thickness_recommended_structural_4_perims,mm,4 * printer_accuracy_extrusion_line_width,0.18000000000000002,Standard structural wall — 4 perimeters. Voron default for load-bearing features.,True
+wall_thickness_heavy_duty_6_perimeters,mm,6 * printer_accuracy_extrusion_line_width,0.27,"Heavy-duty — 6 perimeters. Motor mounts, idler towers, sustained dynamic loads.",True
+fillet_radius_minimum_internal_stress_relief,mm,printer_accuracy_standard_layer_height * 2,0.04000000000000001,Minimum internal fillet to prevent delamination. 2× layer height.,True
+fillet_radius_standard_external_cosmetic,mm,1.00 mm,0.1,Standard external edge fillet — aesthetics and chipping resistance.,True
+fillet_radius_large_structural_gusset,mm,3.00 mm,0.30000000000000004,"Large gusset fillet for high-stress junctions (toolhead arms, motor mounts).",True
+chamfer_depth_standard_45_degree,mm,0.50 mm,0.05,Standard 45° chamfer for edge breaking and hole lead-ins.,True
+chamfer_depth_lead_in_for_pin_insertion,mm,0.80 mm,0.08000000000000002,Larger lead-in chamfer for pin/shaft insertion guidance.,True
+overhang_maximum_angle_from_vertical_standard,deg,50 deg,0.8726646259971648,Max unsupported overhang from vertical on standard machines.,True
+overhang_maximum_angle_high_perf_cpap,deg,70 deg,1.2217304763960306,Max overhang with aggressive cooling (CPAP). K3 with SLM XY can reliably hit 65–70°.,True
+bridge_maximum_reliable_span_with_tuning,mm,60 mm,6.0,Max bridge span on well-tuned FDM at 30–60 mm/s bridging speed. Highly material-dependent.,True
+bridge_long_span_sag_z_compensation,mm,printer_accuracy_standard_layer_height * 2,0.04000000000000001,Z compensation for bridge sag on long spans — raise ceiling by this amount.,True
+magnet_disc_6x2mm_outer_diameter,mm,6.00 mm,0.6000000000000001,6×2 mm N52 neodymium disc magnet OD. Very common for panel clips and small latches.,True
+magnet_disc_6x2mm_height,mm,2.00 mm,0.2,6×2 mm magnet height.,True
+magnet_disc_6x3mm_outer_diameter,mm,6.00 mm,0.6000000000000001,6×3 mm disc magnet OD.,True
+magnet_disc_6x3mm_height,mm,3.00 mm,0.30000000000000004,6×3 mm disc magnet height.,True
+magnet_disc_8x2mm_outer_diameter,mm,8.00 mm,0.8,"8×2 mm N52 disc magnet OD. Common for toolhead docking (Tap, Klicky, etc.).",True
+magnet_disc_8x2mm_height,mm,2.00 mm,0.2,8×2 mm magnet height.,True
+magnet_disc_10x2mm_outer_diameter,mm,10.00 mm,1.0,10×2 mm N52 disc magnet OD. Common for enclosure door catches and panel latches.,True
+magnet_disc_10x2mm_height,mm,2.00 mm,0.2,10×2 mm magnet height.,True
+magnet_disc_10x3mm_outer_diameter,mm,10.00 mm,1.0,10×3 mm disc magnet OD.,True
+magnet_disc_10x3mm_height,mm,3.00 mm,0.30000000000000004,10×3 mm magnet height.,True
+magnet_pocket_press_fit_clearance_per_side,mm,-0.10 mm,-0.010000000000000002,Magnet pocket press-fit clearance per side. Model pocket SMALLER than magnet OD by this. Magnet will require a press — use a flat surface and tap gently.,True
+magnet_pocket_glue_gap_clearance_per_side,mm,0.15 mm,0.015,Magnet pocket clearance per side for CA/epoxy retention. Magnet drops in freely; adhesive fills the gap. Do not use press fit if gluing.,True
+magnet_pocket_depth_flush_recess,mm,0.20 mm,0.020000000000000004,Recess magnet below surface by this amount so it doesn't protrude. Protruding magnets interfere with flush mating surfaces.,True
+magnet_warhammer_base_transport_6x2_pocket_id,mm,6.10 mm,0.61,6×2 mm magnet pocket ID for Warhammer base transport trays — slight clearance for reliable drop-in placement with glue.,True
+motion_mgn7h_rail_nominal_width,mm,7.00 mm,0.7000000000000001,MGN7H linear rail nominal width. Lightweight option for low-mass toolheads.,True
+motion_mgn9h_rail_nominal_width,mm,9.00 mm,0.9,MGN9H rail nominal width.,True
+motion_mgn12h_rail_nominal_width,mm,12.00 mm,1.2000000000000002,MGN12H rail nominal width. Standard on V-Core 3.1 AWD Y and Z.,True
+motion_mgn15h_rail_nominal_width,mm,15.00 mm,1.5,MGN15H rail nominal width. Heavy-duty gantry / Z axes.,True
+motion_mgn12h_carriage_block_length,mm,45.00 mm,4.5,MGN12H H-type carriage block length. Used for toolhead plate sizing and hole pattern layout.,True
+motion_mgn12h_carriage_hole_pitch_along_rail,mm,20.00 mm,2.0,MGN12H carriage mounting hole pitch — along rail axis.,True
+motion_mgn12h_carriage_hole_pitch_across_rail,mm,20.00 mm,2.0,MGN12H carriage mounting hole pitch — perpendicular to rail axis.,True
+motion_mgn9h_carriage_hole_pitch_along_rail,mm,15.00 mm,1.5,MGN9H carriage mounting hole pitch along rail.,True
+motion_mgn9h_carriage_hole_pitch_across_rail,mm,10.00 mm,1.0,MGN9H carriage mounting hole pitch across rail.,True
+motion_gt2_belt_pitch,mm,2.00 mm,0.2,"GT2 / 3MGT belt tooth pitch. Standard for K3, V-Core, Voron.",True
+motion_gt2_belt_nominal_width,mm,6.00 mm,0.6000000000000001,GT2 / 3MGT belt nominal width.,True
+motion_gt2_belt_clamp_slot_extra_width,mm,0.20 mm,0.020000000000000004,Extra width in belt clamp slot for insertion and tensioning clearance.,True
+motion_gt2_pulley_16t_outer_diameter,mm,11.00 mm,1.1,GT2 16-tooth pulley OD (approximate). Verify per brand — varies ±0.3 mm.,True
+motion_gt2_pulley_20t_outer_diameter,mm,13.00 mm,1.3,GT2 20-tooth pulley OD (approximate). Most common idler/drive pulley size.,True
+motion_gt2_pulley_80t_outer_diameter,mm,51.00 mm,5.1000000000000005,GT2 80-tooth pulley OD. Used in some AWD / geared arrangements.,True
+motion_gt2_pulley_bore_standard_5mm_shaft,mm,5.00 mm,0.5,Standard GT2 pulley shaft bore — 5 mm. Add 0.05 mm clearance for FDM shaft receivers.,True
+motion_gt2_idler_bearing_od_f695,mm,13.00 mm,1.3,F695 flanged bearing OD — standard GT2 idler bearing in Voron/K3/V-Core.,True
+motion_gt2_idler_bearing_id_f695,mm,5.00 mm,0.5,F695 bearing ID — fits M5 shoulder bolt.,True
+motion_gt2_idler_bearing_width_f695,mm,4.00 mm,0.4,F695 bearing width.,True
+motion_nema17_motor_body_width,mm,42.30 mm,4.2299999999999995,NEMA17 motor body width (square). Standard across all NEMA17 motors.,True
+motion_nema17_motor_bolt_pattern_center_to_center,mm,31.00 mm,3.1,NEMA17 mounting bolt pattern — center to center (square pattern).,True
+motion_nema17_motor_bolt_size,mm,3.00 mm,0.30000000000000004,NEMA17 mounting bolt — M3. Model clearance holes at hole_geometry_m3_screw_clearance_diameter.,True
+motion_nema17_motor_shaft_diameter,mm,5.00 mm,0.5,NEMA17 output shaft diameter. Standard 5 mm.,True
+motion_nema17_motor_shaft_flat_depth,mm,0.50 mm,0.05,NEMA17 shaft D-flat depth. Used for set screw / grub screw engagement geometry.,True
+motion_nema17_motor_shaft_length_standard,mm,20.00 mm,2.0,"NEMA17 standard shaft length — 20 mm. Some variants: 22, 24 mm. Verify your specific motor.",True
+motion_nema17_motor_face_boss_diameter,mm,22.00 mm,2.2,NEMA17 front face centering boss diameter. Used for precision motor registration in mounts.,True
+motion_nema14_motor_body_width,mm,35.20 mm,3.5200000000000005,"NEMA14 motor body width — used in compact extruder motors (Orbiter, Sherpa Mini).",True
+motion_nema14_motor_bolt_pattern_center_to_center,mm,26.00 mm,2.6,NEMA14 mounting bolt pattern C-C.,True
+motion_nema14_motor_shaft_diameter,mm,5.00 mm,0.5,NEMA14 output shaft diameter.,True
+motion_vslot_2020_extrusion_width,mm,20.00 mm,2.0,2020 V-slot extrusion nominal width.,True
+motion_vslot_2040_extrusion_width,mm,40.00 mm,4.0,2040 extrusion nominal width.,True
+motion_tslot_m3_nut_slot_clearance_width,mm,5.70 mm,0.5700000000000001,M3 T-slot nut / hammerhead sliding width in 2020 extrusion. ISO slot = 5.50 + 0.20 mm clearance.,True
+motion_beacon_probe_body_outer_diameter,mm,12.00 mm,1.2000000000000002,Beacon eddy-current probe body OD. Used for mount bore and retention clip geometry.,True
+motion_beacon_probe_body_total_length,mm,20.50 mm,2.0500000000000003,Beacon probe body total length. Verify against your Beacon revision.,True
+motion_orbiter_v25_motor_mount_bolt_pattern,mm,26.00 mm,2.6,Orbiter v2.5 extruder mounting bolt pattern C-C (NEMA14 pattern).,True
+motion_orbiter_v25_filament_path_offset_from_mount,mm,15.00 mm,1.5,Orbiter v2.5 filament centerline offset from mount face. Used for toolhead geometry validation.,True
+motion_chube_hotend_collet_outer_diameter,mm,12.00 mm,1.2000000000000002,Chube Conduction hotend collet OD. Used for retention clip bore and mount pocket. Verify with your unit.,True
+motion_can_bus_cable_chain_slot_width,mm,10.00 mm,1.0,CAN bus toolhead umbilical cable chain slot minimum width. Accounts for cable bundle + connector bodies.,True
+motion_toolhead_carriage_plate_thickness_5mm,mm,5.00 mm,0.5,V-Core toolhead carriage CNC plate thickness — 5 mm 6061-T6 as used in Wishbone toolhead architecture.,True
+motion_toolhead_carriage_plate_thickness_4mm,mm,4.00 mm,0.4,K3 / secondary toolhead plate thickness — 4 mm 6061-T6.,True
+cnc_aluminum_6061_stock_plate_thickness_tolerance,mm,0.10 mm,0.010000000000000002,Mill tolerance on 6061-T6 stock plate thickness — typically ±0.05–0.10 mm. Account for this in stack height calculations when combining printed and machined parts.,True
+cnc_aluminum_drilled_hole_oversize,mm,0.05 mm,0.005000000000000001,"Drilled hole tolerance in aluminum — typically +0.05/−0.00 mm. For precision fits, always ream to H7 class after drilling.",True
+cnc_aluminum_reamed_hole_h7_tolerance_at_5mm,mm,0.012 mm,0.0012000000000000001,H7 reamed hole tolerance for a 5 mm hole — ±0.006 mm. Reference for press-fit dowel pins and bearing seats in 6061.,True
+cnc_aluminum_tap_drill_m2_diameter,mm,1.60 mm,0.16000000000000003,M2×0.4 tap drill diameter in aluminum — ISO standard pre-tap hole for ~75% thread engagement.,True
+cnc_aluminum_tap_drill_m2p5_diameter,mm,2.05 mm,0.205,M2.5×0.45 tap drill diameter in aluminum.,True
+cnc_aluminum_tap_drill_m3_diameter,mm,2.50 mm,0.25,M3×0.5 tap drill diameter in aluminum — standard for all M3 tapped holes in 6061 toolhead plates.,True
+cnc_aluminum_tap_drill_m4_diameter,mm,3.30 mm,0.33,M4×0.7 tap drill diameter in aluminum.,True
+cnc_aluminum_tap_drill_m5_diameter,mm,4.20 mm,0.42000000000000004,M5×0.8 tap drill diameter in aluminum.,True
+cnc_aluminum_tap_drill_m6_diameter,mm,5.00 mm,0.5,M6×1.0 tap drill diameter in aluminum.,True
+cnc_aluminum_thread_engagement_minimum_diameter_ratio,,1.50,1.5,Minimum thread engagement length = bolt_diameter × this ratio. M3 in 4 mm plate = 4.0 mm engagement > 1.5× = OK. Below 1× risks strip-out under load.,True
+cnc_aluminum_thread_engagement_recommended_ratio,,2.00,2.0,Recommended thread engagement for structural joints = 2× bolt diameter. M3 structural: 6 mm minimum engagement.,True
+cnc_aluminum_minimum_wall_for_tapped_hole,mm,3.00 mm,0.30000000000000004,Minimum material wall thickness surrounding a tapped hole in aluminum. Thinner risks thread pullout and wall blowout.,True
+cnc_aluminum_countersink_m3_flat_head_4mm_plate,mm,1.70 mm,0.17,Countersink depth for a flush M3 flat-head screw in a 4 mm plate. ISO M3 flat head height = 1.70 mm.,True
+cnc_aluminum_countersink_m3_flat_head_5mm_plate,mm,1.70 mm,0.17,Same countersink depth for 5 mm plate — flat head fully recessed with 3.30 mm of uncut material remaining.,True
+cnc_aluminum_pocket_depth_tolerance_typical_service,mm,0.05 mm,0.005000000000000001,Typical pocket depth tolerance achievable from most CNC services — ±0.05 mm. Tighter than this requires premium machining.,True
+cnc_aluminum_press_fit_pin_h7_in_6061_5mm,mm,4.994 mm,0.4994,5 mm H7 press-fit dowel hole in 6061 — nominal 5.000 mm −0.006 mm = 4.994 mm lower bound. Requires reaming.,True
+cnc_aluminum_6061_thermal_expansion_per_degree_c,,0.080,0.08,6061-T6 linear thermal expansion coefficient — ~23.6 µm/m/°C ≈ 0.08 µm/mm/°C. Relevant for chamber-heated assemblies where aluminum and plastic expand at different rates.,True
+material_pla_print_shrink_percent,,0.30,0.3,PLA linear shrinkage — approximately 0.2–0.4%. Typically accounted for by printer calibration. Reference for large parts.,True
+material_petg_print_shrink_percent,,0.30,0.3,PETG linear shrinkage — approximately 0.2–0.4%. Very similar to PLA; well-behaved.,True
+material_abs_print_shrink_percent,,0.60,0.6,ABS linear shrinkage — approximately 0.4–0.8%. Significantly more than PLA/PETG; chamber heating helps consistency.,True
+material_asa_print_shrink_percent,,0.50,0.5,ASA linear shrinkage — similar to ABS but slightly less. Preferred over ABS for UV resistance in external parts.,True
+material_abs_minimum_chamber_temp_celsius,,45,45.0,Minimum chamber temperature for reliable ABS/ASA inter-layer adhesion and warp resistance. 50–60°C is better for functional parts.,True
+material_pc_minimum_chamber_temp_celsius,,70,70.0,Minimum chamber temperature for reliable PC (polycarbonate) layer bonding. PC requires aggressive chamber heating.,True
+material_tpu_95a_shore_hardness,,95,95.0,"TPU 95A shore hardness — firm but flexible. Good for gaskets, bump stops, and strain reliefs where some flex is needed.",True
+material_tpu_85a_shore_hardness,,85,85.0,"TPU 85A — softer, more compliant. Useful for cable boots, vibration isolation feet.",True
+material_6061_fdm_diff_expansion_per_deg_c,,0.055,0.055,Differential thermal expansion between 6061-T6 aluminum and ABS/ASA per °C. Aluminum expands ~23.6 µm/m/°C; ABS ~90 µm/m/°C. Relevant for hybrid toolhead assemblies in heated chambers.,True
+electronics_m2p5_screw_clearance_hole,mm,2.90 mm,0.29,M2.5 bolt clearance through-hole — Raspberry Pi / SBC standard fastener. Model at this diameter.,True
+electronics_m2p5_hex_standoff_od,mm,4.50 mm,0.45,M2.5 hex standoff OD — standard brass spacer for SBC mounting. Used for boss sizing.,True
+electronics_raspberry_pi_4_5_mount_hole_pitch_x,mm,58.00 mm,5.800000000000001,Raspberry Pi 4 / Pi 5 mounting hole pitch — X axis (long side).,True
+electronics_raspberry_pi_4_5_mount_hole_pitch_y,mm,49.00 mm,4.9,Raspberry Pi 4 / Pi 5 mounting hole pitch — Y axis.,True
+electronics_raspberry_pi_board_width,mm,56.00 mm,5.6000000000000005,Raspberry Pi PCB width.,True
+electronics_raspberry_pi_board_length,mm,85.00 mm,8.5,Raspberry Pi PCB length.,True
+electronics_btt_octopus_mount_hole_pitch_x,mm,109.00 mm,10.9,BTT Octopus / Octopus Pro board mounting hole pitch — X.,True
+electronics_btt_octopus_mount_hole_pitch_y,mm,81.50 mm,8.15,BTT Octopus board mounting hole pitch — Y.,True
+electronics_btt_skr_mini_e3_mount_hole_pitch_x,mm,85.00 mm,8.5,BTT SKR Mini E3 V3 mounting hole pitch — X. BabyBelt Pro mainboard.,True
+electronics_btt_skr_mini_e3_mount_hole_pitch_y,mm,55.00 mm,5.5,BTT SKR Mini E3 V3 mounting hole pitch — Y.,True
+electronics_pcb_edge_clearance_to_wall_minimum,mm,2.00 mm,0.2,Minimum clearance from PCB edge to enclosure wall — allows for component overhang and manufacturing tolerance.,True
+electronics_din_rail_standard_width,mm,35.00 mm,3.5,Standard DIN EN 50022 rail width. Used for clip geometry in electrical panel and control box designs.,True
+electronics_din_rail_clip_engagement_depth,mm,5.00 mm,0.5,Typical DIN rail clip engagement depth for reliable snap-on retention.,True
+electronics_jst_xh_2p54_connector_body_width_2pin,mm,6.00 mm,0.6000000000000001,JST-XH 2-pin connector body width. 2.54 mm pitch. Used for cutout and slot sizing in terminal blocks.,True
+electronics_jst_xh_2p54_connector_body_height,mm,7.00 mm,0.7000000000000001,JST-XH connector body height.,True
+electronics_usb_a_panel_cutout_width,mm,14.00 mm,1.4000000000000001,Standard USB-A panel cutout width.,True
+electronics_usb_a_panel_cutout_height,mm,7.00 mm,0.7000000000000001,Standard USB-A panel cutout height.,True
+electronics_usb_c_panel_cutout_width,mm,10.00 mm,1.0,Standard USB-C panel cutout width.,True
+electronics_usb_c_panel_cutout_height,mm,4.50 mm,0.45,Standard USB-C panel cutout height.,True
+electronics_xt30_panel_cutout_diameter,mm,10.50 mm,1.05,XT30 connector panel cutout hole diameter. Used on 48V toolhead and Doomcube power distribution.,True
+electronics_xt60_panel_cutout_diameter,mm,12.00 mm,1.2000000000000002,XT60 connector panel cutout hole diameter.,True
+electronics_wago_221_lever_nut_body_width_2way,mm,11.00 mm,1.1,WAGO 221-412 (2-conductor) lever nut body width. For printed mounting clips and wire management blocks.,True
+electronics_wago_221_lever_nut_body_height,mm,16.00 mm,1.6,WAGO 221 lever nut body height.,True
+electronics_wago_221_lever_nut_body_depth,mm,14.00 mm,1.4000000000000001,WAGO 221 lever nut body depth.,True
+electronics_esp32_devkit_board_width,mm,28.00 mm,2.8000000000000003,ESP32 DevKit V1 PCB width. Common ESPHome BLE proxy board.,True
+electronics_esp32_devkit_board_length,mm,52.00 mm,5.2,ESP32 DevKit V1 PCB length.,True
+electronics_d1_mini_esp8266_board_width,mm,25.60 mm,2.5600000000000005,Wemos D1 Mini board width.,True
+electronics_d1_mini_esp8266_board_length,mm,34.20 mm,3.4200000000000004,Wemos D1 Mini board length.,True
+home_auto_us_single_gang_box_internal_width,mm,33.30 mm,3.33,Standard US single-gang electrical box internal width. Used for custom insert and bracket designs.,True
+home_auto_us_single_gang_box_internal_height,mm,44.45 mm,4.445,Standard US single-gang electrical box internal height.,True
+home_auto_us_decora_faceplate_cutout_width,mm,44.50 mm,4.45,Decora / paddle-style faceplate cutout width. For custom switch plates and smart home inserts.,True
+home_auto_us_decora_faceplate_cutout_height,mm,69.85 mm,6.984999999999999,Decora faceplate cutout height.,True
+home_auto_conduit_half_inch_knockout_diameter,mm,22.20 mm,2.22,½ inch conduit knockout diameter in standard US electrical boxes.,True
+home_auto_conduit_three_quarter_inch_knockout_dia,mm,27.80 mm,2.7800000000000002,¾ inch conduit knockout diameter.,True
+home_auto_sonoff_zbdongle_p_body_width,mm,20.00 mm,2.0,Sonoff Zigbee Dongle Plus body width — for printed mount and bracket design.,True
+home_auto_sonoff_zbdongle_p_body_length,mm,75.00 mm,7.5,Sonoff Zigbee Dongle Plus body length.,True
+foam_dart_half_dart_body_outer_diameter,mm,13.00 mm,1.3,Half-dart body outer diameter standard. Base reference for barrel and breech clearances.,True
+foam_dart_half_dart_tip_outer_diameter,mm,13.00 mm,1.3,Half-dart foam tip OD — approximately same as body for most half-dart designs.,True
+foam_dart_half_dart_body_length,mm,36.00 mm,3.6,Standard half-dart overall length.,True
+foam_dart_full_dart_body_outer_diameter,mm,11.50 mm,1.1500000000000001,Full-dart foam body OD — narrower than tip.,True
+foam_dart_full_dart_tip_outer_diameter,mm,13.00 mm,1.3,Full-dart foam tip OD.,True
+foam_dart_full_dart_overall_length,mm,72.00 mm,7.2,Standard full-dart overall length.,True
+foam_dart_barrel_bore_half_dart_performance,mm,13.20 mm,1.32,Half-dart barrel bore for performance — tight for good seal and range. +0.20 mm over dart OD.,True
+foam_dart_barrel_bore_half_dart_slam_fire,mm,13.70 mm,1.37,Half-dart barrel bore for slam-fire / rapid cycling — loose enough for reliable feeding under fast operation.,True
+foam_dart_flywheel_gap_half_dart_standard,mm,9.00 mm,0.9,Flywheel gap for half-dart at standard wheel OD. Tune 8.5–9.5 mm depending on wheel OD and dart compression preference.,True
+foam_dart_flywheel_motor_can_worker_artifact_od,mm,22.10 mm,2.2100000000000004,Worker / Artifact 130/180-size flywheel motor can OD — for motor cage bore sizing. Verify per motor brand.,True
+foam_dart_spring_guide_rod_diameter_standard,mm,4.00 mm,0.4,Standard spring guide rod diameter — 4 mm for most semi-auto plunger designs. 5 mm for high-draw builds.,True
+foam_dart_plunger_tube_id_19mm,mm,19.00 mm,1.9000000000000001,Small plunger tube ID — 19 mm PVC / CPVC. Common in compact semi-auto designs.,True
+foam_dart_plunger_tube_id_25mm,mm,25.00 mm,2.5,Large plunger tube ID — 25 mm PVC. Common in high-volume springers.,True
+foam_dart_plunger_tube_wall_thickness,mm,2.00 mm,0.2,Standard PVC plunger tube wall thickness. Used for outer diameter calc: OD = ID + 2× wall.,True
+warhammer_base_25mm_outer_diameter,mm,25.00 mm,2.5,25 mm round base OD — legacy infantry standard. Tight clearance slot: 25.30 mm.,True
+warhammer_base_32mm_outer_diameter,mm,32.00 mm,3.2,32 mm round base OD — current infantry standard. Tight clearance slot: 32.30 mm.,True
+warhammer_base_40mm_outer_diameter,mm,40.00 mm,4.0,"40 mm round base OD — heavy infantry, small cavalry, some vehicles.",True
+warhammer_base_50mm_outer_diameter,mm,50.00 mm,5.0,"50 mm round base OD — large infantry, medium cavalry.",True
+warhammer_base_60mm_outer_diameter,mm,60.00 mm,6.0,"60 mm round base OD — large monsters, heavy cavalry.",True
+warhammer_base_slot_clearance_fdm,mm,0.30 mm,0.03,FDM clearance to add to base OD for tray / rack slot — base drops in freely without binding.,True
+warhammer_base_height_standard,mm,3.00 mm,0.30000000000000004,Standard Citadel round base height — approximately 3 mm. Verify with your base batch.,True
+warhammer_flying_stand_post_diameter,mm,3.00 mm,0.30000000000000004,Standard GW flying base post rod diameter — 3 mm. Clearance hole in model: 3.20 mm.,True
+warhammer_flying_stand_post_clearance_hole,mm,3.20 mm,0.32000000000000006,Flying base post clearance hole — 3 mm post + 0.20 mm FDM.,True
+warhammer_magnetization_base_6x2mm_pocket_id,mm,6.10 mm,0.61,6×2 mm magnet pocket ID for base magnetization (transport tray use). Slight clearance for glue-in.,True
+warhammer_magnetization_base_6x2mm_pocket_depth,mm,2.10 mm,0.21000000000000002,6×2 mm magnet pocket depth — 2.0 mm magnet + 0.10 mm for glue / flush margin.,True
+warhammer_terrain_wall_thickness_minimum_rigid,mm,3.00 mm,0.30000000000000004,Minimum FDM terrain wall thickness for rigid scatter terrain — thin terrain flexes and delaminates under play.,True
+warhammer_terrain_wall_thickness_structural_building,mm,4.00 mm,0.4,Recommended wall thickness for structural terrain buildings — 4 mm provides good rigidity at tabletop scale.,True
+warhammer_kill_team_tile_standard_size,mm,200.00 mm,20.0,Kill Team game board tile standard size — 200 × 200 mm. Used for modular terrain planning.,True
+drill_imperial_fractional_1_64_inch_diameter_mm,mm,0.397 mm,0.039700000000000006,"1/64"" drill bit = 0.397 mm exactly. Nearest stocked metric: 0.4 mm. Smallest common fractional bit. Pilot for #0-#1 screws, fine detail work.",True
+drill_imperial_fractional_1_32_inch_diameter_mm,mm,0.794 mm,0.07940000000000001,"1/32"" drill bit = 0.794 mm exactly. Nearest stocked metric: 0.8 mm. Pilot for #1-#2 screws in softwood.",True
+drill_imperial_fractional_3_64_inch_diameter_mm,mm,1.191 mm,0.11910000000000001,"3/64"" drill bit = 1.191 mm exactly. Nearest stocked metric: 1.2 mm. Pilot for #2-#3 screws in hardwood.",True
+drill_imperial_fractional_1_16_inch_diameter_mm,mm,1.587 mm,0.1587,"1/16"" drill bit = 1.587 mm exactly. Nearest stocked metric: 1.6 mm. Pilot for #2-#3 screws in softwood; #3-#4 in hardwood. Common starter size.",True
+drill_imperial_fractional_5_64_inch_diameter_mm,mm,1.984 mm,0.19840000000000002,"5/64"" drill bit = 1.984 mm exactly. Nearest stocked metric: 2.0 mm. Pilot for #4 screws in hardwood; #5 in softwood.",True
+drill_imperial_fractional_3_32_inch_diameter_mm,mm,2.381 mm,0.23810000000000003,"3/32"" drill bit = 2.381 mm exactly. Nearest stocked metric: 2.4 mm. Pilot for #4-#5 in softwood; #6 in hardwood. Very common size.",True
+drill_imperial_fractional_7_64_inch_diameter_mm,mm,2.778 mm,0.2778,"7/64"" drill bit = 2.778 mm exactly. Nearest stocked metric: 2.8 mm. Pilot for #6 in softwood; #8 in hardwood. Extremely common.",True
+drill_imperial_fractional_1_8_inch_diameter_mm,mm,3.175 mm,0.3175,"1/8"" drill bit = 3.175 mm exactly. Nearest stocked metric: 3.2 mm. Pilot for #8 in softwood; #10 in hardwood. Most-used general pilot bit.",True
+drill_imperial_fractional_9_64_inch_diameter_mm,mm,3.572 mm,0.3572,"9/64"" drill bit = 3.572 mm exactly. Nearest stocked metric: 3.6 mm. Pilot for #10 in hardwood; clearance for #6.",True
+drill_imperial_fractional_5_32_inch_diameter_mm,mm,3.969 mm,0.39690000000000003,"5/32"" drill bit = 3.969 mm exactly. Nearest stocked metric: 4.0 mm. Clearance for #8; pilot for #10-#12 in softwood.",True
+drill_imperial_fractional_11_64_inch_diameter_mm,mm,4.366 mm,0.4366,"11/64"" drill bit = 4.366 mm exactly. Nearest stocked metric: 4.4 mm. Pilot for #12 in hardwood.",True
+drill_imperial_fractional_3_16_inch_diameter_mm,mm,4.762 mm,0.47620000000000007,"3/16"" drill bit = 4.762 mm exactly. Nearest stocked metric: 4.8 mm. Clearance for #10; pilot for #14 in softwood; M4 clearance equivalent.",True
+drill_imperial_fractional_13_64_inch_diameter_mm,mm,5.159 mm,0.5159,"13/64"" drill bit = 5.159 mm exactly. Nearest stocked metric: 5.2 mm. Pilot for #14 in hardwood; lag bolt pilot (1/4in) in softwood.",True
+drill_imperial_fractional_7_32_inch_diameter_mm,mm,5.556 mm,0.5556,"7/32"" drill bit = 5.556 mm exactly. Nearest stocked metric: 5.6 mm. Clearance for #12; pilot for 1/4in lag bolt.",True
+drill_imperial_fractional_15_64_inch_diameter_mm,mm,5.953 mm,0.5953,"15/64"" drill bit = 5.953 mm exactly. Nearest stocked metric: 6.0 mm. Pilot for 1/4in lag bolt in hardwood.",True
+drill_imperial_fractional_1_4_inch_diameter_mm,mm,6.35 mm,0.635,"1/4"" drill bit = 6.35 mm exactly. Nearest stocked metric: 6.3 mm. Clearance for #14; pilot for 5/16in lag bolt. Dowel/rod reference.",True
+drill_imperial_fractional_17_64_inch_diameter_mm,mm,6.747 mm,0.6747000000000001,"17/64"" drill bit = 6.747 mm exactly. Nearest stocked metric: 6.7 mm. Standard fractional drill bit 17/64 inch.",True
+drill_imperial_fractional_9_32_inch_diameter_mm,mm,7.144 mm,0.7144,"9/32"" drill bit = 7.144 mm exactly. Nearest stocked metric: 7.1 mm. Pilot for 5/16in lag bolt; clearance for #16.",True
+drill_imperial_fractional_19_64_inch_diameter_mm,mm,7.541 mm,0.7541000000000001,"19/64"" drill bit = 7.541 mm exactly. Nearest stocked metric: 7.5 mm. Standard fractional drill bit 19/64 inch.",True
+drill_imperial_fractional_5_16_inch_diameter_mm,mm,7.938 mm,0.7938000000000001,"5/16"" drill bit = 7.938 mm exactly. Nearest stocked metric: 7.9 mm. Clearance for 1/4in bolts; pilot for 3/8in lag bolt.",True
+drill_imperial_fractional_21_64_inch_diameter_mm,mm,8.334 mm,0.8334,"21/64"" drill bit = 8.334 mm exactly. Nearest stocked metric: 8.3 mm. Standard fractional drill bit 21/64 inch.",True
+drill_imperial_fractional_11_32_inch_diameter_mm,mm,8.731 mm,0.8731,"11/32"" drill bit = 8.731 mm exactly. Nearest stocked metric: 8.7 mm. Standard fractional drill bit 11/32 inch.",True
+drill_imperial_fractional_23_64_inch_diameter_mm,mm,9.128 mm,0.9128000000000001,"23/64"" drill bit = 9.128 mm exactly. Nearest stocked metric: 9.1 mm. Standard fractional drill bit 23/64 inch.",True
+drill_imperial_fractional_3_8_inch_diameter_mm,mm,9.525 mm,0.9525000000000001,"3/8"" drill bit = 9.525 mm exactly. Nearest stocked metric: 9.5 mm. Clearance for 5/16in bolts; large anchor pilot holes.",True
+drill_imperial_fractional_25_64_inch_diameter_mm,mm,9.922 mm,0.9922000000000001,"25/64"" drill bit = 9.922 mm exactly. Nearest stocked metric: 9.9 mm. Standard fractional drill bit 25/64 inch.",True
+drill_imperial_fractional_13_32_inch_diameter_mm,mm,10.319 mm,1.0319,"13/32"" drill bit = 10.319 mm exactly. Nearest stocked metric: 10.3 mm. Standard fractional drill bit 13/32 inch.",True
+drill_imperial_fractional_27_64_inch_diameter_mm,mm,10.716 mm,1.0715999999999999,"27/64"" drill bit = 10.716 mm exactly. Nearest stocked metric: 10.7 mm. Standard fractional drill bit 27/64 inch.",True
+drill_imperial_fractional_7_16_inch_diameter_mm,mm,11.112 mm,1.1112,"7/16"" drill bit = 11.112 mm exactly. Nearest stocked metric: 11.1 mm. Clearance for 3/8in bolts.",True
+drill_imperial_fractional_29_64_inch_diameter_mm,mm,11.509 mm,1.1509,"29/64"" drill bit = 11.509 mm exactly. Nearest stocked metric: 11.5 mm. Standard fractional drill bit 29/64 inch.",True
+drill_imperial_fractional_15_32_inch_diameter_mm,mm,11.906 mm,1.1906,"15/32"" drill bit = 11.906 mm exactly. Nearest stocked metric: 11.9 mm. Standard fractional drill bit 15/32 inch.",True
+drill_imperial_fractional_31_64_inch_diameter_mm,mm,12.303 mm,1.2303000000000002,"31/64"" drill bit = 12.303 mm exactly. Nearest stocked metric: 12.3 mm. Standard fractional drill bit 31/64 inch.",True
+drill_imperial_fractional_1_2_inch_diameter_mm,mm,12.7 mm,1.27,"1/2"" drill bit = 12.7 mm exactly. Nearest stocked metric: 12.7 mm. Clearance for 7/16in bolts; lock/hinge mortise reference.",True
+drill_imperial_fractional_33_64_inch_diameter_mm,mm,13.097 mm,1.3097,"33/64"" drill bit = 13.097 mm exactly. Nearest stocked metric: 13.1 mm. Standard fractional drill bit 33/64 inch.",True
+drill_imperial_fractional_17_32_inch_diameter_mm,mm,13.494 mm,1.3494000000000002,"17/32"" drill bit = 13.494 mm exactly. Nearest stocked metric: 13.5 mm. Standard fractional drill bit 17/32 inch.",True
+drill_imperial_fractional_35_64_inch_diameter_mm,mm,13.891 mm,1.3891,"35/64"" drill bit = 13.891 mm exactly. Nearest stocked metric: 13.9 mm. Standard fractional drill bit 35/64 inch.",True
+drill_imperial_fractional_9_16_inch_diameter_mm,mm,14.287 mm,1.4287,"9/16"" drill bit = 14.287 mm exactly. Nearest stocked metric: 14.3 mm. Clearance for 1/2in bolts.",True
+drill_imperial_fractional_37_64_inch_diameter_mm,mm,14.684 mm,1.4684,"37/64"" drill bit = 14.684 mm exactly. Nearest stocked metric: 14.7 mm. Standard fractional drill bit 37/64 inch.",True
+drill_imperial_fractional_19_32_inch_diameter_mm,mm,15.081 mm,1.5081,"19/32"" drill bit = 15.081 mm exactly. Nearest stocked metric: 15.1 mm. Standard fractional drill bit 19/32 inch.",True
+drill_imperial_fractional_39_64_inch_diameter_mm,mm,15.478 mm,1.5478,"39/64"" drill bit = 15.478 mm exactly. Nearest stocked metric: 15.5 mm. Standard fractional drill bit 39/64 inch.",True
+drill_imperial_fractional_5_8_inch_diameter_mm,mm,15.875 mm,1.5875000000000001,"5/8"" drill bit = 15.875 mm exactly. Nearest stocked metric: 15.9 mm. Large anchor and clearance work.",True
+drill_imperial_fractional_41_64_inch_diameter_mm,mm,16.272 mm,1.6272,"41/64"" drill bit = 16.272 mm exactly. Nearest stocked metric: 16.3 mm. Standard fractional drill bit 41/64 inch.",True
+drill_imperial_fractional_21_32_inch_diameter_mm,mm,16.669 mm,1.6669,"21/32"" drill bit = 16.669 mm exactly. Nearest stocked metric: 16.7 mm. Standard fractional drill bit 21/32 inch.",True
+drill_imperial_fractional_43_64_inch_diameter_mm,mm,17.066 mm,1.7066,"43/64"" drill bit = 17.066 mm exactly. Nearest stocked metric: 17.1 mm. Standard fractional drill bit 43/64 inch.",True
+drill_imperial_fractional_11_16_inch_diameter_mm,mm,17.462 mm,1.7462,"11/16"" drill bit = 17.462 mm exactly. Nearest stocked metric: 17.5 mm. Clearance for 5/8in bolts.",True
+drill_imperial_fractional_45_64_inch_diameter_mm,mm,17.859 mm,1.7859000000000003,"45/64"" drill bit = 17.859 mm exactly. Nearest stocked metric: 17.9 mm. Standard fractional drill bit 45/64 inch.",True
+drill_imperial_fractional_23_32_inch_diameter_mm,mm,18.256 mm,1.8256000000000001,"23/32"" drill bit = 18.256 mm exactly. Nearest stocked metric: 18.3 mm. Standard fractional drill bit 23/32 inch.",True
+drill_imperial_fractional_47_64_inch_diameter_mm,mm,18.653 mm,1.8653,"47/64"" drill bit = 18.653 mm exactly. Nearest stocked metric: 18.7 mm. Standard fractional drill bit 47/64 inch.",True
+drill_imperial_fractional_3_4_inch_diameter_mm,mm,19.05 mm,1.9050000000000002,"3/4"" drill bit = 19.05 mm exactly. Nearest stocked metric: 19.0 mm. Large clearance and boring work; common Forstner reference.",True
+drill_imperial_fractional_49_64_inch_diameter_mm,mm,19.447 mm,1.9447,"49/64"" drill bit = 19.447 mm exactly. Nearest stocked metric: 19.4 mm. Standard fractional drill bit 49/64 inch.",True
+drill_imperial_fractional_25_32_inch_diameter_mm,mm,19.844 mm,1.9844000000000002,"25/32"" drill bit = 19.844 mm exactly. Nearest stocked metric: 19.8 mm. Standard fractional drill bit 25/32 inch.",True
+drill_imperial_fractional_51_64_inch_diameter_mm,mm,20.241 mm,2.0241000000000002,"51/64"" drill bit = 20.241 mm exactly. Nearest stocked metric: 20.2 mm. Standard fractional drill bit 51/64 inch.",True
+drill_imperial_fractional_13_16_inch_diameter_mm,mm,20.637 mm,2.0637000000000003,"13/16"" drill bit = 20.637 mm exactly. Nearest stocked metric: 20.6 mm. Standard fractional drill bit 13/16 inch.",True
+drill_imperial_fractional_53_64_inch_diameter_mm,mm,21.034 mm,2.1034,"53/64"" drill bit = 21.034 mm exactly. Nearest stocked metric: 21.0 mm. Standard fractional drill bit 53/64 inch.",True
+drill_imperial_fractional_27_32_inch_diameter_mm,mm,21.431 mm,2.1431,"27/32"" drill bit = 21.431 mm exactly. Nearest stocked metric: 21.4 mm. Standard fractional drill bit 27/32 inch.",True
+drill_imperial_fractional_55_64_inch_diameter_mm,mm,21.828 mm,2.1828,"55/64"" drill bit = 21.828 mm exactly. Nearest stocked metric: 21.8 mm. Standard fractional drill bit 55/64 inch.",True
+drill_imperial_fractional_7_8_inch_diameter_mm,mm,22.225 mm,2.2225,"7/8"" drill bit = 22.225 mm exactly. Nearest stocked metric: 22.2 mm. Large boring; clearance for 3/4in bolts.",True
+drill_imperial_fractional_57_64_inch_diameter_mm,mm,22.622 mm,2.2622,"57/64"" drill bit = 22.622 mm exactly. Nearest stocked metric: 22.6 mm. Standard fractional drill bit 57/64 inch.",True
+drill_imperial_fractional_29_32_inch_diameter_mm,mm,23.019 mm,2.3019,"29/32"" drill bit = 23.019 mm exactly. Nearest stocked metric: 23.0 mm. Standard fractional drill bit 29/32 inch.",True
+drill_imperial_fractional_59_64_inch_diameter_mm,mm,23.416 mm,2.3416,"59/64"" drill bit = 23.416 mm exactly. Nearest stocked metric: 23.4 mm. Standard fractional drill bit 59/64 inch.",True
+drill_imperial_fractional_15_16_inch_diameter_mm,mm,23.812 mm,2.3812,"15/16"" drill bit = 23.812 mm exactly. Nearest stocked metric: 23.8 mm. Standard fractional drill bit 15/16 inch.",True
+drill_imperial_fractional_61_64_inch_diameter_mm,mm,24.209 mm,2.4209,"61/64"" drill bit = 24.209 mm exactly. Nearest stocked metric: 24.2 mm. Standard fractional drill bit 61/64 inch.",True
+drill_imperial_fractional_31_32_inch_diameter_mm,mm,24.606 mm,2.4606000000000003,"31/32"" drill bit = 24.606 mm exactly. Nearest stocked metric: 24.6 mm. Standard fractional drill bit 31/32 inch.",True
+drill_imperial_fractional_63_64_inch_diameter_mm,mm,25.003 mm,2.5003,"63/64"" drill bit = 25.003 mm exactly. Nearest stocked metric: 25.0 mm. Standard fractional drill bit 63/64 inch.",True
+drill_imperial_fractional_1_1_inch_diameter_mm,mm,25.4 mm,2.54,"1/1"" drill bit = 25.4 mm exactly. Nearest stocked metric: 25.4 mm. Full 1 inch — large boring, lock cylinders, pipe holes.",True
+woodscrew_gauge_00_major_diameter_mm,mm,1.52 mm,0.15200000000000002,"#0 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (0×0.013) = 0.06"". Tiny - electronics, fine woodwork.",True
+woodscrew_gauge_00_pilot_hole_softwood_mm,mm,1.2 mm,0.12,"#0 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Tiny - electronics, fine woodwork.",True
+woodscrew_gauge_00_pilot_hole_hardwood_mm,mm,1.4 mm,0.13999999999999999,"#0 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Tiny - electronics, fine woodwork.",True
+woodscrew_gauge_00_clearance_hole_top_board_mm,mm,1.8 mm,0.18000000000000002,#0 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_01_major_diameter_mm,mm,1.85 mm,0.18500000000000003,"#1 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (1×0.013) = 0.073"". Jewelry boxes, small hinges.",True
+woodscrew_gauge_01_pilot_hole_softwood_mm,mm,1.4 mm,0.13999999999999999,"#1 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Jewelry boxes, small hinges.",True
+woodscrew_gauge_01_pilot_hole_hardwood_mm,mm,1.6 mm,0.16000000000000003,"#1 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Jewelry boxes, small hinges.",True
+woodscrew_gauge_01_clearance_hole_top_board_mm,mm,2.1 mm,0.21000000000000002,#1 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_02_major_diameter_mm,mm,2.18 mm,0.21800000000000003,"#2 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (2×0.013) = 0.086"". Cabinet hardware, thin stock. TPI=32.",True
+woodscrew_gauge_02_pilot_hole_softwood_mm,mm,1.5 mm,0.15000000000000002,"#2 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Cabinet hardware, thin stock.",True
+woodscrew_gauge_02_pilot_hole_hardwood_mm,mm,1.8 mm,0.18000000000000002,"#2 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Cabinet hardware, thin stock.",True
+woodscrew_gauge_02_clearance_hole_top_board_mm,mm,2.4 mm,0.24,#2 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_02_countersink_flat_head_diameter_mm,mm,6.4 mm,0.6400000000000001,#2 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_03_major_diameter_mm,mm,2.51 mm,0.251,"#3 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (3×0.013) = 0.099"". Light joinery. TPI=28.",True
+woodscrew_gauge_03_pilot_hole_softwood_mm,mm,1.6 mm,0.16000000000000003,"#3 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light joinery.",True
+woodscrew_gauge_03_pilot_hole_hardwood_mm,mm,2.0 mm,0.2,"#3 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light joinery.",True
+woodscrew_gauge_03_clearance_hole_top_board_mm,mm,2.7 mm,0.27,#3 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_03_countersink_flat_head_diameter_mm,mm,6.4 mm,0.6400000000000001,#3 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_04_major_diameter_mm,mm,2.84 mm,0.284,"#4 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (4×0.013) = 0.112"". Small hinges, cabinet doors, thin plywood. TPI=24.",True
+woodscrew_gauge_04_pilot_hole_softwood_mm,mm,1.8 mm,0.18000000000000002,"#4 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Small hinges, cabinet doors, thin plywood.",True
+woodscrew_gauge_04_pilot_hole_hardwood_mm,mm,2.2 mm,0.22000000000000003,"#4 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Small hinges, cabinet doors, thin plywood.",True
+woodscrew_gauge_04_clearance_hole_top_board_mm,mm,3.0 mm,0.30000000000000004,#4 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_04_countersink_flat_head_diameter_mm,mm,6.4 mm,0.6400000000000001,#4 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_05_major_diameter_mm,mm,3.17 mm,0.317,"#5 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (5×0.013) = 0.125"". Light woodwork. TPI=20.",True
+woodscrew_gauge_05_pilot_hole_softwood_mm,mm,2.0 mm,0.2,"#5 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light woodwork.",True
+woodscrew_gauge_05_pilot_hole_hardwood_mm,mm,2.4 mm,0.24,"#5 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light woodwork.",True
+woodscrew_gauge_05_clearance_hole_top_board_mm,mm,3.4 mm,0.34,#5 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_05_countersink_flat_head_diameter_mm,mm,7.1 mm,0.71,#5 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_06_major_diameter_mm,mm,3.51 mm,0.351,"#6 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (6×0.013) = 0.138"". Face frames, drawer boxes, cabinetry - common. TPI=18.",True
+woodscrew_gauge_06_pilot_hole_softwood_mm,mm,2.2 mm,0.22000000000000003,"#6 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Face frames, drawer boxes, cabinetry - common.",True
+woodscrew_gauge_06_pilot_hole_hardwood_mm,mm,2.8 mm,0.27999999999999997,"#6 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Face frames, drawer boxes, cabinetry - common.",True
+woodscrew_gauge_06_clearance_hole_top_board_mm,mm,3.6 mm,0.36000000000000004,#6 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_06_countersink_flat_head_diameter_mm,mm,7.1 mm,0.71,#6 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_07_major_diameter_mm,mm,3.84 mm,0.384,"#7 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (7×0.013) = 0.151"". Medium joinery. TPI=16.",True
+woodscrew_gauge_07_pilot_hole_softwood_mm,mm,2.4 mm,0.24,"#7 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Medium joinery.",True
+woodscrew_gauge_07_pilot_hole_hardwood_mm,mm,3.0 mm,0.30000000000000004,"#7 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Medium joinery.",True
+woodscrew_gauge_07_clearance_hole_top_board_mm,mm,4.0 mm,0.4,#7 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_07_countersink_flat_head_diameter_mm,mm,8.7 mm,0.87,#7 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_08_major_diameter_mm,mm,4.17 mm,0.41700000000000004,"#8 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (8×0.013) = 0.164"". MOST COMMON - furniture, general woodwork, shelving. TPI=15.",True
+woodscrew_gauge_08_pilot_hole_softwood_mm,mm,2.8 mm,0.27999999999999997,"#8 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. MOST COMMON - furniture, general woodwork, shelving.",True
+woodscrew_gauge_08_pilot_hole_hardwood_mm,mm,3.2 mm,0.32000000000000006,"#8 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. MOST COMMON - furniture, general woodwork, shelving.",True
+woodscrew_gauge_08_clearance_hole_top_board_mm,mm,4.4 mm,0.44000000000000006,#8 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_08_countersink_flat_head_diameter_mm,mm,8.7 mm,0.87,#8 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_09_major_diameter_mm,mm,4.5 mm,0.45,"#9 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (9×0.013) = 0.177"". Heavy furniture. TPI=14.",True
+woodscrew_gauge_09_pilot_hole_softwood_mm,mm,3.0 mm,0.30000000000000004,"#9 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy furniture.",True
+woodscrew_gauge_09_pilot_hole_hardwood_mm,mm,3.4 mm,0.34,"#9 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy furniture.",True
+woodscrew_gauge_09_clearance_hole_top_board_mm,mm,4.8 mm,0.48,#9 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_09_countersink_flat_head_diameter_mm,mm,9.5 mm,0.9500000000000001,#9 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_10_major_diameter_mm,mm,4.83 mm,0.48300000000000004,"#10 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (10×0.013) = 0.19"". Structural, decking, outdoor joinery - very common. TPI=13.",True
+woodscrew_gauge_10_pilot_hole_softwood_mm,mm,3.2 mm,0.32000000000000006,"#10 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural, decking, outdoor joinery - very common.",True
+woodscrew_gauge_10_pilot_hole_hardwood_mm,mm,3.6 mm,0.36000000000000004,"#10 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural, decking, outdoor joinery - very common.",True
+woodscrew_gauge_10_clearance_hole_top_board_mm,mm,5.2 mm,0.52,#10 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_10_countersink_flat_head_diameter_mm,mm,11.1 mm,1.11,#10 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_11_major_diameter_mm,mm,5.16 mm,0.516,"#11 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (11×0.013) = 0.203"". Heavy structural. TPI=12.",True
+woodscrew_gauge_11_pilot_hole_softwood_mm,mm,3.4 mm,0.34,"#11 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy structural.",True
+woodscrew_gauge_11_pilot_hole_hardwood_mm,mm,4.0 mm,0.4,"#11 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy structural.",True
+woodscrew_gauge_11_clearance_hole_top_board_mm,mm,5.5 mm,0.55,#11 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_11_countersink_flat_head_diameter_mm,mm,11.1 mm,1.11,#11 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_12_major_diameter_mm,mm,5.49 mm,0.549,"#12 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (12×0.013) = 0.216"". Heavy construction, door hanging. TPI=11.",True
+woodscrew_gauge_12_pilot_hole_softwood_mm,mm,3.6 mm,0.36000000000000004,"#12 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy construction, door hanging.",True
+woodscrew_gauge_12_pilot_hole_hardwood_mm,mm,4.4 mm,0.44000000000000006,"#12 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy construction, door hanging.",True
+woodscrew_gauge_12_clearance_hole_top_board_mm,mm,5.8 mm,0.58,#12 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_12_countersink_flat_head_diameter_mm,mm,12.7 mm,1.27,#12 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_14_major_diameter_mm,mm,6.15 mm,0.6150000000000001,"#14 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (14×0.013) = 0.242"". Heavy framing, solid-core doors. TPI=10.",True
+woodscrew_gauge_14_pilot_hole_softwood_mm,mm,4.4 mm,0.44000000000000006,"#14 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy framing, solid-core doors.",True
+woodscrew_gauge_14_pilot_hole_hardwood_mm,mm,5.0 mm,0.5,"#14 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy framing, solid-core doors.",True
+woodscrew_gauge_14_clearance_hole_top_board_mm,mm,6.6 mm,0.66,#14 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_14_countersink_flat_head_diameter_mm,mm,14.3 mm,1.4300000000000002,#14 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+woodscrew_gauge_16_major_diameter_mm,mm,6.81 mm,0.681,"#16 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (16×0.013) = 0.268"". Timber framing. TPI=9.",True
+woodscrew_gauge_16_pilot_hole_softwood_mm,mm,5.0 mm,0.5,"#16 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Timber framing.",True
+woodscrew_gauge_16_pilot_hole_hardwood_mm,mm,5.6 mm,0.5599999999999999,"#16 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Timber framing.",True
+woodscrew_gauge_16_clearance_hole_top_board_mm,mm,7.2 mm,0.7200000000000001,#16 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_18_major_diameter_mm,mm,7.47 mm,0.747,"#18 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (18×0.013) = 0.294"". Heavy timber. TPI=8.",True
+woodscrew_gauge_18_pilot_hole_softwood_mm,mm,5.4 mm,0.54,"#18 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy timber.",True
+woodscrew_gauge_18_pilot_hole_hardwood_mm,mm,6.0 mm,0.6000000000000001,"#18 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy timber.",True
+woodscrew_gauge_18_clearance_hole_top_board_mm,mm,7.7 mm,0.77,#18 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+woodscrew_gauge_20_major_diameter_mm,mm,8.13 mm,0.8130000000000002,"#20 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (20×0.013) = 0.32"". Structural timber. TPI=8.",True
+woodscrew_gauge_20_pilot_hole_softwood_mm,mm,5.8 mm,0.58,"#20 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural timber.",True
+woodscrew_gauge_20_pilot_hole_hardwood_mm,mm,6.4 mm,0.6400000000000001,"#20 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural timber.",True
+woodscrew_gauge_20_clearance_hole_top_board_mm,mm,8.3 mm,0.8300000000000001,#20 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+print_in_place_captive_sphere_clearance,mm,0.30 mm,0.03,Radial gap between captive sphere and socket for print-in-place FDM. Must exceed layer height to prevent fusion. Tested on 0.20 mm layers — reduce to 0.25 for 0.12 mm layers.,True
+print_in_place_captive_sphere_min_diameter,mm,8.00 mm,0.8,Minimum sphere diameter for reliable print-in-place captive joints. Below this the bridge spans become too short for clean FDM.,True
+print_in_place_hinge_pin_clearance,mm,0.25 mm,0.025,Radial clearance for print-in-place living hinge pins. Tighter than captive sphere since rotation axis is fixed.,True
+twist_lock_bayonet_rotation_angle_deg,deg,40 deg,0.6981317007977318,Rotation angle to lock/unlock. Must be less than (360/tab_count - entry_slot_angle) to avoid tab running into next entry slot.,True
+twist_lock_bayonet_tab_height_mm,mm,2.00 mm,0.2,Radial height of each locking tab (how far it protrudes into the channel). Determines pull-off resistance.,True
+twist_lock_bayonet_channel_depth_mm,mm,2.20 mm,0.22000000000000003,Depth of rotation channel in mating part. Tab height + clearance for smooth rotation.,True
+twist_lock_bayonet_entry_slot_width_deg,deg,15 deg,0.2617993877991494,Angular width of entry slot where tab drops in before rotating to lock. Must be wide enough for easy alignment.,True
+twist_lock_bayonet_ramp_angle_deg,deg,5 deg,0.08726646259971647,"Optional ramp angle at channel end — creates a detent that resists accidental unlocking. 0 = no detent, 5 = light snap, 10 = firm.",True
+twist_lock_bayonet_lid_engagement_depth_mm,mm,4.00 mm,0.4,How far the lid collar overlaps the container body. Deeper = more stable but harder to print overhangs internally.,True
+twist_lock_bayonet_clearance_radial_mm,mm,0.15 mm,0.015,Radial clearance between lid inner wall and container outer wall. Uses sliding fit class.,True
+dovetail_angle_deg,deg,60 deg,1.0471975511965976,Dovetail half-angle (from vertical). 60° is standard for FDM — provides retention without excessive overhang. 45° also printable but weaker lock.,True
+dovetail_width_base_mm,mm,6.00 mm,0.6000000000000001,Width at narrow end (base) of dovetail tail. Scale up for larger load-bearing joints.,True
+dovetail_width_top_mm,mm,8.00 mm,0.8,Width at wide end (top) of dovetail tail. Difference from base determines lock strength.,True
+dovetail_depth_mm,mm,4.00 mm,0.4,Depth of dovetail slot/rail. Deeper = stronger retention but more material.,True
+dovetail_clearance_per_surface_mm,mm,0.12 mm,0.012,Per-surface clearance for sliding dovetail fit in FDM. Tighter than general sliding fit because dovetails self-align.,True
+dovetail_slide_entry_chamfer_mm,mm,0.50 mm,0.05,Lead-in chamfer at dovetail entry to ease assembly. Applied to both rail and slot.,True
+spring_clip_arm_thickness_mm,mm,1.60 mm,0.16000000000000003,Flexure arm thickness for FDM spring clips (PLA). Thinner = more flex but weaker. 1.6 mm gives ~2 mm deflection before yield at 40 mm arm length.,True
+spring_clip_arm_width_mm,mm,6.00 mm,0.6000000000000001,Width of spring clip arm. Wider = stiffer (scales linearly with width).,True
+spring_clip_deflection_max_mm,mm,2.00 mm,0.2,Maximum safe deflection for PLA spring clip arms at 1.6 mm thickness × 40 mm length. Beyond this risks permanent deformation.,True
+spring_clip_hook_depth_mm,mm,1.50 mm,0.15000000000000002,How far the hook protrudes past the mating surface. Must be less than max deflection for the arm to flex over it.,True
+container_wall_thickness_food_safe_mm,mm,2.50 mm,0.25,"Minimum wall thickness for food-adjacent containers (treats, dry goods). Provides structural rigidity and prevents permeation. Not FDA-rated — for dry pet treats only.",True
+container_base_thickness_mm,mm,2.00 mm,0.2,Base/floor thickness for general containers. Thicker than walls because bottom bears load and is the first layer group.,True
+container_corner_radius_min_mm,mm,3.00 mm,0.30000000000000004,Minimum corner radius for rounded-rectangle containers. Smaller radii create stress concentrations and thin-wall issues in FDM.,True
+container_lid_rim_width_mm,mm,1.50 mm,0.15000000000000002,Width of the sealing rim/lip on container lids. Provides contact area for dust seal without excessive material.,True
+hardware_m3_grub_screw_common_length_mm,mm,3.0 mm,0.30000000000000004,M3 grub/set screw most common length (3 mm). Also available in 4 and 5 mm.,True
+hardware_m4_grub_screw_common_length_mm,mm,5.0 mm,0.5,M4 grub/set screw most common length (5 mm). Also available in 4 and 6 mm.,True
+print_in_place_socket_opening_ratio,,0.65,0.65,Socket opening diameter / sphere diameter (dimensionless ratio). 0.65 = equator is above the socket lip.,True
+twist_lock_bayonet_tab_count,,3,3.0,Number of tabs/channels in a twist-lock lid (dimensionless count). 3 gives 120 deg spacing.,True

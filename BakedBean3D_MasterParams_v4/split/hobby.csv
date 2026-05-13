@@ -1,15 +1,15 @@
-Name,Expression,Unit,Comment
-camera_gopro_hero_12_width,71.8 mm,mm,GoPro Hero 12/13 Black body width. GoPro spec.
-camera_gopro_hero_12_height,50.8 mm,mm,GoPro Hero 12/13 Black body height. GoPro spec.
-camera_gopro_hero_12_depth,33.6 mm,mm,GoPro Hero 12/13 Black body depth. GoPro spec.
-camera_gopro_mount_finger_gap,3.1 mm,mm,GoPro mounting finger gap between tabs. Standard across all GoPro mounts.
-camera_gopro_mount_tab_thick,3.0 mm,mm,GoPro mounting finger tab thickness.
-camera_gopro_mount_screw_dia,5.0 mm,mm,GoPro mounting screw diameter (M5 thumbscrew).
-paint_citadel_pot_dia,30.0 mm,mm,Games Workshop Citadel 12 ml paint pot diameter. Many 3D-printed holders use 32 mm holes for clearance.
-paint_citadel_pot_height,35.0 mm,mm,Citadel 12 ml paint pot height with lid.
-paint_vallejo_dropper_dia,25.0 mm,mm,Vallejo 17 ml dropper bottle diameter. Standard 26 mm rack hole accommodates this.
-paint_vallejo_dropper_height,70.0 mm,mm,Vallejo 17 ml dropper bottle height without cap.
-paint_army_painter_dropper_dia,26.0 mm,mm,Army Painter 12 ml dropper bottle diameter. Uses same 26 mm rack standard as Vallejo.
-paint_army_painter_dropper_height,70.0 mm,mm,Army Painter 12 ml dropper bottle height.
-paint_craft_bottle_2oz_dia,37.0 mm,mm,Standard 2 oz acrylic craft paint bottle diameter (FolkArt/Apple Barrel/DecoArt). Nominal � verify with calipers.
-paint_craft_bottle_2oz_height,75.0 mm,mm,Standard 2 oz craft paint bottle height. Nominal � verify with calipers.
+Name,Unit,Expression,Value,Comment,Favorite
+camera_gopro_hero_12_width,mm,71.8 mm,7.18,GoPro Hero 12/13 Black body width. GoPro spec.,True
+camera_gopro_hero_12_height,mm,50.8 mm,5.08,GoPro Hero 12/13 Black body height. GoPro spec.,True
+camera_gopro_hero_12_depth,mm,33.6 mm,3.3600000000000003,GoPro Hero 12/13 Black body depth. GoPro spec.,True
+camera_gopro_mount_finger_gap,mm,3.1 mm,0.31000000000000005,GoPro mounting finger gap between tabs. Standard across all GoPro mounts.,True
+camera_gopro_mount_tab_thick,mm,3.0 mm,0.30000000000000004,GoPro mounting finger tab thickness.,True
+camera_gopro_mount_screw_dia,mm,5.0 mm,0.5,GoPro mounting screw diameter (M5 thumbscrew).,True
+paint_citadel_pot_dia,mm,30.0 mm,3.0,Games Workshop Citadel 12 ml paint pot diameter. Many 3D-printed holders use 32 mm holes for clearance.,True
+paint_citadel_pot_height,mm,35.0 mm,3.5,Citadel 12 ml paint pot height with lid.,True
+paint_vallejo_dropper_dia,mm,25.0 mm,2.5,Vallejo 17 ml dropper bottle diameter. Standard 26 mm rack hole accommodates this.,True
+paint_vallejo_dropper_height,mm,70.0 mm,7.0,Vallejo 17 ml dropper bottle height without cap.,True
+paint_army_painter_dropper_dia,mm,26.0 mm,2.6,Army Painter 12 ml dropper bottle diameter. Uses same 26 mm rack standard as Vallejo.,True
+paint_army_painter_dropper_height,mm,70.0 mm,7.0,Army Painter 12 ml dropper bottle height.,True
+paint_craft_bottle_2oz_dia,mm,37.0 mm,3.7,Standard 2 oz acrylic craft paint bottle diameter (FolkArt/Apple Barrel/DecoArt). Nominal � verify with calipers.,True
+paint_craft_bottle_2oz_height,mm,75.0 mm,7.5,Standard 2 oz craft paint bottle height. Nominal � verify with calipers.,True

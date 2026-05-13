@@ -1,66 +1,66 @@
-Name,Expression,Unit,Comment
-connector_usb_a_plug_width,12.0 mm,mm,USB Type-A plug body width. USB-IF spec. See also electronics_usb_a_panel_cutout_width (14.0 mm) for panel holes.
-connector_usb_a_plug_height,4.5 mm,mm,USB Type-A plug body height. USB-IF spec.
-connector_usb_c_plug_width,8.34 mm,mm,USB Type-C plug body width. USB-IF Type-C R2.0 spec. See also electronics_usb_c_panel_cutout_width (10.0 mm).
-connector_usb_c_plug_height,2.56 mm,mm,USB Type-C plug body height. USB-IF Type-C R2.0 spec.
-connector_sd_card_width,24.0 mm,mm,Full-size SD card width. SD Association specification.
-connector_sd_card_length,32.0 mm,mm,Full-size SD card length. SD Association specification.
-connector_sd_card_thick,2.1 mm,mm,Full-size SD card thickness. SD Association specification.
-connector_microsd_width,11.0 mm,mm,MicroSD card width. SD Association specification.
-connector_microsd_length,15.0 mm,mm,MicroSD card length. SD Association specification.
-connector_microsd_thick,1.0 mm,mm,MicroSD card thickness. SD Association specification.
-card_credit_width,85.60 mm,mm,Standard credit/debit/ID card width. ISO/IEC 7810 ID-1 exact.
-card_credit_height,53.98 mm,mm,Standard credit/debit/ID card height. ISO/IEC 7810 ID-1 exact.
-card_credit_thick,0.76 mm,mm,Standard credit card thickness. ISO/IEC 7810 ID-1 (tolerance 0.68-0.84 mm).
-card_credit_corner_radius,3.18 mm,mm,Standard credit card corner radius. ISO/IEC 7810 (tolerance 2.88-3.48 mm).
-card_business_width,88.9 mm,mm,US standard business card width (3.5 inches).
-card_business_height,50.8 mm,mm,US standard business card height (2 inches).
-card_playing_poker_width,63.5 mm,mm,Standard poker-size playing card width (2.5 inches). USPCC standard.
-card_playing_poker_height,88.9 mm,mm,Standard poker-size playing card height (3.5 inches). USPCC standard.
-coin_us_penny_dia,19.05 mm,mm,US penny diameter. US Mint specification exact.
-coin_us_penny_thick,1.52 mm,mm,US penny thickness. US Mint specification exact.
-coin_us_nickel_dia,21.21 mm,mm,US nickel diameter. US Mint specification exact.
-coin_us_nickel_thick,1.95 mm,mm,US nickel thickness. US Mint specification exact.
-coin_us_dime_dia,17.91 mm,mm,US dime diameter. US Mint specification exact.
-coin_us_dime_thick,1.35 mm,mm,US dime thickness. US Mint specification exact.
-coin_us_quarter_dia,24.26 mm,mm,US quarter diameter. US Mint specification exact.
-coin_us_quarter_thick,1.75 mm,mm,US quarter thickness. US Mint specification exact.
-coin_us_half_dollar_dia,30.61 mm,mm,US half dollar diameter. US Mint specification exact.
-coin_us_half_dollar_thick,2.15 mm,mm,US half dollar thickness. US Mint specification exact.
-coin_us_dollar_dia,26.49 mm,mm,US dollar coin (Sacagawea/Presidential) diameter. US Mint specification exact.
-coin_us_dollar_thick,2.00 mm,mm,US dollar coin thickness. US Mint specification exact.
-cable_usb_c_cable_od,3.5 mm,mm,USB-C cable outer diameter typical. Nominal � braided cables may be 4.5-5.0 mm.
-cable_lightning_cable_od,3.2 mm,mm,Lightning cable outer diameter typical (Apple original). Third-party may be 3.5-4.5 mm.
-cable_hdmi_plug_width,13.9 mm,mm,HDMI Type A plug width. HDMI specification exact.
-cable_hdmi_plug_height,4.55 mm,mm,HDMI Type A plug height. HDMI specification exact.
-cable_displayport_plug_width,16.10 mm,mm,DisplayPort full-size plug width including latch. VESA spec.
-cable_displayport_plug_height,4.76 mm,mm,DisplayPort full-size plug height. VESA spec.
-cable_rj45_plug_width,11.68 mm,mm,RJ45 Ethernet plug width. TIA/EIA-568 standard exact.
-cable_rj45_plug_height,13.5 mm,mm,RJ45 Ethernet plug height including latch. Without latch ~10.2 mm.
-cable_audio_35mm_plug_dia,3.5 mm,mm,3.5 mm audio jack plug diameter. IEC 60603-11 exact.
-cable_audio_35mm_barrel_length,14.0 mm,mm,3.5 mm audio jack barrel length (TRS/TRRS typical). Varies by manufacturer.
-media_samsung_t7_ssd_width,57.3 mm,mm,Samsung T7 portable SSD width. Samsung datasheet.
-media_samsung_t7_ssd_height,85.0 mm,mm,Samsung T7 portable SSD height. Samsung datasheet.
-media_samsung_t7_ssd_depth,8.0 mm,mm,Samsung T7 portable SSD depth. Samsung datasheet.
-media_wd_passport_width,75.0 mm,mm,WD My Passport external HDD width. WD datasheet.
-media_wd_passport_height,107.0 mm,mm,WD My Passport external HDD height. WD datasheet.
-media_wd_passport_depth,11.15 mm,mm,WD My Passport external HDD depth. WD datasheet.
-media_sata_25_width,69.85 mm,mm,2.5-inch SATA drive width. SFF-8201 standard exact.
-media_sata_25_length,100.45 mm,mm,2.5-inch SATA drive length. SFF-8201 standard exact.
-media_sata_25_height_thin,7.0 mm,mm,2.5-inch SATA drive height (thin/SSD). SFF-8201 standard.
-media_sata_25_height_std,9.5 mm,mm,2.5-inch SATA drive height (standard HDD). SFF-8201 standard.
-media_sata_35_width,101.6 mm,mm,3.5-inch SATA drive width. SFF-8301 standard exact.
-media_sata_35_length,146.99 mm,mm,3.5-inch SATA drive length. SFF-8301 standard exact.
-media_sata_35_height,25.4 mm,mm,3.5-inch SATA drive height. SFF-8301 standard. Some newer drives 17.8 mm.
-media_m2_2280_width,22.0 mm,mm,M.2 2280 SSD width. PCI-SIG M.2 specification exact. Name encodes 22 x 80 mm.
-media_m2_2280_length,80.0 mm,mm,M.2 2280 SSD length. PCI-SIG specification exact.
-media_m2_2280_height,2.23 mm,mm,M.2 2280 SSD height (single-sided). Double-sided ~3.73 mm.
-media_cfexpress_type_b_width,29.6 mm,mm,CFexpress Type B card width. CompactFlash Association spec exact.
-media_cfexpress_type_b_height,38.36 mm,mm,CFexpress Type B card height. CFA spec exact.
-media_cfexpress_type_b_thick,3.8 mm,mm,CFexpress Type B card thickness. CFA spec exact.
-glasses_hard_case_width,70.0 mm,mm,Sunglasses hard shell case width typical. Nominal � range 65-75 mm. Verify for specific case.
-glasses_hard_case_height,42.0 mm,mm,Sunglasses hard case height typical. Nominal � range 38-45 mm.
-glasses_hard_case_length,165.0 mm,mm,Sunglasses hard case length typical. Nominal � range 155-170 mm.
-glasses_folded_width,140.0 mm,mm,Folded eyeglasses width envelope typical. Nominal � range 130-155 mm.
-glasses_folded_height,48.0 mm,mm,Folded eyeglasses height envelope typical. Nominal � range 40-55 mm.
-glasses_folded_depth,48.0 mm,mm,Folded eyeglasses depth envelope typical. Nominal � range 35-55 mm.
+Name,Unit,Expression,Value,Comment,Favorite
+connector_usb_a_plug_width,mm,12.0 mm,1.2000000000000002,USB Type-A plug body width. USB-IF spec. See also electronics_usb_a_panel_cutout_width (14.0 mm) for panel holes.,True
+connector_usb_a_plug_height,mm,4.5 mm,0.45,USB Type-A plug body height. USB-IF spec.,True
+connector_usb_c_plug_width,mm,8.34 mm,0.8340000000000001,USB Type-C plug body width. USB-IF Type-C R2.0 spec. See also electronics_usb_c_panel_cutout_width (10.0 mm).,True
+connector_usb_c_plug_height,mm,2.56 mm,0.256,USB Type-C plug body height. USB-IF Type-C R2.0 spec.,True
+connector_sd_card_width,mm,24.0 mm,2.4000000000000004,Full-size SD card width. SD Association specification.,True
+connector_sd_card_length,mm,32.0 mm,3.2,Full-size SD card length. SD Association specification.,True
+connector_sd_card_thick,mm,2.1 mm,0.21000000000000002,Full-size SD card thickness. SD Association specification.,True
+connector_microsd_width,mm,11.0 mm,1.1,MicroSD card width. SD Association specification.,True
+connector_microsd_length,mm,15.0 mm,1.5,MicroSD card length. SD Association specification.,True
+connector_microsd_thick,mm,1.0 mm,0.1,MicroSD card thickness. SD Association specification.,True
+card_credit_width,mm,85.60 mm,8.56,Standard credit/debit/ID card width. ISO/IEC 7810 ID-1 exact.,True
+card_credit_height,mm,53.98 mm,5.398,Standard credit/debit/ID card height. ISO/IEC 7810 ID-1 exact.,True
+card_credit_thick,mm,0.76 mm,0.07600000000000001,Standard credit card thickness. ISO/IEC 7810 ID-1 (tolerance 0.68-0.84 mm).,True
+card_credit_corner_radius,mm,3.18 mm,0.31800000000000006,Standard credit card corner radius. ISO/IEC 7810 (tolerance 2.88-3.48 mm).,True
+card_business_width,mm,88.9 mm,8.89,US standard business card width (3.5 inches).,True
+card_business_height,mm,50.8 mm,5.08,US standard business card height (2 inches).,True
+card_playing_poker_width,mm,63.5 mm,6.3500000000000005,Standard poker-size playing card width (2.5 inches). USPCC standard.,True
+card_playing_poker_height,mm,88.9 mm,8.89,Standard poker-size playing card height (3.5 inches). USPCC standard.,True
+coin_us_penny_dia,mm,19.05 mm,1.9050000000000002,US penny diameter. US Mint specification exact.,True
+coin_us_penny_thick,mm,1.52 mm,0.15200000000000002,US penny thickness. US Mint specification exact.,True
+coin_us_nickel_dia,mm,21.21 mm,2.121,US nickel diameter. US Mint specification exact.,True
+coin_us_nickel_thick,mm,1.95 mm,0.195,US nickel thickness. US Mint specification exact.,True
+coin_us_dime_dia,mm,17.91 mm,1.7910000000000001,US dime diameter. US Mint specification exact.,True
+coin_us_dime_thick,mm,1.35 mm,0.135,US dime thickness. US Mint specification exact.,True
+coin_us_quarter_dia,mm,24.26 mm,2.426,US quarter diameter. US Mint specification exact.,True
+coin_us_quarter_thick,mm,1.75 mm,0.17500000000000002,US quarter thickness. US Mint specification exact.,True
+coin_us_half_dollar_dia,mm,30.61 mm,3.061,US half dollar diameter. US Mint specification exact.,True
+coin_us_half_dollar_thick,mm,2.15 mm,0.215,US half dollar thickness. US Mint specification exact.,True
+coin_us_dollar_dia,mm,26.49 mm,2.649,US dollar coin (Sacagawea/Presidential) diameter. US Mint specification exact.,True
+coin_us_dollar_thick,mm,2.00 mm,0.2,US dollar coin thickness. US Mint specification exact.,True
+cable_usb_c_cable_od,mm,3.5 mm,0.35000000000000003,USB-C cable outer diameter typical. Nominal � braided cables may be 4.5-5.0 mm.,True
+cable_lightning_cable_od,mm,3.2 mm,0.32000000000000006,Lightning cable outer diameter typical (Apple original). Third-party may be 3.5-4.5 mm.,True
+cable_hdmi_plug_width,mm,13.9 mm,1.3900000000000001,HDMI Type A plug width. HDMI specification exact.,True
+cable_hdmi_plug_height,mm,4.55 mm,0.455,HDMI Type A plug height. HDMI specification exact.,True
+cable_displayport_plug_width,mm,16.10 mm,1.6100000000000003,DisplayPort full-size plug width including latch. VESA spec.,True
+cable_displayport_plug_height,mm,4.76 mm,0.476,DisplayPort full-size plug height. VESA spec.,True
+cable_rj45_plug_width,mm,11.68 mm,1.168,RJ45 Ethernet plug width. TIA/EIA-568 standard exact.,True
+cable_rj45_plug_height,mm,13.5 mm,1.35,RJ45 Ethernet plug height including latch. Without latch ~10.2 mm.,True
+cable_audio_35mm_plug_dia,mm,3.5 mm,0.35000000000000003,3.5 mm audio jack plug diameter. IEC 60603-11 exact.,True
+cable_audio_35mm_barrel_length,mm,14.0 mm,1.4000000000000001,3.5 mm audio jack barrel length (TRS/TRRS typical). Varies by manufacturer.,True
+media_samsung_t7_ssd_width,mm,57.3 mm,5.73,Samsung T7 portable SSD width. Samsung datasheet.,True
+media_samsung_t7_ssd_height,mm,85.0 mm,8.5,Samsung T7 portable SSD height. Samsung datasheet.,True
+media_samsung_t7_ssd_depth,mm,8.0 mm,0.8,Samsung T7 portable SSD depth. Samsung datasheet.,True
+media_wd_passport_width,mm,75.0 mm,7.5,WD My Passport external HDD width. WD datasheet.,True
+media_wd_passport_height,mm,107.0 mm,10.700000000000001,WD My Passport external HDD height. WD datasheet.,True
+media_wd_passport_depth,mm,11.15 mm,1.115,WD My Passport external HDD depth. WD datasheet.,True
+media_sata_25_width,mm,69.85 mm,6.984999999999999,2.5-inch SATA drive width. SFF-8201 standard exact.,True
+media_sata_25_length,mm,100.45 mm,10.045000000000002,2.5-inch SATA drive length. SFF-8201 standard exact.,True
+media_sata_25_height_thin,mm,7.0 mm,0.7000000000000001,2.5-inch SATA drive height (thin/SSD). SFF-8201 standard.,True
+media_sata_25_height_std,mm,9.5 mm,0.9500000000000001,2.5-inch SATA drive height (standard HDD). SFF-8201 standard.,True
+media_sata_35_width,mm,101.6 mm,10.16,3.5-inch SATA drive width. SFF-8301 standard exact.,True
+media_sata_35_length,mm,146.99 mm,14.699000000000002,3.5-inch SATA drive length. SFF-8301 standard exact.,True
+media_sata_35_height,mm,25.4 mm,2.54,3.5-inch SATA drive height. SFF-8301 standard. Some newer drives 17.8 mm.,True
+media_m2_2280_width,mm,22.0 mm,2.2,M.2 2280 SSD width. PCI-SIG M.2 specification exact. Name encodes 22 x 80 mm.,True
+media_m2_2280_length,mm,80.0 mm,8.0,M.2 2280 SSD length. PCI-SIG specification exact.,True
+media_m2_2280_height,mm,2.23 mm,0.223,M.2 2280 SSD height (single-sided). Double-sided ~3.73 mm.,True
+media_cfexpress_type_b_width,mm,29.6 mm,2.9600000000000004,CFexpress Type B card width. CompactFlash Association spec exact.,True
+media_cfexpress_type_b_height,mm,38.36 mm,3.8360000000000003,CFexpress Type B card height. CFA spec exact.,True
+media_cfexpress_type_b_thick,mm,3.8 mm,0.38,CFexpress Type B card thickness. CFA spec exact.,True
+glasses_hard_case_width,mm,70.0 mm,7.0,Sunglasses hard shell case width typical. Nominal � range 65-75 mm. Verify for specific case.,True
+glasses_hard_case_height,mm,42.0 mm,4.2,Sunglasses hard case height typical. Nominal � range 38-45 mm.,True
+glasses_hard_case_length,mm,165.0 mm,16.5,Sunglasses hard case length typical. Nominal � range 155-170 mm.,True
+glasses_folded_width,mm,140.0 mm,14.0,Folded eyeglasses width envelope typical. Nominal � range 130-155 mm.,True
+glasses_folded_height,mm,48.0 mm,4.800000000000001,Folded eyeglasses height envelope typical. Nominal � range 40-55 mm.,True
+glasses_folded_depth,mm,48.0 mm,4.800000000000001,Folded eyeglasses depth envelope typical. Nominal � range 35-55 mm.,True
