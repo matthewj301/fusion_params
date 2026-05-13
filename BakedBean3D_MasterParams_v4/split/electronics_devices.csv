@@ -1,0 +1,122 @@
+Name,Expression,Unit,Comment
+phone_iphone_16_height,147.6 mm,mm,iPhone 16 body height. Apple 2024 spec.
+phone_iphone_16_width,71.6 mm,mm,iPhone 16 body width. Apple 2024 spec.
+phone_iphone_16_depth,7.80 mm,mm,iPhone 16 body depth/thickness. Apple 2024 spec.
+phone_iphone_16_pro_height,149.6 mm,mm,iPhone 16 Pro body height. Apple 2024 spec.
+phone_iphone_16_pro_width,71.5 mm,mm,iPhone 16 Pro body width. Apple 2024 spec.
+phone_iphone_16_pro_depth,8.25 mm,mm,iPhone 16 Pro body depth. Apple 2024 spec.
+phone_iphone_16_pro_max_height,163.0 mm,mm,iPhone 16 Pro Max body height. Apple 2024 spec.
+phone_iphone_16_pro_max_width,77.6 mm,mm,iPhone 16 Pro Max body width. Apple 2024 spec.
+phone_iphone_16_pro_max_depth,8.25 mm,mm,iPhone 16 Pro Max body depth. Apple 2024 spec.
+phone_iphone_15_height,147.6 mm,mm,iPhone 15 body height. Apple 2023 spec.
+phone_iphone_15_width,71.6 mm,mm,iPhone 15 body width. Apple 2023 spec.
+phone_iphone_15_depth,7.80 mm,mm,iPhone 15 body depth. Apple 2023 spec.
+phone_iphone_15_pro_height,146.6 mm,mm,iPhone 15 Pro body height. Apple 2023 spec.
+phone_iphone_15_pro_width,70.6 mm,mm,iPhone 15 Pro body width. Apple 2023 spec.
+phone_iphone_15_pro_depth,8.25 mm,mm,iPhone 15 Pro body depth. Apple 2023 spec.
+phone_iphone_15_pro_max_height,159.9 mm,mm,iPhone 15 Pro Max body height. Apple 2023 spec.
+phone_iphone_15_pro_max_width,76.7 mm,mm,iPhone 15 Pro Max body width. Apple 2023 spec.
+phone_iphone_15_pro_max_depth,8.25 mm,mm,iPhone 15 Pro Max body depth. Apple 2023 spec.
+phone_galaxy_s24_height,147.0 mm,mm,Samsung Galaxy S24 body height. Samsung 2024 spec.
+phone_galaxy_s24_width,70.6 mm,mm,Samsung Galaxy S24 body width. Samsung 2024 spec.
+phone_galaxy_s24_depth,7.60 mm,mm,Samsung Galaxy S24 body depth. Samsung 2024 spec.
+phone_galaxy_s24_plus_height,158.5 mm,mm,Samsung Galaxy S24+ body height. Samsung 2024 spec.
+phone_galaxy_s24_plus_width,75.9 mm,mm,Samsung Galaxy S24+ body width. Samsung 2024 spec.
+phone_galaxy_s24_plus_depth,7.70 mm,mm,Samsung Galaxy S24+ body depth. Samsung 2024 spec.
+phone_galaxy_s24_ultra_height,162.3 mm,mm,Samsung Galaxy S24 Ultra body height. Samsung 2024 spec.
+phone_galaxy_s24_ultra_width,79.0 mm,mm,Samsung Galaxy S24 Ultra body width. Samsung 2024 spec.
+phone_galaxy_s24_ultra_depth,8.60 mm,mm,Samsung Galaxy S24 Ultra body depth. Samsung 2024 spec.
+tablet_ipad_air_11_height,247.6 mm,mm,iPad Air 11-inch (M2) body height. Apple 2024 spec.
+tablet_ipad_air_11_width,178.5 mm,mm,iPad Air 11-inch (M2) body width. Apple 2024 spec.
+tablet_ipad_air_11_depth,6.1 mm,mm,iPad Air 11-inch (M2) body depth. Apple 2024 spec.
+tablet_ipad_pro_11_height,249.7 mm,mm,iPad Pro 11-inch (M4) body height. Apple 2024 spec.
+tablet_ipad_pro_11_width,177.5 mm,mm,iPad Pro 11-inch (M4) body width. Apple 2024 spec.
+tablet_ipad_pro_11_depth,5.3 mm,mm,iPad Pro 11-inch (M4) body depth. Apple 2024 spec.
+tablet_ipad_pro_13_height,281.6 mm,mm,iPad Pro 13-inch (M4) body height. Apple 2024 spec.
+tablet_ipad_pro_13_width,215.5 mm,mm,iPad Pro 13-inch (M4) body width. Apple 2024 spec.
+tablet_ipad_pro_13_depth,5.1 mm,mm,iPad Pro 13-inch (M4) body depth. Apple 2024 spec.
+tablet_ipad_mini_7_height,195.4 mm,mm,iPad Mini 7th gen body height. Apple 2024 spec.
+tablet_ipad_mini_7_width,134.8 mm,mm,iPad Mini 7th gen body width. Apple 2024 spec.
+tablet_ipad_mini_7_depth,6.3 mm,mm,iPad Mini 7th gen body depth � thickest current iPad. Apple 2024 spec.
+charger_magsafe_15w_dia,56.0 mm,mm,Apple MagSafe 15W charger puck diameter. Apple spec.
+charger_magsafe_15w_thick,6.0 mm,mm,Apple MagSafe 15W charger puck thickness. Apple spec.
+charger_magsafe_25w_dia,55.5 mm,mm,Apple MagSafe 25W charger puck diameter. Apple spec.
+charger_magsafe_25w_thick,4.5 mm,mm,Apple MagSafe 25W charger puck thickness. Apple spec.
+charger_apple_watch_dia,27.6 mm,mm,Apple Watch magnetic charger puck diameter. Apple spec.
+charger_apple_watch_thick,6.0 mm,mm,Apple Watch magnetic charger puck thickness. Apple spec.
+audio_airpods_pro_2_case_width,60.6 mm,mm,AirPods Pro 2 charging case width. Apple spec.
+audio_airpods_pro_2_case_height,45.2 mm,mm,AirPods Pro 2 charging case height. Apple spec.
+audio_airpods_pro_2_case_depth,21.7 mm,mm,AirPods Pro 2 charging case depth. Apple spec.
+controller_xbox_width,153.0 mm,mm,Xbox Series X/S wireless controller width. Microsoft spec.
+controller_xbox_height,102.0 mm,mm,Xbox Series X/S controller height. Microsoft spec.
+controller_xbox_depth,61.0 mm,mm,Xbox Series X/S controller depth. Microsoft spec.
+controller_ps5_dualsense_width,160.0 mm,mm,PS5 DualSense wireless controller width. Sony spec.
+controller_ps5_dualsense_height,106.0 mm,mm,PS5 DualSense controller height. Sony spec.
+controller_ps5_dualsense_depth,66.0 mm,mm,PS5 DualSense controller depth. Sony spec.
+controller_switch_pro_width,152.0 mm,mm,Nintendo Switch Pro Controller width. Nintendo spec.
+controller_switch_pro_height,106.0 mm,mm,Nintendo Switch Pro Controller height. Nintendo spec.
+controller_switch_pro_depth,63.0 mm,mm,Nintendo Switch Pro Controller depth. Nintendo spec.
+controller_joycon_width,35.9 mm,mm,Nintendo Switch Joy-Con single width. Nintendo spec.
+controller_joycon_height,102.0 mm,mm,Nintendo Switch Joy-Con single height. Nintendo spec.
+controller_joycon_depth,13.9 mm,mm,Nintendo Switch Joy-Con body depth (thinnest). Max ~28.4 mm at button protrusion.
+remote_apple_tv_siri_width,35.6 mm,mm,Apple TV Siri Remote 3rd gen (USB-C) width. Apple spec.
+remote_apple_tv_siri_height,137.2 mm,mm,Apple TV Siri Remote 3rd gen length/height. Apple spec.
+remote_apple_tv_siri_depth,9.1 mm,mm,Apple TV Siri Remote 3rd gen depth. Apple spec.
+remote_fire_tv_width,38.0 mm,mm,Amazon Fire TV Alexa Voice Remote width. Approximate.
+remote_fire_tv_height,148.0 mm,mm,Amazon Fire TV Alexa Voice Remote length. Approximate.
+remote_fire_tv_depth,18.0 mm,mm,Amazon Fire TV remote depth. Approximate.
+remote_roku_voice_pro_width,41.0 mm,mm,Roku Voice Remote Pro width. Approximate.
+remote_roku_voice_pro_height,145.0 mm,mm,Roku Voice Remote Pro length. Approximate.
+remote_roku_voice_pro_depth,20.0 mm,mm,Roku Voice Remote Pro depth. Approximate.
+watch_apple_series10_42_height,42.0 mm,mm,Apple Watch Series 10 42 mm case height. Apple spec.
+watch_apple_series10_42_width,36.0 mm,mm,Apple Watch Series 10 42 mm case width. Apple spec.
+watch_apple_series10_42_depth,9.7 mm,mm,Apple Watch Series 10 42 mm case depth. Apple spec.
+watch_apple_series10_46_height,46.0 mm,mm,Apple Watch Series 10 46 mm case height. Apple spec.
+watch_apple_series10_46_width,39.0 mm,mm,Apple Watch Series 10 46 mm case width. Apple spec.
+watch_apple_series10_46_depth,9.7 mm,mm,Apple Watch Series 10 46 mm case depth. Apple spec.
+watch_apple_ultra_2_height,49.0 mm,mm,Apple Watch Ultra 2 case height. Apple spec.
+watch_apple_ultra_2_width,44.0 mm,mm,Apple Watch Ultra 2 case width. Apple spec.
+watch_apple_ultra_2_depth,14.4 mm,mm,Apple Watch Ultra 2 case depth. Apple spec.
+watch_band_width_20mm,20.0 mm,mm,Standard 20 mm watch band/lug width. Common for many smartwatches and men's dress watches.
+watch_band_width_22mm,22.0 mm,mm,Standard 22 mm watch band/lug width. Common for larger men's watches.
+smarthome_echo_dot_5_dia,100.0 mm,mm,Amazon Echo Dot 5th gen diameter. Amazon spec.
+smarthome_echo_dot_5_height,89.0 mm,mm,Amazon Echo Dot 5th gen height. Amazon spec.
+smarthome_nest_mini_2_dia,98.0 mm,mm,Google Nest Mini 2nd gen diameter. Google spec.
+smarthome_nest_mini_2_height,42.0 mm,mm,Google Nest Mini 2nd gen height. Google spec.
+smarthome_echo_show_5_width,147.0 mm,mm,Amazon Echo Show 5 3rd gen width. Amazon spec.
+smarthome_echo_show_5_height,82.0 mm,mm,Amazon Echo Show 5 3rd gen height. Amazon spec.
+smarthome_echo_show_5_depth,91.0 mm,mm,Amazon Echo Show 5 3rd gen depth. Amazon spec.
+smarthome_kasa_ep10_width,60.0 mm,mm,TP-Link Kasa EP10 smart plug width. TP-Link spec.
+smarthome_kasa_ep10_height,51.5 mm,mm,TP-Link Kasa EP10 smart plug height. TP-Link spec.
+smarthome_kasa_ep10_depth,38.0 mm,mm,TP-Link Kasa EP10 smart plug depth (excluding prongs). TP-Link spec.
+smarthome_hue_bridge_width,88.0 mm,mm,Philips Hue Bridge width (rounded square shape). Philips spec.
+smarthome_hue_bridge_height,26.0 mm,mm,Philips Hue Bridge height. Philips spec.
+camera_security_ring_indoor_width,49.0 mm,mm,Ring Indoor Cam 2nd gen width (cube body). Ring spec.
+camera_security_ring_indoor_height,49.0 mm,mm,Ring Indoor Cam 2nd gen height (camera body only). With stand ~97 mm.
+camera_security_ring_indoor_depth,49.0 mm,mm,Ring Indoor Cam 2nd gen depth (cube body). Ring spec.
+camera_security_ring_stickup_dia,60.0 mm,mm,Ring Stick Up Cam battery body diameter. Ring spec.
+camera_security_ring_stickup_height,97.0 mm,mm,Ring Stick Up Cam height without mount. Ring spec.
+camera_security_ring_doorbell_width,61.7 mm,mm,Ring Video Doorbell current gen width. Ring spec.
+camera_security_ring_doorbell_height,126.5 mm,mm,Ring Video Doorbell current gen height. Ring spec.
+camera_security_ring_doorbell_depth,22.1 mm,mm,Ring Video Doorbell current gen depth. Ring spec.
+camera_security_unifi_g4_bullet_dia,75.0 mm,mm,Ubiquiti UniFi G4 Bullet camera body diameter. Ubiquiti datasheet.
+camera_security_unifi_g4_bullet_length,140.0 mm,mm,Ubiquiti UniFi G4 Bullet camera body length. Ubiquiti datasheet.
+camera_security_unifi_g4_instant_width,81.6 mm,mm,Ubiquiti UniFi G4 Instant camera width. Ubiquiti datasheet.
+camera_security_unifi_g4_instant_height,50.0 mm,mm,Ubiquiti UniFi G4 Instant camera height. Ubiquiti datasheet.
+camera_security_unifi_g4_instant_depth,47.2 mm,mm,Ubiquiti UniFi G4 Instant camera depth. Ubiquiti datasheet.
+camera_security_unifi_g5_flex_dia,48.0 mm,mm,Ubiquiti UniFi G5 Flex turret camera body diameter. Ubiquiti datasheet.
+camera_security_unifi_g5_flex_height,107.5 mm,mm,Ubiquiti UniFi G5 Flex turret camera height. Ubiquiti datasheet.
+camera_security_tripod_mount_thread_dia,6.35 mm,mm,Standard 1/4-20 UNC tripod mount thread outer diameter. ANSI/ASME standard.
+camera_security_tripod_mount_thread_pitch,1.27 mm,mm,Standard 1/4-20 UNC tripod mount thread pitch (20 TPI). ANSI/ASME standard.
+phone_universal_max_height,phone_iphone_16_pro_max_height,mm,Max phone height across all models � iPhone 16 Pro Max at 163.0 mm. For universal holder depth.
+phone_universal_max_width,phone_galaxy_s24_ultra_width,mm,Max phone width across all models � Galaxy S24 Ultra at 79.0 mm.
+phone_universal_max_depth,phone_galaxy_s24_ultra_depth,mm,Max phone depth across all models � Galaxy S24 Ultra at 8.60 mm.
+phone_case_allowance,3.0 mm,mm,Typical rugged phone case adds ~3 mm per side. Adjust per actual case.
+phone_universal_cased_width,phone_universal_max_width + 2 * phone_case_allowance,mm,Universal phone width with case allowance. For holder/dock inner width.
+phone_universal_cased_depth,phone_universal_max_depth + 2 * phone_case_allowance,mm,Universal phone depth with case allowance. For holder/dock slot depth.
+tablet_universal_max_height,tablet_ipad_pro_13_height,mm,Max tablet height � iPad Pro 13 at 281.6 mm.
+tablet_universal_max_width,tablet_ipad_pro_13_width,mm,Max tablet width � iPad Pro 13 at 215.5 mm.
+tablet_universal_max_depth,tablet_ipad_mini_7_depth,mm,Max tablet depth � iPad Mini 7 at 6.3 mm (thickest current iPad).
+controller_universal_max_width,controller_ps5_dualsense_width,mm,Max controller width � PS5 DualSense at 160 mm. For universal charging dock/holder.
+controller_universal_max_height,controller_ps5_dualsense_height,mm,Max controller height � DualSense/Switch Pro at 106 mm.
+controller_universal_max_depth,controller_ps5_dualsense_depth,mm,Max controller depth � PS5 DualSense at 66 mm.

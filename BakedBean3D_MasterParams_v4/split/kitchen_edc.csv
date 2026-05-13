@@ -1,0 +1,39 @@
+Name,Expression,Unit,Comment
+drinkware_coffee_mug_std_top_dia,82.0 mm,mm,Standard 8-12 oz coffee mug top/rim diameter. Nominal � verify with calipers. Range 80-89 mm.
+drinkware_coffee_mug_std_base_dia,70.0 mm,mm,Standard coffee mug base diameter. Nominal � verify with calipers. Range 65-75 mm.
+drinkware_coffee_mug_std_height,95.0 mm,mm,Standard coffee mug height. Nominal � verify with calipers. Range 90-100 mm.
+drinkware_yeti_rambler_20oz_lip_dia,89.0 mm,mm,Yeti Rambler 20 oz tumbler lip/rim diameter. Yeti spec.
+drinkware_yeti_rambler_20oz_height,175.0 mm,mm,Yeti Rambler 20 oz tumbler height. Yeti spec.
+drinkware_yeti_rambler_30oz_lip_dia,102.0 mm,mm,Yeti Rambler 30 oz tumbler lip/rim diameter. Yeti spec.
+drinkware_yeti_rambler_30oz_height,194.0 mm,mm,Yeti Rambler 30 oz tumbler height. Yeti spec.
+drinkware_stanley_quencher_40oz_base_dia,75.0 mm,mm,Stanley Quencher H2.0 40 oz base diameter. Stanley spec.
+drinkware_stanley_quencher_40oz_height,260.0 mm,mm,Stanley Quencher H2.0 40 oz height without straw. Stanley spec.
+drinkware_hydro_flask_32oz_body_dia,91.0 mm,mm,Hydro Flask 32 oz wide mouth body diameter. Hydro Flask spec.
+drinkware_hydro_flask_32oz_height,239.0 mm,mm,Hydro Flask 32 oz wide mouth height with cap. Hydro Flask spec.
+edc_bic_pen_body_width,9.0 mm,mm,BIC Cristal pen hex body across-flats width. For round holder hole use edc_bic_pen_circular_hole_dia.
+edc_bic_pen_length,149.0 mm,mm,BIC Cristal pen overall length with cap.
+edc_sharpie_barrel_dia,12.0 mm,mm,Sharpie Fine Point marker barrel diameter. Approximate � cap is slightly wider at ~14 mm.
+edc_sharpie_length,140.0 mm,mm,Sharpie Fine Point marker length with cap.
+edc_chapstick_dia,16.5 mm,mm,Standard chapstick/lip balm tube diameter.
+edc_chapstick_height,67.0 mm,mm,Standard chapstick/lip balm tube height.
+edc_bic_lighter_width,25.0 mm,mm,BIC Classic lighter body width (wide face).
+edc_bic_lighter_height,80.0 mm,mm,BIC Classic lighter body height.
+edc_bic_lighter_depth,12.5 mm,mm,BIC Classic lighter body depth (thin face).
+edc_zippo_width,38.1 mm,mm,Zippo Classic lighter width. Zippo spec.
+edc_zippo_height,57.2 mm,mm,Zippo Classic lighter height. Zippo spec.
+edc_zippo_depth,12.7 mm,mm,Zippo Classic lighter depth. Zippo spec.
+bottle_pill_13dram_dia,33.0 mm,mm,13 dram prescription pill bottle body diameter. Pharmaceutical industry standard. Cap dia ~2-4 mm larger.
+bottle_pill_13dram_height,54.0 mm,mm,13 dram pill bottle height. Pharmaceutical standard.
+bottle_pill_20dram_dia,39.0 mm,mm,20 dram prescription pill bottle body diameter. Pharmaceutical standard.
+bottle_pill_20dram_height,58.0 mm,mm,20 dram pill bottle height. Pharmaceutical standard.
+bottle_pill_30dram_dia,46.0 mm,mm,30 dram prescription pill bottle body diameter. Pharmaceutical standard.
+bottle_pill_30dram_height,69.0 mm,mm,30 dram pill bottle height. Pharmaceutical standard.
+bottle_nalgene_32oz_body_dia,90.0 mm,mm,Nalgene 32 oz wide mouth bottle body diameter. Nalgene spec.
+bottle_nalgene_32oz_height,214.0 mm,mm,Nalgene 32 oz wide mouth bottle height. Nalgene spec.
+bottle_nalgene_32oz_mouth_dia,63.0 mm,mm,Nalgene 32 oz wide mouth opening inner diameter. Nalgene spec.
+bottle_eye_drop_15ml_dia,29.0 mm,mm,Standard 15 ml eye drop bottle body diameter. Nominal � varies by brand. Range 22-30 mm.
+bottle_eye_drop_15ml_height,77.0 mm,mm,Standard 15 ml eye drop bottle height with cap. Nominal � range 70-80 mm.
+bottle_spray_28_400_neck_od,28.0 mm,mm,28/400 spray bottle neck finish outer diameter. GPI standard exact.
+drinkware_max_body_dia,drinkware_yeti_rambler_30oz_lip_dia,mm,Largest drinkware diameter � Yeti 30 oz at 102 mm.
+drinkware_max_height,drinkware_stanley_quencher_40oz_height,mm,Tallest drinkware � Stanley Quencher 40 oz at 260 mm.
+edc_bic_pen_circular_hole_dia,10.4 mm,mm,BIC Cristal hex pen across-corners diameter (9 mm / cos 30). Use for round holder holes.
