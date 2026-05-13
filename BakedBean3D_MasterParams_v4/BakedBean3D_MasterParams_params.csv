@@ -438,3 +438,29 @@ woodscrew_gauge_20_major_diameter_mm,8.13 mm,mm,"#20 wood screw major thread dia
 woodscrew_gauge_20_pilot_hole_softwood_mm,5.8 mm,mm,"#20 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural timber."
 woodscrew_gauge_20_pilot_hole_hardwood_mm,6.4 mm,mm,"#20 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural timber."
 woodscrew_gauge_20_clearance_hole_top_board_mm,8.3 mm,mm,#20 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.
+print_in_place_captive_sphere_clearance,0.30 mm,mm,Radial gap between captive sphere and socket for print-in-place FDM. Must exceed layer height to prevent fusion. Tested on 0.20 mm layers — reduce to 0.25 for 0.12 mm layers.
+print_in_place_captive_sphere_min_diameter,8.00 mm,mm,Minimum sphere diameter for reliable print-in-place captive joints. Below this the bridge spans become too short for clean FDM.
+print_in_place_socket_opening_ratio,0.65,ratio,Socket opening diameter / sphere diameter. Must allow sphere to be trapped but still rotate freely. 0.65 = equator is above the socket lip.
+print_in_place_hinge_pin_clearance,0.25 mm,mm,Radial clearance for print-in-place living hinge pins. Tighter than captive sphere since rotation axis is fixed.
+twist_lock_bayonet_tab_count,3,count,Number of tabs/channels in a twist-lock lid. 3 gives 120° spacing — good balance of engagement strength and rotation angle.
+twist_lock_bayonet_rotation_angle_deg,40,deg,Rotation angle to lock/unlock. Must be less than (360/tab_count - entry_slot_angle) to avoid tab running into next entry slot.
+twist_lock_bayonet_tab_height_mm,2.00 mm,mm,Radial height of each locking tab (how far it protrudes into the channel). Determines pull-off resistance.
+twist_lock_bayonet_channel_depth_mm,2.20 mm,mm,Depth of rotation channel in mating part. Tab height + clearance for smooth rotation.
+twist_lock_bayonet_entry_slot_width_deg,15,deg,Angular width of entry slot where tab drops in before rotating to lock. Must be wide enough for easy alignment.
+twist_lock_bayonet_ramp_angle_deg,5,deg,"Optional ramp angle at channel end — creates a detent that resists accidental unlocking. 0 = no detent, 5 = light snap, 10 = firm."
+twist_lock_bayonet_lid_engagement_depth_mm,4.00 mm,mm,How far the lid collar overlaps the container body. Deeper = more stable but harder to print overhangs internally.
+twist_lock_bayonet_clearance_radial_mm,0.15 mm,mm,Radial clearance between lid inner wall and container outer wall. Uses sliding fit class.
+dovetail_angle_deg,60,deg,Dovetail half-angle (from vertical). 60° is standard for FDM — provides retention without excessive overhang. 45° also printable but weaker lock.
+dovetail_width_base_mm,6.00 mm,mm,Width at narrow end (base) of dovetail tail. Scale up for larger load-bearing joints.
+dovetail_width_top_mm,8.00 mm,mm,Width at wide end (top) of dovetail tail. Difference from base determines lock strength.
+dovetail_depth_mm,4.00 mm,mm,Depth of dovetail slot/rail. Deeper = stronger retention but more material.
+dovetail_clearance_per_surface_mm,0.12 mm,mm,Per-surface clearance for sliding dovetail fit in FDM. Tighter than general sliding fit because dovetails self-align.
+dovetail_slide_entry_chamfer_mm,0.50 mm,mm,Lead-in chamfer at dovetail entry to ease assembly. Applied to both rail and slot.
+spring_clip_arm_thickness_mm,1.60 mm,mm,"Flexure arm thickness for FDM spring clips (PLA). Thinner = more flex but weaker. 1.6 mm gives ~2 mm deflection before yield at 40 mm arm length."
+spring_clip_arm_width_mm,6.00 mm,mm,Width of spring clip arm. Wider = stiffer (scales linearly with width).
+spring_clip_deflection_max_mm,2.00 mm,mm,Maximum safe deflection for PLA spring clip arms at 1.6 mm thickness × 40 mm length. Beyond this risks permanent deformation.
+spring_clip_hook_depth_mm,1.50 mm,mm,How far the hook protrudes past the mating surface. Must be less than max deflection for the arm to flex over it.
+container_wall_thickness_food_safe_mm,2.50 mm,mm,"Minimum wall thickness for food-adjacent containers (treats, dry goods). Provides structural rigidity and prevents permeation. Not FDA-rated — for dry pet treats only."
+container_base_thickness_mm,2.00 mm,mm,Base/floor thickness for general containers. Thicker than walls because bottom bears load and is the first layer group.
+container_corner_radius_min_mm,3.00 mm,mm,Minimum corner radius for rounded-rectangle containers. Smaller radii create stress concentrations and thin-wall issues in FDM.
+container_lid_rim_width_mm,1.50 mm,mm,Width of the sealing rim/lip on container lids. Provides contact area for dust seal without excessive material.
