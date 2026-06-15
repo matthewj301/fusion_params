@@ -1,0 +1,151 @@
+Name,Unit,Expression,Value,Comment,Favorite
+m3_selftap_hole,mm,2.70,0.27,"Hole diameter for direct M3 screw into plastic (self-tapping, no insert). Use for low-load non-serviceable joints. Engagement length ≥ 8 mm recommended.",True
+m4_selftap_hole,mm,3.50,0.35000000000000003,Hole diameter for direct M4 self-tapping into plastic.,True
+m2_thru_hole,mm,2.40,0.24,M2 bolt clearance through-hole. ISO M2 shank = 2.0 mm + 0.40 mm FDM clearance.,True
+m2_close_fit_hole,mm,2.20,0.22000000000000003,M2 close-fit location hole — for alignment and indexed dowels.,True
+m2_boss_od,mm,4.00,0.4,M2 boss OD — cylindrical pad surrounding M2 hole. 2× screw diameter rule.,True
+m2p5_thru_hole,mm,2.90,0.29,M2.5 bolt clearance through-hole. ISO M2.5 shank = 2.5 mm + 0.40 mm. Raspberry Pi / SBC standard fastener.,True
+m2p5_close_fit_hole,mm,2.70,0.27,M2.5 close-fit location hole.,True
+m2p5_boss_od,mm,5.00,0.5,M2.5 boss OD — standard for SBC and PCB mounting posts.,True
+m3_thru_hole,mm,3.40,0.34,M3 bolt clearance through-hole. Voron project standard. ISO M3 shank = 3.0 mm + 0.40 mm.,True
+m3_close_fit_hole,mm,3.20,0.32000000000000006,M3 close-fit location hole.,True
+m3_boss_od,mm,6.40,0.6400000000000001,M3 boss OD — Voron standard. ~1.5 mm wall around clearance hole.,True
+m4_thru_hole,mm,4.50,0.45,M4 bolt clearance through-hole. ISO M4 = 4.0 mm + 0.50 mm.,True
+m4_close_fit_hole,mm,4.20,0.42000000000000004,M4 close-fit location hole.,True
+m4_boss_od,mm,8.00,0.8,"M4 boss OD — 2× screw diameter, ~1.75 mm wall.",True
+m5_thru_hole,mm,5.50,0.55,M5 bolt clearance through-hole. ISO M5 = 5.0 mm + 0.50 mm.,True
+m5_close_fit_hole,mm,5.20,0.52,M5 close-fit location hole.,True
+m5_boss_od,mm,9.50,0.9500000000000001,M5 boss OD.,True
+m6_thru_hole,mm,6.60,0.66,M6 bolt clearance through-hole.,True
+m6_close_fit_hole,mm,6.20,0.6200000000000001,M6 close-fit location hole.,True
+m6_boss_od,mm,11.00,1.1,M6 boss OD.,True
+m2_heatset_hole,mm,3.20,0.32000000000000006,M2 heat-set hole ID. ~98% of insert OD. Measure your batch.,True
+m2_heatset_depth,mm,3.20,0.32000000000000006,M2 recess depth = insert length + 0.20 mm.,True
+m3_heatset_hole,mm,4.40,0.44000000000000006,M3 heat-set hole ID — Voron standard Ruthex M3×5×4 (OD=4.5 mm). 98% of OD.,True
+m3_heatset_depth,mm,4.20,0.42000000000000004,M3 recess depth — 4.0 mm insert + 0.20 mm flush margin.,True
+m3_heatset_boss_od,mm,7.00,0.7000000000000001,M3 heat-set boss OD — slightly larger than plain M3 boss to handle insert knurling pressure.,True
+m4_heatset_hole,mm,5.40,0.54,M4 heat-set hole ID (Ruthex RX-M4×6 OD≈5.6 mm). Always measure batch.,True
+m4_heatset_depth,mm,6.20,0.6200000000000001,M4 recess depth = 6.0 mm insert + 0.20 mm.,True
+m5_heatset_hole,mm,6.40,0.6400000000000001,M5 heat-set hole ID. Verify OD of your specific insert brand.,True
+heatset_temp_pla,,180,180.0,Soldering iron tip temp for PLA heat-set installation. Use a dedicated brass insert tip.,True
+heatset_temp_petg,,220,220.0,Iron tip temp for PETG heat-set installation.,True
+heatset_temp_abs_asa,,240,240.0,Iron tip temp for ABS/ASA heat-set installation.,True
+m2_button_head_dia,mm,3.80,0.38,M2 button-head (ISO 7380) head OD.,True
+m2_button_head_height,mm,0.90,0.09000000000000001,M2 button-head head height.,True
+m2p5_button_head_dia,mm,4.70,0.47000000000000003,M2.5 button-head head OD.,True
+m2p5_button_head_height,mm,1.30,0.13,M2.5 button-head head height.,True
+m3_button_head_dia,mm,5.70,0.5700000000000001,M3 button-head head OD. Most common fastener in 3D printer assemblies.,True
+m3_button_head_height,mm,1.65,0.165,M3 button-head head height.,True
+m4_button_head_dia,mm,7.60,0.76,M4 button-head head OD.,True
+m4_button_head_height,mm,2.20,0.22000000000000003,M4 button-head head height.,True
+m5_button_head_dia,mm,9.50,0.9500000000000001,M5 button-head head OD.,True
+m5_button_head_height,mm,2.75,0.275,M5 button-head head height.,True
+m2_socket_head_dia,mm,3.80,0.38,M2 socket cap head (DIN 912) OD.,True
+m2_socket_head_height,mm,2.00,0.2,M2 socket cap head height.,True
+m2p5_socket_head_dia,mm,4.50,0.45,M2.5 socket cap head OD.,True
+m2p5_socket_head_height,mm,2.50,0.25,M2.5 socket cap head height.,True
+m3_socket_head_dia,mm,5.50,0.55,M3 socket cap head OD. Slightly narrower than button — useful where lateral clearance is tight.,True
+m3_socket_head_height,mm,3.00,0.30000000000000004,M3 socket cap head height. Taller than button head — verify stack height in assemblies.,True
+m4_socket_head_dia,mm,7.00,0.7000000000000001,M4 socket cap head OD.,True
+m4_socket_head_height,mm,4.00,0.4,M4 socket cap head height.,True
+m5_socket_head_dia,mm,8.50,0.8500000000000001,M5 socket cap head OD.,True
+m5_socket_head_height,mm,5.00,0.5,M5 socket cap head height.,True
+m3_flat_head_dia,mm,5.50,0.55,M3 flat-head socket screw (DIN 7991 / ISO 10642) head OD.,True
+m3_flat_head_height,mm,1.70,0.17,M3 flat-head head height (below flush surface).,True
+m4_flat_head_dia,mm,7.00,0.7000000000000001,M4 flat-head head OD.,True
+m5_flat_head_dia,mm,8.50,0.8500000000000001,M5 flat-head head OD.,True
+m2_hex_nut_af,mm,4.00,0.4,M2 hex nut AF (ISO 4032).,True
+m2_hex_nut_height,mm,1.60,0.16000000000000003,M2 hex nut height.,True
+m2p5_hex_nut_af,mm,5.00,0.5,M2.5 hex nut AF.,True
+m2p5_hex_nut_height,mm,2.00,0.2,M2.5 hex nut height.,True
+m3_hex_nut_af,mm,5.50,0.55,M3 hex nut AF. Standard for Voron nut traps. FDM pocket: model at 5.70 mm.,True
+m3_hex_nut_height,mm,2.40,0.24,M3 hex nut height. FDM pocket depth: model at 2.60 mm.,True
+m4_hex_nut_af,mm,7.00,0.7000000000000001,M4 hex nut AF.,True
+m4_hex_nut_height,mm,3.20,0.32000000000000006,M4 hex nut height.,True
+m5_hex_nut_af,mm,8.00,0.8,M5 hex nut AF.,True
+m5_hex_nut_height,mm,4.00,0.4,M5 hex nut height.,True
+m3_square_nut_width,mm,5.50,0.55,M3 square nut (DIN 557) width. FDM trap: 5.70 mm slot.,True
+m3_square_nut_height,mm,1.80,0.18000000000000002,M3 square nut height. FDM trap depth: 2.00 mm.,True
+m4_square_nut_width,mm,7.00,0.7000000000000001,M4 square nut width.,True
+m4_square_nut_height,mm,2.40,0.24,M4 square nut height.,True
+m3_washer_od,mm,7.00,0.7000000000000001,M3 flat washer OD (ISO 7089 normal series).,True
+m3_washer_thick,mm,0.50,0.05,M3 flat washer thickness.,True
+m4_washer_od,mm,9.00,0.9,M4 flat washer OD.,True
+m5_washer_od,mm,10.00,1.0,M5 flat washer OD.,True
+m3_dowel_pin_dia,mm,3.00,0.30000000000000004,"ISO 8734 dowel pin h6 class — 3 mm nominal. For precision alignment features. FDM receiver hole: 3.10–3.15 mm for clearance fit, or post-ream for press fit.",True
+m4_dowel_pin_dia,mm,4.00,0.4,4 mm ISO dowel pin nominal diameter.,True
+m5_dowel_pin_dia,mm,5.00,0.5,5 mm ISO dowel pin nominal diameter.,True
+m3_standoff_od,mm,5.50,0.55,M3 hex standoff OD — standard brass or aluminum spacers. Used for PCB mount boss sizing and clearance calculations.,True
+m2p5_standoff_od,mm,4.50,0.45,M2.5 hex standoff OD.,True
+ziptie_2p5mm_width,mm,2.80,0.27999999999999997,Standard 2.5 mm zip tie slot width with FDM clearance. For cable management routing channels.,True
+ziptie_2p5mm_thick,mm,1.40,0.13999999999999999,Standard 2.5 mm zip tie slot thickness with FDM clearance.,True
+ziptie_3p5mm_width,mm,3.80,0.38,Standard 3.5 mm zip tie slot width with FDM clearance.,True
+ziptie_3p5mm_thick,mm,2.00,0.2,Standard 3.5 mm zip tie slot thickness with FDM clearance.,True
+m3_nut_pocket_af,mm,m3_hex_nut_af + 0.20,0.5700000000000001,M3 hex nut pocket AF for FDM. ISO = 5.50 mm + 0.20 mm clearance.,True
+m3_nut_pocket_depth,mm,m3_hex_nut_height + 0.20,0.26,M3 hex nut pocket depth. ISO height 2.40 + 0.20 mm.,True
+m3_nut_pocket_circum,mm,6.60,0.66,M3 hex nut circumscribed circle + clearance for polygon-pocket method.,True
+m3_sq_nut_pocket_width,mm,m3_square_nut_width + 0.20,0.5700000000000001,M3 square nut pocket width. ISO 5.50 + 0.20 mm.,True
+m3_sq_nut_pocket_depth,mm,m3_square_nut_height + 0.20,0.2,M3 square nut pocket depth. ISO 1.80 + 0.20 mm.,True
+m4_nut_pocket_af,mm,m4_hex_nut_af + 0.20,0.7200000000000001,M4 hex nut pocket AF. ISO 7.00 + 0.20 mm.,True
+m4_nut_pocket_depth,mm,m4_hex_nut_height + 0.20,0.34,M4 hex nut pocket depth. ISO 3.20 + 0.20 mm.,True
+m5_nut_pocket_af,mm,m5_hex_nut_af + 0.20,0.82,M5 hex nut pocket AF. ISO 8.00 + 0.20 mm.,True
+m5_nut_pocket_depth,mm,m5_hex_nut_height + 0.20,0.42000000000000004,M5 hex nut pocket depth. ISO 4.00 + 0.20 mm.,True
+m2_button_cbore_dia,mm,m2_button_head_dia + 0.40,0.42000000000000004,M2 button-head counterbore dia. ISO head 3.80 + 0.40 mm FDM.,True
+m2_button_cbore_depth,mm,m2_button_head_height + 0.30,0.12,M2 button-head counterbore depth. ISO head 0.90 + 0.30 mm.,True
+m2p5_button_cbore_dia,mm,m2p5_button_head_dia + 0.40,0.51,M2.5 button-head counterbore dia. ISO head 4.70 + 0.40 mm.,True
+m2p5_button_cbore_depth,mm,m2p5_button_head_height + 0.30,0.16000000000000003,M2.5 button-head counterbore depth. ISO head 1.30 + 0.30 mm.,True
+m3_button_cbore_dia,mm,m3_button_head_dia + 0.40,0.61,M3 button-head counterbore dia. ISO head 5.70 + 0.40 mm. Voron standard.,True
+m3_button_cbore_depth,mm,m3_button_head_height + 0.30,0.195,M3 button-head counterbore depth. ISO head 1.65 + 0.30 mm.,True
+m3_socket_cbore_dia,mm,m3_socket_head_dia + 0.40,0.5900000000000001,M3 socket cap counterbore dia. ISO head 5.50 + 0.40 mm.,True
+m3_socket_cbore_depth,mm,m3_socket_head_height + 0.30,0.33,M3 socket cap counterbore depth. ISO head 3.00 + 0.30 mm.,True
+m4_button_cbore_dia,mm,m4_button_head_dia + 0.40,0.8,M4 button-head counterbore dia. ISO head 7.60 + 0.40 mm.,True
+m4_button_cbore_depth,mm,m4_button_head_height + 0.30,0.25,M4 button-head counterbore depth. ISO head 2.20 + 0.30 mm.,True
+m5_button_cbore_dia,mm,m5_button_head_dia + 0.40,0.9900000000000001,M5 button-head counterbore dia.,True
+m3_countersink_dia,mm,6.00,0.6000000000000001,M3 flat-head countersink top opening. ISO head 5.50 + 0.50 mm.,True
+m4_countersink_dia,mm,8.00,0.8,M4 flat-head countersink top opening.,True
+m2_thread_pitch,mm,0.40,0.04000000000000001,M2 coarse thread pitch. Reference for thread tool.,True
+m2p5_thread_pitch,mm,0.45,0.045000000000000005,M2.5 coarse thread pitch.,True
+m3_thread_pitch,mm,0.50,0.05,M3 coarse thread pitch.,True
+m4_thread_pitch,mm,0.70,0.06999999999999999,M4 coarse thread pitch.,True
+m5_thread_pitch,mm,0.80,0.08000000000000002,M5 coarse thread pitch.,True
+m6_thread_pitch,mm,1.00,0.1,M6 coarse thread pitch.,True
+magnet_6x2mm_od,mm,6.00,0.6000000000000001,6×2 mm N52 neodymium disc magnet OD. Very common for panel clips and small latches.,True
+magnet_6x2mm_height,mm,2.00,0.2,6×2 mm magnet height.,True
+magnet_6x3mm_od,mm,6.00,0.6000000000000001,6×3 mm disc magnet OD.,True
+magnet_6x3mm_height,mm,3.00,0.30000000000000004,6×3 mm disc magnet height.,True
+magnet_8x2mm_od,mm,8.00,0.8,"8×2 mm N52 disc magnet OD. Common for toolhead docking (Tap, Klicky, etc.).",True
+magnet_8x2mm_height,mm,2.00,0.2,8×2 mm magnet height.,True
+magnet_10x2mm_od,mm,10.00,1.0,10×2 mm N52 disc magnet OD. Common for enclosure door catches and panel latches.,True
+magnet_10x2mm_height,mm,2.00,0.2,10×2 mm magnet height.,True
+magnet_10x3mm_od,mm,10.00,1.0,10×3 mm disc magnet OD.,True
+magnet_10x3mm_height,mm,3.00,0.30000000000000004,10×3 mm magnet height.,True
+magnet_press_fit,mm,-0.10,-0.010000000000000002,Magnet pocket press-fit clearance per side. Model pocket SMALLER than magnet OD by this. Magnet will require a press — use a flat surface and tap gently.,True
+magnet_glue_gap,mm,0.15,0.015,Magnet pocket clearance per side for CA/epoxy retention. Magnet drops in freely; adhesive fills the gap. Do not use press fit if gluing.,True
+magnet_flush_recess,mm,0.20,0.020000000000000004,Recess magnet below surface by this amount so it doesn't protrude. Protruding magnets interfere with flush mating surfaces.,True
+m2_2280_width,mm,22.0,2.2,M.2 2280 SSD width. PCI-SIG M.2 specification exact. Name encodes 22 x 80 mm.,True
+m2_2280_length,mm,80.0,8.0,M.2 2280 SSD length. PCI-SIG specification exact.,True
+m2_2280_height,mm,2.23,0.223,M.2 2280 SSD height (single-sided). Double-sided ~3.73 mm.,True
+m3_grub_length,mm,3.0,0.30000000000000004,M3 grub/set screw most common length (3 mm). Also available in 4 and 5 mm.,True
+m4_grub_length,mm,5.0,0.5,M4 grub/set screw most common length (5 mm). Also available in 4 and 6 mm.,True
+m2p5_heatset_hole,mm,3.30,0.33,M2.5 heat-set hole ID. Generic ~97% of assumed 3.4 mm OD; verify/coupon-test your batch (brand-dependent). Depth = insert length + 0.2 mm.,True
+m6_heatset_hole,mm,7.80,0.78,M6 heat-set hole ID. Generic ~97% of assumed 8.0 mm OD; verify/coupon-test your batch. Depth = insert length + 0.2 mm.,True
+m8_heatset_hole,mm,9.60,0.96,M8 heat-set hole ID. Generic ~97% of assumed 9.9 mm OD; verify/coupon-test your batch. Depth = insert length + 0.2 mm.,True
+m10_heatset_hole,mm,11.70,1.17,M10 heat-set hole ID. Generic ~97% of assumed 12.0 mm OD; verify/coupon-test your batch. Depth = insert length + 0.2 mm.,True
+m6_hex_nut_af,mm,10.0,1,M6 hex nut AF (DIN 934 / ISO 4032). Add ~0.2-0.3 mm for printed pockets.,True
+m6_hex_nut_height,mm,5.2,0.52,M6 hex nut height (ISO 4032).,True
+m8_hex_nut_af,mm,13.0,1.3,M8 hex nut AF.,True
+m8_hex_nut_height,mm,6.8,0.68,M8 hex nut height.,True
+m10_hex_nut_af,mm,17.0,1.7,M10 hex nut AF.,True
+m10_hex_nut_height,mm,8.4,0.84,M10 hex nut height.,True
+m6_socket_head_dia,mm,10.0,1,M6 socket cap head (DIN 912) OD. Counterbore slightly over head dia for clearance.,True
+m6_socket_head_height,mm,6.0,0.6,M6 socket cap head height.,True
+m8_socket_head_dia,mm,13.0,1.3,M8 socket cap head OD.,True
+m8_socket_head_height,mm,8.0,0.8,M8 socket cap head height.,True
+magnet_8x3mm_od,mm,8.0,0.8,8x3 mm N42-N52 disc magnet OD. Press-fit pocket ~0.1 mm over.,True
+magnet_8x3mm_height,mm,3.0,0.3,8x3 mm magnet height.,True
+magnet_12x3mm_od,mm,12.0,1.2,12x3 mm disc magnet OD. Press-fit pocket ~0.1 mm over.,True
+magnet_12x3mm_height,mm,3.0,0.3,12x3 mm magnet height.,True
+magnet_15x3mm_od,mm,15.0,1.5,15x3 mm disc magnet OD.,True
+magnet_15x3mm_height,mm,3.0,0.3,15x3 mm magnet height.,True
+magnet_20x2mm_od,mm,20.0,2,20x2 mm disc magnet OD.,True
+magnet_20x2mm_height,mm,2.0,0.2,20x2 mm magnet height.,True

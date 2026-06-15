@@ -1,0 +1,116 @@
+Name,Unit,Expression,Value,Comment,Favorite
+mgn7h_rail_width,mm,7.00,0.7000000000000001,MGN7H linear rail nominal width. Lightweight option for low-mass toolheads.,True
+mgn9h_rail_width,mm,9.00,0.9,MGN9H rail nominal width.,True
+mgn12h_rail_width,mm,12.00,1.2000000000000002,MGN12H rail nominal width. Standard on V-Core 3.1 AWD Y and Z.,True
+mgn15h_rail_width,mm,15.00,1.5,MGN15H rail nominal width. Heavy-duty gantry / Z axes.,True
+mgn12h_carriage_length,mm,45.00,4.5,MGN12H H-type carriage block length. Used for toolhead plate sizing and hole pattern layout.,True
+mgn12h_pitch_along,mm,20.00,2.0,MGN12H carriage mounting hole pitch — along rail axis.,True
+mgn12h_pitch_across,mm,20.00,2.0,MGN12H carriage mounting hole pitch — perpendicular to rail axis.,True
+mgn9h_pitch_along,mm,15.00,1.5,MGN9H carriage mounting hole pitch along rail.,True
+mgn9h_pitch_across,mm,10.00,1.0,MGN9H carriage mounting hole pitch across rail.,True
+gt2_belt_pitch,mm,2.00,0.2,"GT2 / 3MGT belt tooth pitch. Standard for K3, V-Core, Voron.",True
+gt2_belt_width,mm,6.00,0.6000000000000001,GT2 / 3MGT belt nominal width.,True
+gt2_clamp_extra,mm,0.20,0.020000000000000004,Extra width in belt clamp slot for insertion and tensioning clearance.,True
+gt2_pulley_16t_od,mm,11.00,1.1,GT2 16-tooth pulley OD (approximate). Verify per brand — varies ±0.3 mm.,True
+gt2_pulley_20t_od,mm,13.00,1.3,GT2 20-tooth pulley OD (approximate). Most common idler/drive pulley size.,True
+gt2_pulley_80t_od,mm,51.00,5.1000000000000005,GT2 80-tooth pulley OD. Used in some AWD / geared arrangements.,True
+gt2_pulley_bore,mm,5.00,0.5,Standard GT2 pulley shaft bore — 5 mm. Add 0.05 mm clearance for FDM shaft receivers.,True
+f695_bearing_od,mm,13.00,1.3,F695 flanged bearing OD — standard GT2 idler bearing in Voron/K3/V-Core.,True
+f695_bearing_id,mm,5.00,0.5,F695 bearing ID — fits M5 shoulder bolt.,True
+f695_bearing_width,mm,4.00,0.4,F695 bearing width.,True
+nema17_body_width,mm,42.30,4.2299999999999995,NEMA17 motor body width (square). Standard across all NEMA17 motors.,True
+nema17_bolt_pattern_center_to_center,mm,31.00,3.1,NEMA17 mounting bolt pattern — center to center (square pattern).,True
+nema17_bolt_size,mm,3.00,0.30000000000000004,NEMA17 mounting bolt — M3. Model clearance holes at hole_geometry_m3_screw_clearance_diameter.,True
+nema17_shaft_diameter,mm,5.00,0.5,NEMA17 output shaft diameter. Standard 5 mm.,True
+nema17_shaft_flat_depth,mm,0.50,0.05,NEMA17 shaft D-flat depth. Used for set screw / grub screw engagement geometry.,True
+nema17_shaft_length_standard,mm,20.00,2.0,"NEMA17 standard shaft length — 20 mm. Some variants: 22, 24 mm. Verify your specific motor.",True
+nema17_face_boss_diameter,mm,22.00,2.2,NEMA17 front face centering boss diameter. Used for precision motor registration in mounts.,True
+nema14_body_width,mm,35.20,3.5200000000000005,"NEMA14 motor body width — used in compact extruder motors (Orbiter, Sherpa Mini).",True
+nema14_bolt_pattern_center_to_center,mm,26.00,2.6,NEMA14 mounting bolt pattern C-C.,True
+nema14_shaft_diameter,mm,5.00,0.5,NEMA14 output shaft diameter.,True
+vslot_2020_extrusion_width,mm,20.00,2.0,2020 V-slot extrusion nominal width.,True
+vslot_2040_extrusion_width,mm,40.00,4.0,2040 extrusion nominal width.,True
+tslot_m3_nut_slot_clearance_width,mm,5.70,0.5700000000000001,M3 T-slot nut / hammerhead sliding width in 2020 extrusion. ISO slot = 5.50 + 0.20 mm clearance.,True
+beacon_probe_body_outer_diameter,mm,12.00,1.2000000000000002,Beacon eddy-current probe body OD. Used for mount bore and retention clip geometry.,True
+beacon_probe_body_total_length,mm,20.50,2.0500000000000003,Beacon probe body total length. Verify against your Beacon revision.,True
+orbiter_v25_motor_mount_bolt_pattern,mm,26.00,2.6,Orbiter v2.5 extruder mounting bolt pattern C-C (NEMA14 pattern).,True
+orbiter_v25_filament_path_offset_from_mount,mm,15.00,1.5,Orbiter v2.5 filament centerline offset from mount face. Used for toolhead geometry validation.,True
+chube_hotend_collet_outer_diameter,mm,12.00,1.2000000000000002,Chube Conduction hotend collet OD. Used for retention clip bore and mount pocket. Verify with your unit.,True
+canbus_cable_chain_slot_width,mm,10.00,1.0,CAN bus toolhead umbilical cable chain slot minimum width. Accounts for cable bundle + connector bodies.,True
+toolhead_plate_5mm,mm,5.00,0.5,V-Core toolhead carriage CNC plate thickness — 5 mm 6061-T6 as used in Wishbone toolhead architecture.,True
+toolhead_plate_4mm,mm,4.00,0.4,K3 / secondary toolhead plate thickness — 4 mm 6061-T6.,True
+cnc_plate_tolerance,mm,0.10,0.010000000000000002,Mill tolerance on 6061-T6 stock plate thickness — typically ±0.05–0.10 mm. Account for this in stack height calculations when combining printed and machined parts.,True
+cnc_drilled_oversize,mm,0.05,0.005000000000000001,"Drilled hole tolerance in aluminum — typically +0.05/−0.00 mm. For precision fits, always ream to H7 class after drilling.",True
+cnc_h7_ream_tol,mm,0.012,0.0012000000000000001,H7 reamed hole tolerance for a 5 mm hole — ±0.006 mm. Reference for press-fit dowel pins and bearing seats in 6061.,True
+cnc_m2_tap_drill,mm,1.60,0.16000000000000003,M2×0.4 tap drill diameter in aluminum — ISO standard pre-tap hole for ~75% thread engagement.,True
+cnc_m2p5_tap_drill,mm,2.05,0.205,M2.5×0.45 tap drill diameter in aluminum.,True
+cnc_m3_tap_drill,mm,2.50,0.25,M3×0.5 tap drill diameter in aluminum — standard for all M3 tapped holes in 6061 toolhead plates.,True
+cnc_m4_tap_drill,mm,3.30,0.33,M4×0.7 tap drill diameter in aluminum.,True
+cnc_m5_tap_drill,mm,4.20,0.42000000000000004,M5×0.8 tap drill diameter in aluminum.,True
+cnc_m6_tap_drill,mm,5.00,0.5,M6×1.0 tap drill diameter in aluminum.,True
+cnc_thread_engage_min_ratio,,1.50,1.5,Minimum thread engagement length = bolt_diameter × this ratio. M3 in 4 mm plate = 4.0 mm engagement > 1.5× = OK. Below 1× risks strip-out under load.,True
+cnc_thread_engage_rec_ratio,,2.00,2.0,Recommended thread engagement for structural joints = 2× bolt diameter. M3 structural: 6 mm minimum engagement.,True
+cnc_min_wall_tap,mm,3.00,0.30000000000000004,Minimum material wall thickness surrounding a tapped hole in aluminum. Thinner risks thread pullout and wall blowout.,True
+cnc_m3_csink_4mm,mm,1.70,0.17,Countersink depth for a flush M3 flat-head screw in a 4 mm plate. ISO M3 flat head height = 1.70 mm.,True
+cnc_m3_csink_5mm,mm,1.70,0.17,Same countersink depth for 5 mm plate — flat head fully recessed with 3.30 mm of uncut material remaining.,True
+cnc_pocket_depth_tol,mm,0.05,0.005000000000000001,Typical pocket depth tolerance achievable from most CNC services — ±0.05 mm. Tighter than this requires premium machining.,True
+cnc_5mm_press_fit_pin,mm,4.994,0.4994,5 mm H7 press-fit dowel hole in 6061 — nominal 5.000 mm −0.006 mm = 4.994 mm lower bound. Requires reaming.,True
+cnc_thermal_expansion,,0.080,0.08,6061-T6 linear thermal expansion coefficient — ~23.6 µm/m/°C ≈ 0.08 µm/mm/°C. Relevant for chamber-heated assemblies where aluminum and plastic expand at different rates.,True
+cnc_em_6mm_dia,mm,6.00,0.6,6mm single-flute roughing endmill diameter. Primary roughing tool for Carvera Air aluminum work.,True
+cnc_em_6mm_corner_r,mm,0.20,0.02,Corner radius on 6mm endmill — not truly sharp. Design internal corners with at least this radius.,True
+cnc_em_3175_dia,mm,3.175,0.3175,1/8 inch single-flute finishing endmill diameter. Primary finishing tool.,True
+cnc_em_3175_corner_r,mm,0.10,0.01,Corner radius on 1/8 inch endmill.,True
+cnc_em_2mm_dia,mm,2.00,0.2,2mm ball endmill diameter. For filament half-bores and small radii.,True
+cnc_min_internal_r,mm,1.60,0.16,Minimum internal corner radius for finish-machined pockets. Equals finishing endmill radius (3.175/2).,True
+cnc_min_internal_r_rough,mm,3.10,0.31,Minimum internal corner radius for roughing-only pockets. Equals roughing endmill radius (6.0/2) + clearance.,True
+cnc_max_doc,mm,3.00,0.3,Maximum axial depth of cut per pass in aluminum on Carvera Air 200W spindle.,True
+cnc_max_stepover_pct,,50,50.0,Maximum radial stepover as percentage of tool diameter for roughing in aluminum.,True
+cnc_stock_to_leave,mm,0.20,0.02,Radial stock-to-leave for finish passes. Removed by finishing endmill in a separate pass.,True
+cnc_stock_to_leave_z,mm,0.10,0.01,Axial (floor) stock-to-leave for finish passes.,True
+cnc_max_pocket_depth_ratio,,4,4.0,Maximum pocket depth as multiple of tool diameter. Beyond this deflection and chip evacuation degrade.,True
+cnc_vise_grip_min,mm,5.00,0.5,Minimum material height below vise jaw tops for secure clamping. Less risks part pulling out.,True
+cnc_tab_height,mm,0.50,0.05,Holding tab height for blank cutout contour operations.,True
+cnc_tab_width,mm,3.00,0.3,Holding tab width along contour. Wide enough to resist cutting forces but easy to file off.,True
+cnc_tab_count_min,,2,2.0,Minimum holding tabs per cutout contour. Use 3 for parts longer than 100mm.,True
+cnc_blank_oversize,mm,4.00,0.4,Blank oversize per side beyond finished part envelope. Provides clamping and datum material.,True
+cnc_datum_face_depth,mm,0.30,0.03,Facing depth to establish datum surface on raw stock. Removes mill marks and creates a flat reference.,True
+cnc_work_area_x,mm,200,20.0,Carvera Air maximum X travel.,True
+cnc_work_area_y,mm,150,15.0,Carvera Air maximum Y travel.,True
+cnc_reprobe_tol,mm,0.02,0.002,Expected accuracy of Z re-probe after part flip. Budget this into through-feature meet-in-middle tolerances.,True
+cnc_slip_fit,mm,0.025,0.0025,CNC slip fit clearance per side (H7/h6 class). Part slides freely with no perceptible play.,True
+cnc_press_fit,mm,-0.012,-0.0012,CNC press fit interference per side (H7/p6 class). Requires arbor press. For dowel pins and bearing seats.,True
+cnc_transition_fit,mm,0.005,0.0005,CNC transition fit (H7/k6 class). May or may not need light force to assemble.,True
+cnc_surface_ra_rough,,3.2,3.2,Surface roughness Ra in micrometers achievable after roughing passes on Carvera Air.,True
+cnc_surface_ra_finish,,1.6,1.6,Surface roughness Ra in micrometers after finishing passes.,True
+cnc_surface_ra_face,,0.8,0.8,Surface roughness Ra in micrometers after face milling.,True
+cnc_edge_break,mm,0.30,0.03,Standard edge break chamfer for deburring. Apply to all sharp external edges after machining.,True
+cnc_thread_relief_dia,mm,0.50,0.05,Thread relief undercut — add this to tap drill diameter for the relief groove.,True
+cnc_thread_relief_depth,mm,1.50,0.15,Thread relief undercut depth below last thread. 1.5-2x thread pitch.,True
+alu_6061_service_max,,170,170.0,6061-T6 maximum continuous service temperature in degrees C before age-hardening degrades.,True
+alu_6061_density,,2.70,2.7,6061-T6 density in g/cm3. For weight estimation.,True
+cnc_m8_tap_drill,mm,6.8,0.68,M8x1.25 tap drill diameter in aluminum (75% thread). Source: ISO 261,True
+cnc_m10_tap_drill,mm,8.5,0.85,M10x1.5 tap drill diameter in aluminum.,True
+cnc_m12_tap_drill,mm,10.2,1.02,M12x1.75 tap drill diameter in aluminum.,True
+bearing_608_id,mm,8.0,0.8,"608 bearing bore (skate bearing; filament rollers, idlers).",True
+bearing_608_od,mm,22.0,2.2,608 bearing OD.,True
+bearing_608_width,mm,7.0,0.7,608 bearing width.,True
+bearing_625_id,mm,5.0,0.5,625 bearing bore (common idler).,True
+bearing_625_od,mm,16.0,1.6,625 bearing OD.,True
+bearing_625_width,mm,5.0,0.5,625 bearing width.,True
+bearing_623_id,mm,3.0,0.3,623 bearing bore (small idler; F623 flanged variant common).,True
+bearing_623_od,mm,10.0,1,623 bearing OD.,True
+bearing_623_width,mm,4.0,0.4,623 bearing width.,True
+bearing_688_id,mm,8.0,0.8,688 bearing bore (compact idler).,True
+bearing_688_od,mm,16.0,1.6,688 bearing OD.,True
+bearing_688_width,mm,5.0,0.5,688 bearing width.,True
+bearing_6802_id,mm,15.0,1.5,6802 thin-section bearing bore.,True
+bearing_6802_od,mm,24.0,2.4,6802 bearing OD.,True
+bearing_6802_width,mm,5.0,0.5,6802 bearing width.,True
+bearing_mr105_id,mm,5.0,0.5,MR105 mini bearing bore.,True
+bearing_mr105_od,mm,10.0,1,MR105 bearing OD.,True
+bearing_mr105_width,mm,4.0,0.4,MR105 bearing width.,True
+vslot_2020_slot_width,mm,6.0,0.6,20-series T-slot/V-slot opening; M5 bolt / 6 mm T-nut. V-slot opening ~6.2 mm. Source: wellste,True
+vslot_3030_extrusion_width,mm,30.0,3,3030 extrusion nominal width.,True
+vslot_3030_slot_width,mm,8.0,0.8,3030 slot width (often 8.2); M6 bolt. Some 3030 are 6 mm slot - verify.,True
+vslot_4040_extrusion_width,mm,40.0,4,4040 extrusion nominal width.,True
+vslot_4040_slot_width,mm,8.0,0.8,4040 slot width; M8 bolt. Some makers do 10 mm slot - verify.,True

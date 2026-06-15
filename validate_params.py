@@ -22,6 +22,11 @@ FUSION_NATIVE_UNITS = {"mm", "cm", "in", "deg", "rad", ""}
 DIMENSIONLESS_UNITS = {"count", "x", "%", "ratio", "°C", "A", "µm/mm"}
 VALID_UNITS = FUSION_NATIVE_UNITS | DIMENSIONLESS_UNITS
 UNIT_SUFFIXES = {"mm", "cm", "deg", "rad"}
+FUSION_BUILTINS = {
+    "cos", "sin", "tan", "acos", "asin", "atan", "atan2",
+    "sqrt", "abs", "ceil", "floor", "round", "min", "max",
+    "exp", "log", "log10", "pow", "mod", "sign", "truncate",
+}
 
 FUSION_6COL_HEADER = ["Name", "Unit", "Expression", "Value", "Comment", "Favorite"]
 LEGACY_4COL_HEADER = ["Name", "Expression", "Unit", "Comment"]
@@ -29,7 +34,7 @@ LEGACY_4COL_HEADER = ["Name", "Expression", "Unit", "Comment"]
 
 def extract_references(expression):
     tokens = set(re.findall(r"[a-z][a-z0-9_]{2,}", str(expression)))
-    return tokens - UNIT_SUFFIXES
+    return tokens - UNIT_SUFFIXES - FUSION_BUILTINS
 
 
 def main():

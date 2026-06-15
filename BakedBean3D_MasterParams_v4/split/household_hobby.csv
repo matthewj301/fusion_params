@@ -1,0 +1,143 @@
+Name,Unit,Expression,Value,Comment,Favorite
+halfdart_body_outer_diameter,mm,13.00,1.3,Half-dart body outer diameter standard. Base reference for barrel and breech clearances.,True
+halfdart_tip_outer_diameter,mm,13.00,1.3,Half-dart foam tip OD — approximately same as body for most half-dart designs.,True
+halfdart_body_length,mm,36.00,3.6,Standard half-dart overall length.,True
+fulldart_body_outer_diameter,mm,11.50,1.1500000000000001,Full-dart foam body OD — narrower than tip.,True
+fulldart_tip_outer_diameter,mm,13.00,1.3,Full-dart foam tip OD.,True
+fulldart_overall_length,mm,72.00,7.2,Standard full-dart overall length.,True
+halfdart_barrel_performance,mm,13.20,1.32,Half-dart barrel bore for performance — tight for good seal and range. +0.20 mm over dart OD.,True
+halfdart_barrel_slam_fire,mm,13.70,1.37,Half-dart barrel bore for slam-fire / rapid cycling — loose enough for reliable feeding under fast operation.,True
+nerf_flywheel_gap_half_dart_standard,mm,9.00,0.9,Flywheel gap for half-dart at standard wheel OD. Tune 8.5–9.5 mm depending on wheel OD and dart compression preference.,True
+nerf_flywheel_motor_can_worker_artifact_od,mm,22.10,2.2100000000000004,Worker / Artifact 130/180-size flywheel motor can OD — for motor cage bore sizing. Verify per motor brand.,True
+nerf_spring_guide_rod_diameter_standard,mm,4.00,0.4,Standard spring guide rod diameter — 4 mm for most semi-auto plunger designs. 5 mm for high-draw builds.,True
+nerf_plunger_id_19mm,mm,19.00,1.9000000000000001,Small plunger tube ID — 19 mm PVC / CPVC. Common in compact semi-auto designs.,True
+nerf_plunger_id_25mm,mm,25.00,2.5,Large plunger tube ID — 25 mm PVC. Common in high-volume springers.,True
+nerf_plunger_wall_thickness,mm,2.00,0.2,Standard PVC plunger tube wall thickness. Used for outer diameter calc: OD = ID + 2× wall.,True
+wh_base_25mm_od,mm,25.00,2.5,25 mm round base OD — legacy infantry standard. Tight clearance slot: 25.30 mm.,True
+wh_base_32mm_od,mm,32.00,3.2,32 mm round base OD — current infantry standard. Tight clearance slot: 32.30 mm.,True
+wh_base_40mm_od,mm,40.00,4.0,"40 mm round base OD — heavy infantry, small cavalry, some vehicles.",True
+wh_base_50mm_od,mm,50.00,5.0,"50 mm round base OD — large infantry, medium cavalry.",True
+wh_base_60mm_od,mm,60.00,6.0,"60 mm round base OD — large monsters, heavy cavalry.",True
+wh_base_slot_clearance,mm,0.30,0.03,FDM clearance to add to base OD for tray / rack slot — base drops in freely without binding.,True
+wh_base_height,mm,3.00,0.30000000000000004,Standard Citadel round base height — approximately 3 mm. Verify with your base batch.,True
+wh_flying_post_diameter,mm,3.00,0.30000000000000004,Standard GW flying base post rod diameter — 3 mm. Clearance hole in model: 3.20 mm.,True
+wh_flying_post_clearance_hole,mm,3.20,0.32000000000000006,Flying base post clearance hole — 3 mm post + 0.20 mm FDM.,True
+wh_magnet_6x2_pocket_id,mm,6.10,0.61,6×2 mm magnet pocket ID for base magnetization (transport tray use). Slight clearance for glue-in.,True
+wh_magnet_6x2_pocket_depth,mm,2.10,0.21000000000000002,6×2 mm magnet pocket depth — 2.0 mm magnet + 0.10 mm for glue / flush margin.,True
+wh_terrain_wall_thickness_minimum_rigid,mm,3.00,0.30000000000000004,Minimum FDM terrain wall thickness for rigid scatter terrain — thin terrain flexes and delaminates under play.,True
+wh_terrain_wall_thickness_structural_building,mm,4.00,0.4,Recommended wall thickness for structural terrain buildings — 4 mm provides good rigidity at tabletop scale.,True
+wh_kilteam_tile_standard_size,mm,200.00,20.0,Kill Team game board tile standard size — 200 × 200 mm. Used for modular terrain planning.,True
+coffee_mug_top_dia,mm,82.0,8.200000000000001,Standard 8-12 oz coffee mug top/rim diameter. Nominal � verify with calipers. Range 80-89 mm.,True
+coffee_mug_base_dia,mm,70.0,7.0,Standard coffee mug base diameter. Nominal � verify with calipers. Range 65-75 mm.,True
+coffee_mug_height,mm,95.0,9.5,Standard coffee mug height. Nominal � verify with calipers. Range 90-100 mm.,True
+yeti20oz_lip_dia,mm,89.0,8.9,Yeti Rambler 20 oz tumbler lip/rim diameter. Yeti spec.,True
+yeti20oz_height,mm,175.0,17.5,Yeti Rambler 20 oz tumbler height. Yeti spec.,True
+yeti30oz_lip_dia,mm,102.0,10.200000000000001,Yeti Rambler 30 oz tumbler lip/rim diameter. Yeti spec.,True
+yeti30oz_height,mm,194.0,19.400000000000002,Yeti Rambler 30 oz tumbler height. Yeti spec.,True
+stanley40oz_base_dia,mm,75.0,7.5,Stanley Quencher H2.0 40 oz base diameter. Stanley spec.,True
+stanley40oz_height,mm,260.0,26.0,Stanley Quencher H2.0 40 oz height without straw. Stanley spec.,True
+hydroflask32oz_body_dia,mm,91.0,9.1,Hydro Flask 32 oz wide mouth body diameter. Hydro Flask spec.,True
+hydroflask32oz_height,mm,239.0,23.900000000000002,Hydro Flask 32 oz wide mouth height with cap. Hydro Flask spec.,True
+bic_pen_width,mm,9.0,0.9,BIC Cristal pen hex body across-flats width. For round holder hole use edc_bic_pen_circular_hole_dia.,True
+bic_pen_length,mm,149.0,14.9,BIC Cristal pen overall length with cap.,True
+sharpie_barrel_dia,mm,12.0,1.2000000000000002,Sharpie Fine Point marker barrel diameter. Approximate � cap is slightly wider at ~14 mm.,True
+sharpie_length,mm,140.0,14.0,Sharpie Fine Point marker length with cap.,True
+chapstick_dia,mm,16.5,1.6500000000000001,Standard chapstick/lip balm tube diameter.,True
+chapstick_height,mm,67.0,6.7,Standard chapstick/lip balm tube height.,True
+bic_lighter_width,mm,25.0,2.5,BIC Classic lighter body width (wide face).,True
+bic_lighter_height,mm,80.0,8.0,BIC Classic lighter body height.,True
+bic_lighter_depth,mm,12.5,1.25,BIC Classic lighter body depth (thin face).,True
+zippo_width,mm,38.1,3.8100000000000005,Zippo Classic lighter width. Zippo spec.,True
+zippo_height,mm,57.2,5.720000000000001,Zippo Classic lighter height. Zippo spec.,True
+zippo_depth,mm,12.7,1.27,Zippo Classic lighter depth. Zippo spec.,True
+gopro12_width,mm,71.8,7.18,GoPro Hero 12/13 Black body width. GoPro spec.,True
+gopro12_height,mm,50.8,5.08,GoPro Hero 12/13 Black body height. GoPro spec.,True
+gopro12_depth,mm,33.6,3.3600000000000003,GoPro Hero 12/13 Black body depth. GoPro spec.,True
+gopro_mount_finger_gap,mm,3.1,0.31000000000000005,GoPro mounting finger gap between tabs. Standard across all GoPro mounts.,True
+gopro_mount_tab_thick,mm,3.0,0.30000000000000004,GoPro mounting finger tab thickness.,True
+gopro_mount_screw_dia,mm,5.0,0.5,GoPro mounting screw diameter (M5 thumbscrew).,True
+citadel_pot_dia,mm,30.0,3.0,Games Workshop Citadel 12 ml paint pot diameter. Many 3D-printed holders use 32 mm holes for clearance.,True
+citadel_pot_height,mm,35.0,3.5,Citadel 12 ml paint pot height with lid.,True
+vallejo_dropper_dia,mm,25.0,2.5,Vallejo 17 ml dropper bottle diameter. Standard 26 mm rack hole accommodates this.,True
+vallejo_dropper_height,mm,70.0,7.0,Vallejo 17 ml dropper bottle height without cap.,True
+army_painter_dia,mm,26.0,2.6,Army Painter 12 ml dropper bottle diameter. Uses same 26 mm rack standard as Vallejo.,True
+army_painter_height,mm,70.0,7.0,Army Painter 12 ml dropper bottle height.,True
+craft_paint_2oz_dia,mm,37.0,3.7,Standard 2 oz acrylic craft paint bottle diameter (FolkArt/Apple Barrel/DecoArt). Nominal � verify with calipers.,True
+craft_paint_2oz_height,mm,75.0,7.5,Standard 2 oz craft paint bottle height. Nominal � verify with calipers.,True
+usb_a_plug_width,mm,12.0,1.2000000000000002,USB Type-A plug body width. USB-IF spec. See also electronics_usb_a_panel_cutout_width (14.0 mm) for panel holes.,True
+usb_a_plug_height,mm,4.5,0.45,USB Type-A plug body height. USB-IF spec.,True
+usb_c_plug_width,mm,8.34,0.8340000000000001,USB Type-C plug body width. USB-IF Type-C R2.0 spec. See also electronics_usb_c_panel_cutout_width (10.0 mm).,True
+usb_c_plug_height,mm,2.56,0.256,USB Type-C plug body height. USB-IF Type-C R2.0 spec.,True
+sd_card_width,mm,24.0,2.4000000000000004,Full-size SD card width. SD Association specification.,True
+sd_card_length,mm,32.0,3.2,Full-size SD card length. SD Association specification.,True
+sd_card_thick,mm,2.1,0.21000000000000002,Full-size SD card thickness. SD Association specification.,True
+microsd_width,mm,11.0,1.1,MicroSD card width. SD Association specification.,True
+microsd_length,mm,15.0,1.5,MicroSD card length. SD Association specification.,True
+microsd_thick,mm,1.0,0.1,MicroSD card thickness. SD Association specification.,True
+credit_card_width,mm,85.60,8.56,Standard credit/debit/ID card width. ISO/IEC 7810 ID-1 exact.,True
+credit_card_height,mm,53.98,5.398,Standard credit/debit/ID card height. ISO/IEC 7810 ID-1 exact.,True
+credit_card_thick,mm,0.76,0.07600000000000001,Standard credit card thickness. ISO/IEC 7810 ID-1 (tolerance 0.68-0.84 mm).,True
+credit_card_corner_radius,mm,3.18,0.31800000000000006,Standard credit card corner radius. ISO/IEC 7810 (tolerance 2.88-3.48 mm).,True
+business_card_width,mm,88.9,8.89,US standard business card width (3.5 inches).,True
+business_card_height,mm,50.8,5.08,US standard business card height (2 inches).,True
+poker_card_width,mm,63.5,6.3500000000000005,Standard poker-size playing card width (2.5 inches). USPCC standard.,True
+poker_card_height,mm,88.9,8.89,Standard poker-size playing card height (3.5 inches). USPCC standard.,True
+penny_dia,mm,19.05,1.9050000000000002,US penny diameter. US Mint specification exact.,True
+penny_thick,mm,1.52,0.15200000000000002,US penny thickness. US Mint specification exact.,True
+nickel_dia,mm,21.21,2.121,US nickel diameter. US Mint specification exact.,True
+nickel_thick,mm,1.95,0.195,US nickel thickness. US Mint specification exact.,True
+dime_dia,mm,17.91,1.7910000000000001,US dime diameter. US Mint specification exact.,True
+dime_thick,mm,1.35,0.135,US dime thickness. US Mint specification exact.,True
+quarter_dia,mm,24.26,2.426,US quarter diameter. US Mint specification exact.,True
+quarter_thick,mm,1.75,0.17500000000000002,US quarter thickness. US Mint specification exact.,True
+half_dollar_dia,mm,30.61,3.061,US half dollar diameter. US Mint specification exact.,True
+half_dollar_thick,mm,2.15,0.215,US half dollar thickness. US Mint specification exact.,True
+dollar_coin_dia,mm,26.49,2.649,US dollar coin (Sacagawea/Presidential) diameter. US Mint specification exact.,True
+dollar_coin_thick,mm,2.00,0.2,US dollar coin thickness. US Mint specification exact.,True
+usb_c_cable_od,mm,3.5,0.35000000000000003,USB-C cable outer diameter typical. Nominal � braided cables may be 4.5-5.0 mm.,True
+lightning_cable_od,mm,3.2,0.32000000000000006,Lightning cable outer diameter typical (Apple original). Third-party may be 3.5-4.5 mm.,True
+hdmi_plug_width,mm,13.9,1.3900000000000001,HDMI Type A plug width. HDMI specification exact.,True
+hdmi_plug_height,mm,4.55,0.455,HDMI Type A plug height. HDMI specification exact.,True
+dp_plug_width,mm,16.10,1.6100000000000003,DisplayPort full-size plug width including latch. VESA spec.,True
+dp_plug_height,mm,4.76,0.476,DisplayPort full-size plug height. VESA spec.,True
+rj45_plug_width,mm,11.68,1.168,RJ45 Ethernet plug width. TIA/EIA-568 standard exact.,True
+rj45_plug_height,mm,13.5,1.35,RJ45 Ethernet plug height including latch. Without latch ~10.2 mm.,True
+audio_35mm_plug_dia,mm,3.5,0.35000000000000003,3.5 mm audio jack plug diameter. IEC 60603-11 exact.,True
+audio_35mm_barrel_length,mm,14.0,1.4000000000000001,3.5 mm audio jack barrel length (TRS/TRRS typical). Varies by manufacturer.,True
+pill_13dram_dia,mm,33.0,3.3000000000000003,13 dram prescription pill bottle body diameter. Pharmaceutical industry standard. Cap dia ~2-4 mm larger.,True
+pill_13dram_height,mm,54.0,5.4,13 dram pill bottle height. Pharmaceutical standard.,True
+pill_20dram_dia,mm,39.0,3.9000000000000004,20 dram prescription pill bottle body diameter. Pharmaceutical standard.,True
+pill_20dram_height,mm,58.0,5.800000000000001,20 dram pill bottle height. Pharmaceutical standard.,True
+pill_30dram_dia,mm,46.0,4.6000000000000005,30 dram prescription pill bottle body diameter. Pharmaceutical standard.,True
+pill_30dram_height,mm,69.0,6.9,30 dram pill bottle height. Pharmaceutical standard.,True
+nalgene_32oz_body_dia,mm,90.0,9.0,Nalgene 32 oz wide mouth bottle body diameter. Nalgene spec.,True
+nalgene_32oz_height,mm,214.0,21.400000000000002,Nalgene 32 oz wide mouth bottle height. Nalgene spec.,True
+nalgene_32oz_mouth_dia,mm,63.0,6.300000000000001,Nalgene 32 oz wide mouth opening inner diameter. Nalgene spec.,True
+eyedrop_15ml_dia,mm,29.0,2.9000000000000004,Standard 15 ml eye drop bottle body diameter. Nominal � varies by brand. Range 22-30 mm.,True
+eyedrop_15ml_height,mm,77.0,7.7,Standard 15 ml eye drop bottle height with cap. Nominal � range 70-80 mm.,True
+spray_28_400_neck_od,mm,28.0,2.8000000000000003,28/400 spray bottle neck finish outer diameter. GPI standard exact.,True
+samsung_t7_width,mm,57.3,5.73,Samsung T7 portable SSD width. Samsung datasheet.,True
+samsung_t7_height,mm,85.0,8.5,Samsung T7 portable SSD height. Samsung datasheet.,True
+samsung_t7_depth,mm,8.0,0.8,Samsung T7 portable SSD depth. Samsung datasheet.,True
+wd_passport_width,mm,75.0,7.5,WD My Passport external HDD width. WD datasheet.,True
+wd_passport_height,mm,107.0,10.700000000000001,WD My Passport external HDD height. WD datasheet.,True
+wd_passport_depth,mm,11.15,1.115,WD My Passport external HDD depth. WD datasheet.,True
+sata_25_width,mm,69.85,6.984999999999999,2.5-inch SATA drive width. SFF-8201 standard exact.,True
+sata_25_length,mm,100.45,10.045000000000002,2.5-inch SATA drive length. SFF-8201 standard exact.,True
+sata_25_height_thin,mm,7.0,0.7000000000000001,2.5-inch SATA drive height (thin/SSD). SFF-8201 standard.,True
+sata_25_height_std,mm,9.5,0.9500000000000001,2.5-inch SATA drive height (standard HDD). SFF-8201 standard.,True
+sata_35_width,mm,101.6,10.16,3.5-inch SATA drive width. SFF-8301 standard exact.,True
+sata_35_length,mm,146.99,14.699000000000002,3.5-inch SATA drive length. SFF-8301 standard exact.,True
+sata_35_height,mm,25.4,2.54,3.5-inch SATA drive height. SFF-8301 standard. Some newer drives 17.8 mm.,True
+cfexpress_b_width,mm,29.6,2.9600000000000004,CFexpress Type B card width. CompactFlash Association spec exact.,True
+cfexpress_b_height,mm,38.36,3.8360000000000003,CFexpress Type B card height. CFA spec exact.,True
+cfexpress_b_thick,mm,3.8,0.38,CFexpress Type B card thickness. CFA spec exact.,True
+glasses_case_width,mm,70.0,7.0,Sunglasses hard shell case width typical. Nominal � range 65-75 mm. Verify for specific case.,True
+glasses_case_height,mm,42.0,4.2,Sunglasses hard case height typical. Nominal � range 38-45 mm.,True
+glasses_case_length,mm,165.0,16.5,Sunglasses hard case length typical. Nominal � range 155-170 mm.,True
+glasses_folded_width,mm,140.0,14.0,Folded eyeglasses width envelope typical. Nominal � range 130-155 mm.,True
+glasses_folded_height,mm,48.0,4.800000000000001,Folded eyeglasses height envelope typical. Nominal � range 40-55 mm.,True
+glasses_folded_depth,mm,48.0,4.800000000000001,Folded eyeglasses depth envelope typical. Nominal � range 35-55 mm.,True
+drink_max_body_dia,mm,yeti30oz_lip_dia,10.200000000000001,Largest drinkware diameter � Yeti 30 oz at 102 mm.,True
+drink_max_height,mm,stanley40oz_height,26.0,Tallest drinkware � Stanley Quencher 40 oz at 260 mm.,True
+bic_pen_hole_dia,mm,10.4,1.04,BIC Cristal hex pen across-corners diameter (9 mm / cos 30). Use for round holder holes.,True

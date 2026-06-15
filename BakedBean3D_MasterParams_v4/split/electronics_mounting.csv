@@ -1,0 +1,47 @@
+Name,Unit,Expression,Value,Comment,Favorite
+rpi4_mount_pitch_x,mm,58.00,5.800000000000001,Raspberry Pi 4 / Pi 5 mounting hole pitch — X axis (long side).,True
+rpi4_mount_pitch_y,mm,49.00,4.9,Raspberry Pi 4 / Pi 5 mounting hole pitch — Y axis.,True
+rpi_board_width,mm,56.00,5.6000000000000005,Raspberry Pi PCB width.,True
+rpi_board_length,mm,85.00,8.5,Raspberry Pi PCB length.,True
+octopus_mount_pitch_x,mm,109.00,10.9,BTT Octopus / Octopus Pro board mounting hole pitch — X.,True
+octopus_mount_pitch_y,mm,81.50,8.15,BTT Octopus board mounting hole pitch — Y.,True
+skr_mini_mount_pitch_x,mm,85.00,8.5,BTT SKR Mini E3 V3 mounting hole pitch — X. BabyBelt Pro mainboard.,True
+skr_mini_mount_pitch_y,mm,55.00,5.5,BTT SKR Mini E3 V3 mounting hole pitch — Y.,True
+pcb_edge_clearance,mm,2.00,0.2,Minimum clearance from PCB edge to enclosure wall — allows for component overhang and manufacturing tolerance.,True
+din_rail_width,mm,35.00,3.5,TS35 top-hat DIN rail width (EN 60715; supersedes withdrawn EN 50022). Used for clip geometry in electrical panel and control box designs.,True
+din_rail_clip_depth,mm,5.00,0.5,Typical DIN rail clip engagement depth for reliable snap-on retention.,True
+jst_xh_2pin_width,mm,6.00,0.6000000000000001,JST-XH 2-pin connector body width. 2.54 mm pitch. Used for cutout and slot sizing in terminal blocks.,True
+jst_xh_height,mm,7.00,0.7000000000000001,JST-XH connector body height.,True
+usb_a_panel_width,mm,14.00,1.4000000000000001,Standard USB-A panel cutout width.,True
+usb_a_panel_height,mm,7.00,0.7000000000000001,Standard USB-A panel cutout height.,True
+usb_c_panel_width,mm,10.00,1.0,Standard USB-C panel cutout width.,True
+usb_c_panel_height,mm,4.50,0.45,Standard USB-C panel cutout height.,True
+xt30_panel_dia,mm,10.50,1.05,XT30 connector panel cutout hole diameter. Used on 48V toolhead and Doomcube power distribution.,True
+xt60_panel_dia,mm,12.00,1.2000000000000002,XT60 connector panel cutout hole diameter.,True
+wago221_body_width_2way,mm,11.00,1.1,WAGO 221-412 (2-conductor) lever nut body width. For printed mounting clips and wire management blocks.,True
+wago221_body_height,mm,16.00,1.6,WAGO 221 lever nut body height.,True
+wago221_body_depth,mm,14.00,1.4000000000000001,WAGO 221 lever nut body depth.,True
+esp32_board_width,mm,28.00,2.8000000000000003,ESP32 DevKit V1 PCB width. Common ESPHome BLE proxy board.,True
+esp32_board_length,mm,52.00,5.2,ESP32 DevKit V1 PCB length.,True
+d1mini_board_width,mm,25.60,2.5600000000000005,Wemos D1 Mini board width.,True
+d1mini_board_length,mm,34.20,3.4200000000000004,Wemos D1 Mini board length.,True
+gang_box_internal_width,mm,33.30,3.33,Standard US single-gang electrical box internal width. Used for custom insert and bracket designs.,True
+gang_box_internal_height,mm,44.45,4.445,Standard US single-gang electrical box internal height.,True
+decora_cutout_width,mm,44.50,4.45,Decora / paddle-style faceplate cutout width. For custom switch plates and smart home inserts.,True
+decora_cutout_height,mm,69.85,6.984999999999999,Decora faceplate cutout height.,True
+conduit_half_inch_knockout_dia,mm,22.20,2.22,½ inch conduit knockout diameter in standard US electrical boxes.,True
+conduit_three_quarter_inch_knockout_dia,mm,27.80,2.7800000000000002,¾ inch conduit knockout diameter.,True
+sonoff_zbdongle_p_width,mm,20.00,2.0,Sonoff Zigbee Dongle Plus body width — for printed mount and bracket design.,True
+sonoff_zbdongle_p_length,mm,75.00,7.5,Sonoff Zigbee Dongle Plus body length.,True
+rpi_mount_hole_dia,mm,2.75,0.275,"Raspberry Pi 4/5 mounting hole diameter; M2.5 screws, 3.5 mm in from edges. Source: RPi mechanical spec",True
+rpi_pico_board_length,mm,51.0,5.1,Raspberry Pi Pico board length. Source: RPi Pico datasheet,True
+rpi_pico_board_width,mm,21.0,2.1,Raspberry Pi Pico board width.,True
+rpi_pico_mount_pitch_x,mm,47.0,4.7,Pico mounting hole pitch (long axis).,True
+rpi_pico_mount_pitch_y,mm,11.4,1.14,Pico mounting hole pitch (short axis).,True
+rpi_pico_mount_hole_dia,mm,2.1,0.21,Pico mounting hole diameter.,True
+rpi_zero_board_length,mm,65.0,6.5,Raspberry Pi Zero / Zero 2 W board length. Source: RPi mechanical spec,True
+rpi_zero_board_width,mm,30.0,3,Raspberry Pi Zero board width.,True
+rpi_zero_mount_pitch_x,mm,58.0,5.8,Pi Zero mounting hole pitch (long axis).,True
+rpi_zero_mount_pitch_y,mm,23.0,2.3,Pi Zero mounting hole pitch (short axis).,True
+din_rail_depth,mm,7.5,0.75,TS35 top-hat DIN rail depth (also a 15 mm deep variant). Source: EN 60715,True
+header_pitch,mm,2.54,0.254,Standard 0.1 in header/breadboard/protoboard pin pitch.,True

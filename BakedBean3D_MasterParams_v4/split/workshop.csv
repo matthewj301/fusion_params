@@ -1,75 +1,109 @@
 Name,Unit,Expression,Value,Comment,Favorite
-battery_tool_milwaukee_m18_cp2_length,mm,118.4 mm,11.840000000000002,Milwaukee M18 CP2.0 compact battery length. Milwaukee spec.,True
-battery_tool_milwaukee_m18_cp2_width,mm,79.2 mm,7.920000000000001,Milwaukee M18 CP2.0 compact battery width. Milwaukee spec.,True
-battery_tool_milwaukee_m18_cp2_height,mm,54.6 mm,5.460000000000001,Milwaukee M18 CP2.0 compact battery height. Milwaukee spec.,True
-battery_tool_makita_18v_lxt_5ah_length,mm,113.0 mm,11.3,Makita 18V LXT BL1850B 5.0 Ah battery length. Makita spec.,True
-battery_tool_makita_18v_lxt_5ah_width,mm,75.0 mm,7.5,Makita 18V LXT BL1850B 5.0 Ah battery width. Makita spec.,True
-battery_tool_makita_18v_lxt_5ah_height,mm,62.0 mm,6.2,Makita 18V LXT BL1850B 5.0 Ah battery height. Makita spec.,True
-battery_tool_dewalt_20v_max_4ah_length,mm,178.0 mm,17.8,DeWalt 20V MAX DCB204 4.0 Ah battery length. DeWalt spec.,True
-battery_tool_dewalt_20v_max_4ah_width,mm,76.0 mm,7.6000000000000005,DeWalt 20V MAX DCB204 4.0 Ah battery width. DeWalt spec.,True
-battery_tool_dewalt_20v_max_4ah_height,mm,76.0 mm,7.6000000000000005,DeWalt 20V MAX DCB204 4.0 Ah battery height. DeWalt spec.,True
-battery_aa_dia,mm,14.5 mm,1.4500000000000002,AA cell diameter. IEC 60086 LR6 specification.,True
-battery_aa_length,mm,50.5 mm,5.050000000000001,AA cell length. IEC 60086 LR6 specification.,True
-battery_aaa_dia,mm,10.5 mm,1.05,AAA cell diameter. IEC 60086 LR03 specification.,True
-battery_aaa_length,mm,44.5 mm,4.45,AAA cell length. IEC 60086 LR03 specification.,True
-battery_cr2032_dia,mm,20.0 mm,2.0,CR2032 coin cell diameter. IEC standard.,True
-battery_cr2032_thick,mm,3.2 mm,0.32000000000000006,CR2032 coin cell thickness. IEC standard.,True
-battery_18650_dia,mm,18.0 mm,1.8,18650 lithium cell diameter. Name encodes dimensions: 18 mm dia x 65 mm length.,True
-battery_18650_length,mm,65.0 mm,6.5,18650 lithium cell length. Protected cells may be 67-69 mm with circuit board.,True
-pegboard_std_hole_dia,mm,7.14 mm,0.714,Standard 1/4-inch pegboard hole diameter (actual 9/32 inch). Industry standard.,True
-pegboard_std_hole_spacing,mm,25.4 mm,2.54,Standard pegboard hole center-to-center spacing (1 inch). Industry standard.,True
-pegboard_std_thickness,mm,6.35 mm,0.635,Standard pegboard board thickness (1/4 inch).,True
-pegboard_std_hook_wire_dia,mm,4.72 mm,0.472,Standard pegboard hook wire diameter (3/16 inch / 7 gauge).,True
-pegboard_small_hole_dia,mm,4.76 mm,0.476,Small/hobby pegboard hole diameter (3/16 inch / 1/8-inch nominal).,True
-pegboard_small_thickness,mm,3.18 mm,0.31800000000000006,Small/hobby pegboard board thickness (1/8 inch).,True
-pegboard_light_hook_wire_dia,mm,3.76 mm,0.376,Light-duty pegboard hook wire diameter (9 gauge / 0.148 inch).,True
-tool_dewalt_dcd771_drill_length,mm,219.0 mm,21.900000000000002,DeWalt DCD771 20V drill length front-to-back. DeWalt spec. Tool only without battery.,True
-tool_dewalt_dcd771_drill_width,mm,53.0 mm,5.300000000000001,DeWalt DCD771 20V drill body width. DeWalt spec.,True
-tool_dewalt_dcd771_drill_height,mm,191.0 mm,19.1,DeWalt DCD771 20V drill height handle-to-top. DeWalt spec. Tool only.,True
-tool_milwaukee_m18_drill_length,mm,175.0 mm,17.5,Milwaukee M18 FUEL 2904-20 hammer drill length. Milwaukee spec. Tool only.,True
-tool_milwaukee_m18_drill_width,mm,58.0 mm,5.800000000000001,Milwaukee M18 FUEL drill body width. Milwaukee spec.,True
-tool_milwaukee_m18_drill_height,mm,208.0 mm,20.8,Milwaukee M18 FUEL drill height. Milwaukee spec. Tool only.,True
-tool_dewalt_dcs391_saw_length,mm,305.0 mm,30.5,DeWalt DCS391 6.5-inch circular saw length. DeWalt spec.,True
-tool_dewalt_dcs391_saw_width,mm,229.0 mm,22.900000000000002,DeWalt DCS391 circular saw base plate width. DeWalt spec.,True
-tool_dewalt_dcs391_saw_height,mm,216.0 mm,21.6,DeWalt DCS391 circular saw height. DeWalt spec.,True
-tool_dewalt_dcs391_blade_dia,mm,165.0 mm,16.5,DeWalt DCS391 circular saw blade diameter (6.5 inch).,True
-tool_milwaukee_m18_saw_length,mm,330.0 mm,33.0,Milwaukee M18 FUEL 2732-20 7.25-inch circular saw length. Milwaukee spec.,True
-tool_milwaukee_m18_saw_blade_dia,mm,184.0 mm,18.400000000000002,Milwaukee M18 FUEL circular saw blade diameter (7.25 inch).,True
-tool_dewalt_dcw210_sander_pad_dia,mm,127.0 mm,12.700000000000001,DeWalt DCW210 orbital sander pad diameter (5 inch). DeWalt spec.,True
-tool_dewalt_dcw210_sander_length,mm,180.0 mm,18.0,DeWalt DCW210 orbital sander body length. DeWalt spec.,True
-tool_dewalt_dcw210_sander_height,mm,130.0 mm,13.0,DeWalt DCW210 orbital sander grip-to-pad height. DeWalt spec.,True
-tool_milwaukee_m18_sander_pad_dia,mm,127.0 mm,12.700000000000001,Milwaukee M18 2648-20 orbital sander pad diameter (5 inch).,True
-tool_milwaukee_m18_sander_length,mm,267.0 mm,26.700000000000003,Milwaukee M18 orbital sander body length. Milwaukee spec.,True
-tool_milwaukee_m18_sander_height,mm,146.0 mm,14.600000000000001,Milwaukee M18 orbital sander height. Milwaukee spec.,True
-handtool_screwdriver_handle_dia,mm,33.0 mm,3.3000000000000003,Phillips #2 screwdriver handle diameter typical. Nominal � varies 30-36 mm by brand. Use 38 mm holder hole.,True
-handtool_screwdriver_shaft_dia,mm,6.0 mm,0.6000000000000001,Standard screwdriver shaft diameter (1/4 inch).,True
-handtool_screwdriver_overall_length,mm,210.0 mm,21.0,Phillips #2 screwdriver overall length typical (4-inch shaft). Nominal � range 200-220 mm.,True
-handtool_hammer_16oz_length,mm,330.0 mm,33.0,Standard 16 oz claw hammer overall length (13 inch).,True
-handtool_hammer_16oz_head_width,mm,130.0 mm,13.0,16 oz claw hammer head width (face to claw tip). Klein spec.,True
-handtool_hammer_16oz_handle_dia,mm,31.0 mm,3.1,16 oz hammer handle grip diameter (oval minor axis). Nominal � range 28-35 mm.,True
-handtool_wrench_adj_6in_length,mm,152.0 mm,15.200000000000001,6-inch adjustable wrench overall length. Crescent spec.,True
-handtool_wrench_adj_6in_jaw_width,mm,24.0 mm,2.4000000000000004,6-inch adjustable wrench max jaw capacity (15/16 inch). Crescent spec.,True
-handtool_wrench_adj_8in_length,mm,203.0 mm,20.3,8-inch adjustable wrench overall length. Crescent spec.,True
-handtool_wrench_adj_8in_jaw_width,mm,29.0 mm,2.9000000000000004,8-inch adjustable wrench max jaw capacity (1-1/8 inch). Crescent spec.,True
-handtool_wrench_adj_10in_length,mm,254.0 mm,25.400000000000002,10-inch adjustable wrench overall length. Crescent spec.,True
-handtool_wrench_adj_10in_jaw_width,mm,34.0 mm,3.4000000000000004,10-inch adjustable wrench max jaw capacity (1-5/16 inch). Crescent spec.,True
-handtool_tape_measure_25ft_width,mm,76.0 mm,7.6000000000000005,Stanley 25 ft PowerLock tape measure case width. Stanley spec.,True
-handtool_tape_measure_25ft_height,mm,76.0 mm,7.6000000000000005,Stanley 25 ft tape measure case height. Stanley spec.,True
-handtool_tape_measure_25ft_depth,mm,44.0 mm,4.4,Stanley 25 ft tape measure case depth. Stanley spec.,True
-handtool_utility_knife_length,mm,152.0 mm,15.200000000000001,Stanley 99E retractable utility knife body length. Stanley spec.,True
-handtool_utility_knife_width,mm,44.0 mm,4.4,Stanley 99E utility knife body width/height profile. Approximate.,True
-handtool_utility_knife_depth,mm,19.0 mm,1.9000000000000001,Stanley 99E utility knife body thickness. Approximate.,True
-handtool_torpedo_level_length,mm,229.0 mm,22.900000000000002,9-inch torpedo level length. Klein spec.,True
-handtool_torpedo_level_width,mm,41.0 mm,4.1000000000000005,9-inch torpedo level body width. Klein spec.,True
-handtool_torpedo_level_height,mm,17.0 mm,1.7000000000000002,9-inch torpedo level body height/profile. Klein spec.,True
-key_kw1_length,mm,54.0 mm,5.4,KW1 (Kwikset) house key blank overall length bow to tip. Locksmith spec.,True
-key_kw1_bow_width,mm,22.0 mm,2.2,KW1 key blank bow (head) width. Standard round head.,True
-key_kw1_blade_thick,mm,2.1 mm,0.21000000000000002,KW1 key blank blade thickness. Locksmith spec exact.,True
-key_sc1_length,mm,54.0 mm,5.4,SC1 (Schlage) house key blank overall length. Locksmith spec.,True
-key_sc1_bow_width,mm,22.0 mm,2.2,SC1 key blank bow (head) width. Standard round head.,True
-key_sc1_blade_thick,mm,2.3 mm,0.22999999999999998,SC1 key blank blade thickness. Slightly thicker than KW1. Locksmith spec.,True
-key_split_ring_25mm_od,mm,25.0 mm,2.5,Standard 25 mm split ring keychain ring outer diameter.,True
-key_split_ring_25mm_wire_dia,mm,1.5 mm,0.15000000000000002,Standard 25 mm split ring wire diameter.,True
-battery_aa_holder_slot_dia,mm,battery_aa_dia + 2 * tolerance_fit_class_fdm_sliding_per_surface,1.4800000000000002,AA battery holder slot diameter with FDM sliding fit clearance.,True
-battery_aaa_holder_slot_dia,mm,battery_aaa_dia + 2 * tolerance_fit_class_fdm_sliding_per_surface,1.08,AAA battery holder slot diameter with FDM sliding fit clearance.,True
-battery_18650_holder_slot_dia,mm,battery_18650_dia + 2 * tolerance_fit_class_fdm_sliding_per_surface,1.83,18650 battery holder slot diameter with FDM sliding fit clearance.,True
+milwaukee_m18_bat_cp2_length,mm,118.4,11.840000000000002,Milwaukee M18 CP2.0 compact battery length. Milwaukee spec.,True
+milwaukee_m18_bat_cp2_width,mm,79.2,7.920000000000001,Milwaukee M18 CP2.0 compact battery width. Milwaukee spec.,True
+milwaukee_m18_bat_cp2_height,mm,54.6,5.460000000000001,Milwaukee M18 CP2.0 compact battery height. Milwaukee spec.,True
+makita_18v_bat_lxt_5ah_length,mm,113.0,11.3,Makita 18V LXT BL1850B 5.0 Ah battery length. Makita spec.,True
+makita_18v_bat_lxt_5ah_width,mm,75.0,7.5,Makita 18V LXT BL1850B 5.0 Ah battery width. Makita spec.,True
+makita_18v_bat_lxt_5ah_height,mm,62.0,6.2,Makita 18V LXT BL1850B 5.0 Ah battery height. Makita spec.,True
+dewalt_20v_bat_max_4ah_length,mm,178.0,17.8,"SUSPECT - VERIFY WITH CALIPERS. DeWalt DCB204 4.0 Ah. 178/76/76 = 7/3/3 in, which is the retail PACKAGE size (Amazon ""product dimensions""), not the bare pack (~95 mm long). Do not build a holder to this until measured.",True
+dewalt_20v_bat_max_4ah_width,mm,76.0,7.6000000000000005,SUSPECT - VERIFY WITH CALIPERS. DeWalt DCB204 4.0 Ah width; package-derived (3 in) - measure the actual pack before committing geometry.,True
+dewalt_20v_bat_max_4ah_height,mm,76.0,7.6000000000000005,SUSPECT - VERIFY WITH CALIPERS. DeWalt DCB204 4.0 Ah height; package-derived (3 in) - measure the actual pack before committing geometry.,True
+aa_bat_dia,mm,14.5,1.4500000000000002,AA cell diameter. IEC 60086 LR6 specification.,True
+aa_bat_length,mm,50.5,5.050000000000001,AA cell length. IEC 60086 LR6 specification.,True
+aaa_bat_dia,mm,10.5,1.05,AAA cell diameter. IEC 60086 LR03 specification.,True
+aaa_bat_length,mm,44.5,4.45,AAA cell length. IEC 60086 LR03 specification.,True
+cr2032_dia,mm,20.0,2.0,CR2032 coin cell diameter. IEC standard.,True
+cr2032_thick,mm,3.2,0.32000000000000006,CR2032 coin cell thickness. IEC standard.,True
+bat_18650_dia,mm,18.0,1.8,18650 lithium cell diameter. Name encodes dimensions: 18 mm dia x 65 mm length.,True
+bat_18650_length,mm,65.0,6.5,18650 lithium cell length. Protected cells may be 67-69 mm with circuit board.,True
+pegboard_hole_dia,mm,7.14,0.714,Standard 1/4-inch pegboard hole diameter (actual 9/32 inch). Industry standard.,True
+pegboard_hole_spacing,mm,25.4,2.54,Standard pegboard hole center-to-center spacing (1 inch). Industry standard.,True
+pegboard_thickness,mm,6.35,0.635,Standard pegboard board thickness (1/4 inch).,True
+pegboard_hook_wire_dia,mm,4.72,0.472,Standard pegboard hook wire diameter (3/16 inch / 7 gauge).,True
+pegboard_small_hole_dia,mm,4.76,0.476,Small/hobby pegboard hole diameter (3/16 inch / 1/8-inch nominal).,True
+pegboard_small_thickness,mm,3.18,0.31800000000000006,Small/hobby pegboard board thickness (1/8 inch).,True
+pegboard_light_hook_dia,mm,3.76,0.376,Light-duty pegboard hook wire diameter (9 gauge / 0.148 inch).,True
+dewalt_drill_length,mm,219.0,21.900000000000002,DeWalt DCD771 20V drill length front-to-back. DeWalt spec. Tool only without battery.,True
+dewalt_drill_width,mm,53.0,5.300000000000001,DeWalt DCD771 20V drill body width. DeWalt spec.,True
+dewalt_drill_height,mm,191.0,19.1,DeWalt DCD771 20V drill height handle-to-top. DeWalt spec. Tool only.,True
+milwaukee_drill_length,mm,175.0,17.5,Milwaukee M18 FUEL 2904-20 hammer drill length. Milwaukee spec. Tool only.,True
+milwaukee_drill_width,mm,58.0,5.800000000000001,Milwaukee M18 FUEL drill body width. Milwaukee spec.,True
+milwaukee_drill_height,mm,208.0,20.8,Milwaukee M18 FUEL drill height. Milwaukee spec. Tool only.,True
+dewalt_saw_length,mm,305.0,30.5,DeWalt DCS391 6.5-inch circular saw length. DeWalt spec.,True
+dewalt_saw_width,mm,229.0,22.900000000000002,DeWalt DCS391 circular saw base plate width. DeWalt spec.,True
+dewalt_saw_height,mm,216.0,21.6,DeWalt DCS391 circular saw height. DeWalt spec.,True
+milwaukee_saw_length,mm,330.0,33.0,Milwaukee M18 FUEL 2732-20 7.25-inch circular saw length. Milwaukee spec.,True
+milwaukee_saw_blade_dia,mm,184.0,18.400000000000002,Milwaukee M18 FUEL circular saw blade diameter (7.25 inch).,True
+dewalt_sander_pad_dia,mm,127.0,12.700000000000001,DeWalt DCW210 orbital sander pad diameter (5 inch). DeWalt spec.,True
+dewalt_sander_length,mm,180.0,18.0,DeWalt DCW210 orbital sander body length. DeWalt spec.,True
+dewalt_sander_height,mm,130.0,13.0,DeWalt DCW210 orbital sander grip-to-pad height. DeWalt spec.,True
+milwaukee_sander_pad_dia,mm,127.0,12.700000000000001,Milwaukee M18 2648-20 orbital sander pad diameter (5 inch).,True
+milwaukee_sander_length,mm,267.0,26.700000000000003,Milwaukee M18 orbital sander body length. Milwaukee spec.,True
+milwaukee_sander_height,mm,146.0,14.600000000000001,Milwaukee M18 orbital sander height. Milwaukee spec.,True
+screwdriver_handle_dia,mm,33.0,3.3000000000000003,Phillips #2 screwdriver handle diameter typical. Nominal � varies 30-36 mm by brand. Use 38 mm holder hole.,True
+screwdriver_shaft_dia,mm,6.0,0.6000000000000001,Standard screwdriver shaft diameter (1/4 inch).,True
+screwdriver_overall_length,mm,210.0,21.0,Phillips #2 screwdriver overall length typical (4-inch shaft). Nominal � range 200-220 mm.,True
+hammer_16oz_length,mm,330.0,33.0,Standard 16 oz claw hammer overall length (13 inch).,True
+hammer_16oz_head_width,mm,130.0,13.0,16 oz claw hammer head width (face to claw tip). Klein spec.,True
+hammer_16oz_handle_dia,mm,31.0,3.1,16 oz hammer handle grip diameter (oval minor axis). Nominal � range 28-35 mm.,True
+adj_wrench_6in_length,mm,152.0,15.200000000000001,6-inch adjustable wrench overall length. Crescent spec.,True
+adj_wrench_6in_jaw_width,mm,24.0,2.4000000000000004,6-inch adjustable wrench max jaw capacity (15/16 inch). Crescent spec.,True
+adj_wrench_8in_length,mm,203.0,20.3,8-inch adjustable wrench overall length. Crescent spec.,True
+adj_wrench_8in_jaw_width,mm,29.0,2.9000000000000004,8-inch adjustable wrench max jaw capacity (1-1/8 inch). Crescent spec.,True
+adj_wrench_10in_length,mm,254.0,25.400000000000002,10-inch adjustable wrench overall length. Crescent spec.,True
+adj_wrench_10in_jaw_width,mm,34.0,3.4000000000000004,10-inch adjustable wrench max jaw capacity (1-5/16 inch). Crescent spec.,True
+tape_measure_width,mm,76.0,7.6000000000000005,Stanley 25 ft PowerLock tape measure case width. Stanley spec.,True
+tape_measure_height,mm,76.0,7.6000000000000005,Stanley 25 ft tape measure case height. Stanley spec.,True
+tape_measure_depth,mm,44.0,4.4,Stanley 25 ft tape measure case depth. Stanley spec.,True
+utility_knife_length,mm,152.0,15.200000000000001,Stanley 99E retractable utility knife body length. Stanley spec.,True
+utility_knife_width,mm,44.0,4.4,Stanley 99E utility knife body width/height profile. Approximate.,True
+utility_knife_depth,mm,19.0,1.9000000000000001,Stanley 99E utility knife body thickness. Approximate.,True
+torpedo_level_length,mm,229.0,22.900000000000002,9-inch torpedo level length. Klein spec.,True
+torpedo_level_width,mm,41.0,4.1000000000000005,9-inch torpedo level body width. Klein spec.,True
+torpedo_level_height,mm,17.0,1.7000000000000002,9-inch torpedo level body height/profile. Klein spec.,True
+kw1_key_length,mm,54.0,5.4,KW1 (Kwikset) house key blank overall length bow to tip. Locksmith spec.,True
+kw1_key_bow_width,mm,22.0,2.2,KW1 key blank bow (head) width. Standard round head.,True
+kw1_key_blade_thick,mm,2.1,0.21000000000000002,KW1 key blank blade thickness. Locksmith spec exact.,True
+sc1_key_length,mm,54.0,5.4,SC1 (Schlage) house key blank overall length. Locksmith spec.,True
+sc1_key_bow_width,mm,22.0,2.2,SC1 key blank bow (head) width. Standard round head.,True
+sc1_key_blade_thick,mm,2.3,0.22999999999999998,SC1 key blank blade thickness. Slightly thicker than KW1. Locksmith spec.,True
+keyring_25mm_od,mm,25.0,2.5,Standard 25 mm split ring keychain ring outer diameter.,True
+keyring_25mm_wire_dia,mm,1.5,0.15000000000000002,Standard 25 mm split ring wire diameter.,True
+aa_holder_slot_dia,mm,aa_bat_dia + 2 * fdm_sliding_fit,1.4800000000000002,AA battery holder slot diameter with FDM sliding fit clearance.,True
+aaa_holder_slot_dia,mm,aaa_bat_dia + 2 * fdm_sliding_fit,1.08,AAA battery holder slot diameter with FDM sliding fit clearance.,True
+bat_18650_holder_slot_dia,mm,bat_18650_dia + 2 * fdm_sliding_fit,1.83,18650 battery holder slot diameter with FDM sliding fit clearance.,True
+multiboard_tile_grid,mm,25.0,2.5,Multiboard tile grid pitch (1 MU); snap and bolt accessories array on this. Source: multiboard.io,True
+multiboard_snap_standoff,mm,6.25,0.625,Multiboard offset-snap mount standoff from the tile face. Source: multiboard.io,True
+multiboard_tol,mm,0.25,0.025,Multiboard bolt/snap fit tolerance. Print 0.2 mm layer / 0.4 mm nozzle to match the ecosystem. Source: multiboard.io,True
+multiboard_bin_cu,mm,50.0,5,Multiboard bin Cell Unit (1 CU) height step. Distinct from the 25 mm tile MU. Source: multiboard.io,True
+skadis_grid,mm,40.0,4,IKEA SKADIS pegboard grid pitch (square). Source: dimensions.com,True
+skadis_slot_width,mm,5.0,0.5,SKADIS oval slot width. M3 nut (5.5 mm AF) will not pass; accessories use M2/M2.5. Source: justhangingpegboards.com,True
+skadis_slot_height,mm,15.0,1.5,SKADIS oval slot height.,True
+gridfinity_grid,mm,42.0,4.2,Gridfinity baseplate XY grid pitch. Source: github gridfinity spec,True
+gridfinity_z_unit,mm,7.0,0.7,Gridfinity Z height unit (1U). Source: github gridfinity spec,True
+gridfinity_bin_foot,mm,41.5,4.15,Gridfinity bin foot footprint (grid 42 minus 0.5 clearance); 0.25 mm tol. Source: github gridfinity spec,True
+gridfinity_baseplate_wall,mm,4.65,0.465,Gridfinity baseplate wall height. Source: github gridfinity spec,True
+gridfinity_corner_fillet,mm,4.0,0.4,Gridfinity bin/baseplate corner fillet radius. Source: github gridfinity spec,True
+gridfinity_stack_lip,mm,4.4,0.44,Gridfinity stacking lip height. Source: github gridfinity spec,True
+hsw_grid,mm,42.58,4.258,Honeycomb Storage Wall pitch across two staggered hexes (multi-point holders). Multiboard accepts HSW push-fits. Source: rostap / multiboard.io,True
+french_cleat_angle,deg,45,0.7853981633974483,French cleat bevel angle; wall strip and mating part share the 45 deg face. Source: shop standard,True
+french_cleat_stock,mm,18.3,1.83,French cleat stock thickness = 3/4 in plywood actual. Source: US sheet-goods standard,True
+wall_control_grid,mm,25.4,2.54,Wall Control metal pegboard hole spacing (1 in); accepts standard 1/4 in hooks. VERIFY exact hole size on your panel.,True
+emt_half_inch_od,mm,17.93,1.793,"1/2 in EMT conduit OD (ID 15.80, wall 1.07). Source: makerpipe/accio",True
+emt_three_quarter_inch_od,mm,23.42,2.342,3/4 in EMT OD. Most common for Maker-Pipe-style builds.,True
+emt_one_inch_od,mm,29.54,2.954,1 in EMT OD (ID 26.64).,True
+emt_one_and_quarter_inch_od,mm,38.35,3.835,1-1/4 in EMT OD.,True
+plywood_half_inch_actual,mm,11.9,1.19,1/2 in plywood actual thickness (~15/32). Usually 0.5-1 mm under nominal.,True
+plywood_three_quarter_inch_actual,mm,18.3,1.83,3/4 in plywood actual thickness (~23/32). Plan French-cleat stock around this.,True
+mdf_half_inch_actual,mm,12.7,1.27,1/2 in MDF actual thickness. MDF runs closer to nominal than plywood.,True
+mdf_three_quarter_inch_actual,mm,19.0,1.9,3/4 in MDF actual thickness.,True
+lumber_2x4_thickness,mm,38.0,3.8,2x4 softwood actual thickness (1.5 in).,True
+lumber_2x4_width,mm,89.0,8.9,2x4 softwood actual width (3.5 in).,True
+lumber_2x6_width,mm,140.0,14,2x6 softwood actual width (5.5 in). Thickness same as 2x4 (38 mm).,True
+lumber_1x4_width,mm,89.0,8.9,1x4 softwood actual width (3.5 in). Thickness 19 mm (3/4 in).,True
+sq_drive_quarter_af,mm,6.35,0.635,1/4 in square drive AF (the post a socket slips onto). Always inch-based.,True
+sq_drive_three_eighth_af,mm,9.525,0.9525,3/8 in square drive AF.,True
+sq_drive_half_af,mm,12.70,1.27,1/2 in square drive AF.,True
+sq_drive_three_quarter_af,mm,19.05,1.905,3/4 in square drive AF.,True
+sq_drive_one_inch_af,mm,25.40,2.54,1 in square drive AF.,True
+hex_bit_drive_af,mm,6.35,0.635,1/4 in hex bit (insert) AF - driver/impact collet standard.,True

@@ -1,0 +1,81 @@
+Name,Unit,Expression,Value,Comment,Favorite
+ws0_major_dia,mm,1.52,0.15200000000000002,"#0 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (0×0.013) = 0.06"". Tiny - electronics, fine woodwork.",True
+ws0_pilot_soft,mm,1.2,0.12,"#0 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Tiny - electronics, fine woodwork.",True
+ws0_pilot_hard,mm,1.4,0.13999999999999999,"#0 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Tiny - electronics, fine woodwork.",True
+ws0_clearance,mm,1.8,0.18000000000000002,#0 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws1_major_dia,mm,1.85,0.18500000000000003,"#1 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (1×0.013) = 0.073"". Jewelry boxes, small hinges.",True
+ws1_pilot_soft,mm,1.4,0.13999999999999999,"#1 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Jewelry boxes, small hinges.",True
+ws1_pilot_hard,mm,1.6,0.16000000000000003,"#1 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Jewelry boxes, small hinges.",True
+ws1_clearance,mm,2.1,0.21000000000000002,#1 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws2_major_dia,mm,2.18,0.21800000000000003,"#2 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (2×0.013) = 0.086"". Cabinet hardware, thin stock. TPI=32.",True
+ws2_pilot_soft,mm,1.5,0.15000000000000002,"#2 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Cabinet hardware, thin stock.",True
+ws2_pilot_hard,mm,1.8,0.18000000000000002,"#2 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Cabinet hardware, thin stock.",True
+ws2_clearance,mm,2.4,0.24,#2 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws2_csink_dia,mm,6.4,0.6400000000000001,#2 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws3_major_dia,mm,2.51,0.251,"#3 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (3×0.013) = 0.099"". Light joinery. TPI=28.",True
+ws3_pilot_soft,mm,1.6,0.16000000000000003,"#3 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light joinery.",True
+ws3_pilot_hard,mm,2.0,0.2,"#3 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light joinery.",True
+ws3_clearance,mm,2.7,0.27,#3 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws3_csink_dia,mm,6.4,0.6400000000000001,#3 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws4_major_dia,mm,2.84,0.284,"#4 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (4×0.013) = 0.112"". Small hinges, cabinet doors, thin plywood. TPI=24.",True
+ws4_pilot_soft,mm,1.8,0.18000000000000002,"#4 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Small hinges, cabinet doors, thin plywood.",True
+ws4_pilot_hard,mm,2.2,0.22000000000000003,"#4 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Small hinges, cabinet doors, thin plywood.",True
+ws4_clearance,mm,3.0,0.30000000000000004,#4 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws4_csink_dia,mm,6.4,0.6400000000000001,#4 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws5_major_dia,mm,3.17,0.317,"#5 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (5×0.013) = 0.125"". Light woodwork. TPI=20.",True
+ws5_pilot_soft,mm,2.0,0.2,"#5 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Light woodwork.",True
+ws5_pilot_hard,mm,2.4,0.24,"#5 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Light woodwork.",True
+ws5_clearance,mm,3.4,0.34,#5 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws5_csink_dia,mm,7.1,0.71,#5 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws6_major_dia,mm,3.51,0.351,"#6 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (6×0.013) = 0.138"". Face frames, drawer boxes, cabinetry - common. TPI=18.",True
+ws6_pilot_soft,mm,2.2,0.22000000000000003,"#6 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Face frames, drawer boxes, cabinetry - common.",True
+ws6_pilot_hard,mm,2.8,0.27999999999999997,"#6 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Face frames, drawer boxes, cabinetry - common.",True
+ws6_clearance,mm,3.6,0.36000000000000004,#6 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws6_csink_dia,mm,7.1,0.71,#6 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws7_major_dia,mm,3.84,0.384,"#7 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (7×0.013) = 0.151"". Medium joinery. TPI=16.",True
+ws7_pilot_soft,mm,2.4,0.24,"#7 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Medium joinery.",True
+ws7_pilot_hard,mm,3.0,0.30000000000000004,"#7 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Medium joinery.",True
+ws7_clearance,mm,4.0,0.4,#7 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws7_csink_dia,mm,8.7,0.87,#7 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws8_major_dia,mm,4.17,0.41700000000000004,"#8 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (8×0.013) = 0.164"". MOST COMMON - furniture, general woodwork, shelving. TPI=15.",True
+ws8_pilot_soft,mm,2.8,0.27999999999999997,"#8 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. MOST COMMON - furniture, general woodwork, shelving.",True
+ws8_pilot_hard,mm,3.2,0.32000000000000006,"#8 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. MOST COMMON - furniture, general woodwork, shelving.",True
+ws8_clearance,mm,4.4,0.44000000000000006,#8 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws8_csink_dia,mm,8.7,0.87,#8 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws9_major_dia,mm,4.5,0.45,"#9 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (9×0.013) = 0.177"". Heavy furniture. TPI=14.",True
+ws9_pilot_soft,mm,3.0,0.30000000000000004,"#9 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy furniture.",True
+ws9_pilot_hard,mm,3.4,0.34,"#9 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy furniture.",True
+ws9_clearance,mm,4.8,0.48,#9 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws9_csink_dia,mm,9.5,0.9500000000000001,#9 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws10_major_dia,mm,4.83,0.48300000000000004,"#10 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (10×0.013) = 0.19"". Structural, decking, outdoor joinery - very common. TPI=13.",True
+ws10_pilot_soft,mm,3.2,0.32000000000000006,"#10 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural, decking, outdoor joinery - very common.",True
+ws10_pilot_hard,mm,3.6,0.36000000000000004,"#10 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural, decking, outdoor joinery - very common.",True
+ws10_clearance,mm,5.2,0.52,#10 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws10_csink_dia,mm,11.1,1.11,#10 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws11_major_dia,mm,5.16,0.516,"#11 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (11×0.013) = 0.203"". Heavy structural. TPI=12.",True
+ws11_pilot_soft,mm,3.4,0.34,"#11 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy structural.",True
+ws11_pilot_hard,mm,4.0,0.4,"#11 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy structural.",True
+ws11_clearance,mm,5.5,0.55,#11 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws11_csink_dia,mm,11.1,1.11,#11 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws12_major_dia,mm,5.49,0.549,"#12 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (12×0.013) = 0.216"". Heavy construction, door hanging. TPI=11.",True
+ws12_pilot_soft,mm,3.6,0.36000000000000004,"#12 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy construction, door hanging.",True
+ws12_pilot_hard,mm,4.4,0.44000000000000006,"#12 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy construction, door hanging.",True
+ws12_clearance,mm,5.8,0.58,#12 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws12_csink_dia,mm,12.7,1.27,#12 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws14_major_dia,mm,6.15,0.6150000000000001,"#14 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (14×0.013) = 0.242"". Heavy framing, solid-core doors. TPI=10.",True
+ws14_pilot_soft,mm,4.4,0.44000000000000006,"#14 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy framing, solid-core doors.",True
+ws14_pilot_hard,mm,5.0,0.5,"#14 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy framing, solid-core doors.",True
+ws14_clearance,mm,6.6,0.66,#14 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws14_csink_dia,mm,14.3,1.4300000000000002,#14 flat-head countersink top diameter. US/imperial angle = 82° (NOT 90° — that is metric ISO standard).,True
+ws16_major_dia,mm,6.81,0.681,"#16 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (16×0.013) = 0.268"". Timber framing. TPI=9.",True
+ws16_pilot_soft,mm,5.0,0.5,"#16 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Timber framing.",True
+ws16_pilot_hard,mm,5.6,0.5599999999999999,"#16 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Timber framing.",True
+ws16_clearance,mm,7.2,0.7200000000000001,#16 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws18_major_dia,mm,7.47,0.747,"#18 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (18×0.013) = 0.294"". Heavy timber. TPI=8.",True
+ws18_pilot_soft,mm,5.4,0.54,"#18 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Heavy timber.",True
+ws18_pilot_hard,mm,6.0,0.6000000000000001,"#18 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Heavy timber.",True
+ws18_clearance,mm,7.7,0.77,#18 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True
+ws20_major_dia,mm,8.13,0.8130000000000002,"#20 wood screw major thread diameter (ASME B18.6.1). Formula: 0.060 + (20×0.013) = 0.32"". Structural timber. TPI=8.",True
+ws20_pilot_soft,mm,5.8,0.58,"#20 pilot hole in softwood (pine, fir, cedar, spruce) — ~75% of major dia. Structural timber.",True
+ws20_pilot_hard,mm,6.4,0.6400000000000001,"#20 pilot hole in hardwood (oak, maple, walnut, cherry) — ~85% of major dia. Always drill hardwood regardless of gauge. Structural timber.",True
+ws20_clearance,mm,8.3,0.8300000000000001,#20 clearance through-hole in top board — allows shank to pass freely so screw pulls pieces together. Major dia + 0.2-0.4 mm.,True

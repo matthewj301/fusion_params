@@ -1,0 +1,146 @@
+Name,Unit,Expression,Value,Comment,Favorite
+fdm_hole_shrink,mm,0.15,0.015,FDM holes always print smaller than modeled due to filament expansion and layer resolution. Add to all hole sketch diameters or apply via Offset Face. Measure a 10 mm test circle: shrink = 10.0 − actual_diameter. Update per machine.,True
+fdm_outer_oversize,mm,0.10,0.010000000000000002,FDM outer surfaces print 0.05–0.20 mm larger than modeled due to extrusion pressure. Subtract from shaft and boss ODs for precise fits. Measure a 20 mm calibration cube in X and Y.,True
+fdm_layer_height,mm,0.20,0.020000000000000004,"Default layer height. Base unit for teardrop compensation, bridge sag, and fillet minimums. Update when switching profiles — all derived params follow.",True
+fdm_first_layer_height,mm,0.25,0.025,First layer printed thicker for bed adhesion. Relevant for total Z stack height calculations.,True
+fdm_line_width,mm,0.45,0.045000000000000005,Actual deposited extrusion line width — typically nozzle_dia × 1.10–1.15. All wall thickness and bridge span calcs derive from this. Re-measure after any nozzle change.,True
+fdm_elephant_foot,mm,0.15,0.015,"First-layer squish bulge on outer perimeter — typically 0.10–0.20 mm. Subtract from bottom-surface mating features (flanges, bases) so they sit flush. Dial in with a single-layer calibration square.",True
+fdm_seam_protrusion,mm,0.05,0.005000000000000001,"Small Z-seam protrusion at layer start. Matters on outer mating surfaces. Either orient seam to a non-mating edge, or add this allowance to surface-critical fits.",True
+fdm_min_infill_width,mm,2 * fdm_line_width,0.09000000000000001,"Below this pocket width, infill skips entirely and bridges. Account for this in thin pocket features — infill may not fill them at all.",True
+fdm_solid_top_layers,,3,3.0,Number of solid top layers before a press-fit or heat-set mating surface for best dimensional accuracy. Fewer layers = rougher surface = worse fit.,True
+fdm_nozzle_dia,mm,0.40,0.04,Base nozzle diameter. Line width and wall thickness derivations should reference this. Change when switching nozzles.,True
+fdm_nozzle_06,mm,0.60,0.06,0.6mm nozzle diameter for fast structural prints. Line width ~0.66mm.,True
+fdm_nozzle_08,mm,0.80,0.08,0.8mm nozzle for maximum strength and speed. Line width ~0.88mm.,True
+fdm_layer_012,mm,0.12,0.012,Fine detail layer height. For cosmetic surfaces and small text. Slower but sharper features.,True
+fdm_layer_016,mm,0.16,0.016,Balanced detail/speed layer height. Good compromise for visible functional parts.,True
+fdm_layer_028,mm,0.28,0.028,Draft/fast layer height for 0.4mm nozzle. Maximum practical layer for rapid prototyping.,True
+fdm_support_angle,deg,45,0.7853981633974483,Angle from vertical below which supports are needed. Complement of overhang_max (90-45=45).,True
+fdm_support_gap_z,mm,0.20,0.02,Z gap between support interface and part bottom. Typically 1 layer height for easy removal.,True
+fdm_support_gap_xy,mm,0.40,0.04,XY gap between support walls and part walls. Prevents fusion while maintaining proximity.,True
+tol_fine,mm,0.10,0.010000000000000002,ISO 2768 fine class (f) — general linear tolerance ±0.05 mm per side for 3–30 mm features. Requires a well-calibrated machine.,True
+tol_medium,mm,0.20,0.020000000000000004,ISO 2768 medium class (m) — ±0.10 mm per side for 3–30 mm. Default starting point for most functional FDM parts.,True
+tol_coarse,mm,0.40,0.04000000000000001,ISO 2768 coarse class (c) — ±0.20 mm per side. For non-critical features or lower-accuracy machines.,True
+tol_angular,deg,1.0,0.017453292519943295,General angular tolerance. Matches ISO 2768 medium angular class for 0–10 mm leg length. Critical angles (e.g. 45° for no-support printing) should be exactly constrained.,True
+fdm_sliding_fit,mm,0.15,0.015,"FDM-practical sliding fit clearance per mating surface (total gap = 0.30 mm). Equivalent to coarse H8/e8 adapted for FDM variation. Use for lids, sliding panels, guide channels.",True
+fdm_press_fit,mm,0.05,0.005000000000000001,FDM light press fit per mating surface (total gap = 0.10 mm). Requires deliberate hand force. Good for retained pins and press-in bushings.,True
+fdm_interference_fit,mm,-0.05,-0.005000000000000001,FDM interference fit — hole modeled smaller than shaft by this per side. Requires significant force or press. Most reliable with TPU or small features.,True
+tol_h7g6_running,mm,0.025,0.0025000000000000005,ISO H7/g6 running clearance fit reference. Only achievable by post-machining or reaming in FDM context. Provided as a design target.,True
+fdm_min_hole_dia,mm,2.00,0.2,Minimum FDM hole diameter without post-processing. Smaller holes are often malformed — model at 1.5 mm and drill to final size.,True
+fdm_teardrop_offset,mm,fdm_layer_height,0.020000000000000004,"Upward Z offset for horizontal holes to compensate overhang droop. Shift hole center up by this, or use teardrop profile.",True
+fdm_hole_compensation,mm,fdm_hole_shrink,0.015,"Add to all circle sketch diameters, or Offset Face after modeling. References printer_accuracy_hole_shrink_compensation.",True
+fdm_thread_engage_min,mm,6.00,0.6000000000000001,"Minimum thread engagement length for reliable printed threads under moderate load. Rule of thumb: 1× bolt diameter minimum, 2× for structural. At M3 that is 3–6 mm.",True
+fdm_dowel_clearance,mm,0.15,0.015,"Add to dowel pin nominal diameter for a printed clearance receiver hole — part self-aligns but pin is not retained. For retention, drill and ream to H7.",True
+countersink_angle,deg,90,1.5707963267948966,ISO metric flat-head included angle. 90° — NOT 82° (that is inch/UNC).,True
+fdm_thread_offset_petg,mm,-0.20,-0.020000000000000004,Offset Face per thread flank for PETG/ABS printed threads. Apply to both bolt and nut/hole.,True
+fdm_thread_offset_pla,mm,-0.15,-0.015,Offset Face per flank for PLA. PLA prints tighter; slightly less clearance needed.,True
+fdm_thread_tol_petg,mm,0.50,0.05,ISO Metric Thread Profile add-in tolerance for PETG/ABS. Sweet spot 0.40–0.60 mm.,True
+fdm_thread_tol_pla,mm,0.40,0.04000000000000001,ISO Metric Thread Profile add-in tolerance for PLA.,True
+fdm_wall_minimum,mm,2 * fdm_line_width,0.09000000000000001,Minimum functional wall — 2 perimeters. Non-structural enclosures only.,True
+fdm_wall_structural,mm,4 * fdm_line_width,0.18000000000000002,Standard structural wall — 4 perimeters. Voron default for load-bearing features.,True
+fdm_wall_heavy,mm,6 * fdm_line_width,0.27,"Heavy-duty — 6 perimeters. Motor mounts, idler towers, sustained dynamic loads.",True
+fdm_fillet_min,mm,fdm_layer_height * 2,0.04000000000000001,Minimum internal fillet to prevent delamination. 2× layer height.,True
+fdm_fillet_standard,mm,1.00,0.1,Standard external edge fillet — aesthetics and chipping resistance.,True
+fdm_fillet_large,mm,3.00,0.30000000000000004,"Large gusset fillet for high-stress junctions (toolhead arms, motor mounts).",True
+fdm_chamfer_standard,mm,0.50,0.05,Standard 45° chamfer for edge breaking and hole lead-ins.,True
+fdm_chamfer_leadin,mm,0.80,0.08000000000000002,Larger lead-in chamfer for pin/shaft insertion guidance.,True
+fdm_overhang_max,deg,50,0.8726646259971648,Max unsupported overhang from vertical on standard machines.,True
+fdm_overhang_max_cpap,deg,70,1.2217304763960306,Max overhang with aggressive cooling (CPAP). K3 with SLM XY can reliably hit 65–70°.,True
+fdm_bridge_max,mm,60,6.0,Max bridge span on well-tuned FDM at 30–60 mm/s bridging speed. Highly material-dependent.,True
+fdm_bridge_sag,mm,fdm_layer_height * 2,0.04000000000000001,Z compensation for bridge sag on long spans — raise ceiling by this amount.,True
+pla_shrink,,0.30,0.3,PLA linear shrinkage — approximately 0.2–0.4%. Typically accounted for by printer calibration. Reference for large parts.,True
+petg_shrink,,0.30,0.3,PETG linear shrinkage — approximately 0.2–0.4%. Very similar to PLA; well-behaved.,True
+abs_shrink,,0.60,0.6,ABS linear shrinkage — approximately 0.4–0.8%. Significantly more than PLA/PETG; chamber heating helps consistency.,True
+asa_shrink,,0.50,0.5,ASA linear shrinkage — similar to ABS but slightly less. Preferred over ABS for UV resistance in external parts.,True
+abs_chamber_temp,,45,45.0,Minimum chamber temperature for reliable ABS/ASA inter-layer adhesion and warp resistance. 50–60°C is better for functional parts.,True
+pc_chamber_temp,,70,70.0,Minimum chamber temperature for reliable PC (polycarbonate) layer bonding. PC requires aggressive chamber heating.,True
+tpu_95a_hardness,,95,95.0,"TPU 95A shore hardness — firm but flexible. Good for gaskets, bump stops, and strain reliefs where some flex is needed.",True
+tpu_85a_hardness,,85,85.0,"TPU 85A — softer, more compliant. Useful for cable boots, vibration isolation feet.",True
+pla_tg,,55,55.0,PLA glass transition temperature in degrees C. Parts soften and warp above this. Not suitable near heat sources.,True
+petg_tg,,80,80.0,PETG glass transition temperature. Moderate heat resistance — OK for automotive interior but not engine bay.,True
+abs_tg,,105,105.0,ABS glass transition temperature. Good heat resistance with chamber printing.,True
+asa_tg,,100,100.0,ASA glass transition temperature. Similar to ABS with UV resistance for outdoor use.,True
+pla_tensile,,50,50.0,PLA ultimate tensile strength in MPa (reference). Strongest common FDM filament but brittle.,True
+petg_tensile,,40,40.0,PETG ultimate tensile strength in MPa. More ductile than PLA — better impact resistance.,True
+abs_tensile,,35,35.0,ABS ultimate tensile strength in MPa. Lower than PLA but much better impact and heat resistance.,True
+fdm_6061_diff_expansion,,0.055,0.055,Differential thermal expansion between 6061-T6 aluminum and ABS/ASA per °C. Aluminum expands ~23.6 µm/m/°C; ABS ~90 µm/m/°C. Relevant for hybrid toolhead assemblies in heated chambers.,True
+pip_sphere_clearance,mm,0.30,0.03,Radial gap between captive sphere and socket for print-in-place FDM. Must exceed layer height to prevent fusion. Tested on 0.20 mm layers — reduce to 0.25 for 0.12 mm layers.,True
+pip_sphere_min_dia,mm,8.00,0.8,Minimum sphere diameter for reliable print-in-place captive joints. Below this the bridge spans become too short for clean FDM.,True
+pip_hinge_clearance,mm,0.25,0.025,Radial clearance for print-in-place living hinge pins. Tighter than captive sphere since rotation axis is fixed.,True
+bayonet_rotation_angle,deg,40,0.6981317007977318,Rotation angle to lock/unlock. Must be less than (360/tab_count - entry_slot_angle) to avoid tab running into next entry slot.,True
+bayonet_tab_height,mm,2.00,0.2,Radial height of each locking tab (how far it protrudes into the channel). Determines pull-off resistance.,True
+bayonet_channel_depth,mm,2.20,0.22000000000000003,Depth of rotation channel in mating part. Tab height + clearance for smooth rotation.,True
+bayonet_entry_slot_width,deg,15,0.2617993877991494,Angular width of entry slot where tab drops in before rotating to lock. Must be wide enough for easy alignment.,True
+bayonet_ramp_angle,deg,5,0.08726646259971647,"Optional ramp angle at channel end — creates a detent that resists accidental unlocking. 0 = no detent, 5 = light snap, 10 = firm.",True
+bayonet_engagement_depth,mm,4.00,0.4,How far the lid collar overlaps the container body. Deeper = more stable but harder to print overhangs internally.,True
+bayonet_clearance_radial,mm,0.15,0.015,Radial clearance between lid inner wall and container outer wall. Uses sliding fit class.,True
+dovetail_angle,deg,60,1.0471975511965976,Dovetail half-angle (from vertical). 60° is standard for FDM — provides retention without excessive overhang. 45° also printable but weaker lock.,True
+dovetail_base_width,mm,6.00,0.6000000000000001,Width at narrow end (base) of dovetail tail. Scale up for larger load-bearing joints.,True
+dovetail_top_width,mm,8.00,0.8,Width at wide end (top) of dovetail tail. Difference from base determines lock strength.,True
+dovetail_depth,mm,4.00,0.4,Depth of dovetail slot/rail. Deeper = stronger retention but more material.,True
+dovetail_clearance,mm,0.12,0.012,Per-surface clearance for sliding dovetail fit in FDM. Tighter than general sliding fit because dovetails self-align.,True
+dovetail_chamfer,mm,0.50,0.05,Lead-in chamfer at dovetail entry to ease assembly. Applied to both rail and slot.,True
+spring_clip_thick,mm,1.60,0.16000000000000003,Flexure arm thickness for FDM spring clips (PLA). Thinner = more flex but weaker. 1.6 mm gives ~2 mm deflection before yield at 40 mm arm length.,True
+spring_clip_width,mm,6.00,0.6000000000000001,Width of spring clip arm. Wider = stiffer (scales linearly with width).,True
+spring_clip_max_flex,mm,2.00,0.2,Maximum safe deflection for PLA spring clip arms at 1.6 mm thickness × 40 mm length. Beyond this risks permanent deformation.,True
+spring_clip_hook_depth,mm,1.50,0.15000000000000002,How far the hook protrudes past the mating surface. Must be less than max deflection for the arm to flex over it.,True
+container_wall,mm,2.50,0.25,"Minimum wall thickness for food-adjacent containers (treats, dry goods). Provides structural rigidity and prevents permeation. Not FDA-rated — for dry pet treats only.",True
+container_base,mm,2.00,0.2,Base/floor thickness for general containers. Thicker than walls because bottom bears load and is the first layer group.,True
+container_corner_r,mm,3.00,0.30000000000000004,Minimum corner radius for rounded-rectangle containers. Smaller radii create stress concentrations and thin-wall issues in FDM.,True
+container_rim_width,mm,1.50,0.15000000000000002,Width of the sealing rim/lip on container lids. Provides contact area for dust seal without excessive material.,True
+fdm_living_hinge_thick,mm,0.80,0.08,Single-layer living hinge thickness. Two layers at 0.4mm nozzle. Prints flat then folds along hinge line.,True
+fdm_living_hinge_width,mm,10.00,1.0,Minimum width for reliable FDM living hinge. Narrower hinges concentrate stress and crack.,True
+fdm_living_hinge_radius,mm,3.00,0.3,Minimum bend radius for FDM living hinge. Tighter radii crack on first fold in PLA.,True
+fdm_text_min_height,mm,6.00,0.6,Minimum embossed or debossed text height for legibility at 0.4mm nozzle. Smaller text loses detail.,True
+fdm_text_depth,mm,0.60,0.06,Deboss depth or emboss height for text features. Three layers at 0.20mm layer height.,True
+fdm_rib_thickness,mm,0.90,0.09,Reinforcement rib thickness. Matches fdm_wall_minimum for consistent perimeter fill.,True
+fdm_rib_height_max,mm,9.00,0.9,Maximum rib height before deflection issues. Approximately 10x rib thickness.,True
+fdm_draft_angle,deg,1.5,0.026179938779914945,Minimum draft angle for FDM mold-style features and vertical snap-fit guides.,True
+asm_fdm_to_cnc_clearance,mm,0.20,0.02,Interface clearance between FDM and CNC mating surfaces. Accounts for FDM dimensional variation against precision aluminum.,True
+asm_fdm_to_fdm_clearance,mm,0.30,0.03,Interface clearance between two FDM mating surfaces. Both parts have FDM tolerances.,True
+asm_cnc_to_cnc_clearance,mm,0.05,0.005,Interface clearance between two CNC mating surfaces. Both parts are precision machined.,True
+asm_stackup_budget_fdm,mm,0.15,0.015,Per-part tolerance budget for FDM parts in a tolerance stack. Multiply by number of FDM parts in chain.,True
+asm_stackup_budget_cnc,mm,0.05,0.005,Per-part tolerance budget for CNC parts in a tolerance stack. Multiply by number of CNC parts in chain.,True
+snapfit_beam_length,mm,20.00,2.0,Cantilever beam length from root to hook tip. 20 mm gives safe deflection at 1.2% root strain in PLA. Shorter = stiffer = higher insertion force.,False
+snapfit_beam_thick,mm,1.60,0.16000000000000003,Beam thickness (bending axis). At 20 mm length allows ~1.5 mm deflection before yield in PLA. Integer multiple of fdm_line_width for clean wall fill.,False
+snapfit_beam_width,mm,6.00,0.6000000000000001,Beam width — stiffness scales linearly. 6 mm provides sufficient hook contact area. Minimum 4x fdm_line_width.,False
+snapfit_hook_depth,mm,1.20,0.12,Hook undercut depth — how far hook protrudes past mating lip. Must be less than max safe deflection (1.5 mm at 20 mm beam). Deeper = stronger retention.,False
+snapfit_entry_angle,deg,30,0.5235987755982988,Insertion ramp angle from beam axis. 30 deg = moderate insertion force. Steeper = easier entry but shallower hook. Must be < fdm_overhang_max.,False
+snapfit_retention_angle,deg,80,1.3962634015954636,Retention face angle from beam axis. 80 deg = strong pull-out resistance. 90 deg = permanent snap (destructive removal only).,False
+snapfit_clearance,mm,fdm_sliding_fit,0.015,Gap between beam sides and guide channel walls. References sliding fit for smooth deflection travel.,False
+snapfit_root_fillet,mm,1.50,0.15000000000000002,Fillet radius at beam root to prevent stress concentration and delamination. Critical for fatigue life — minimum 1x beam thickness.,False
+snaplatch_arm_length,mm,12.00,1.2,Latch arm length from pivot to hook tip. Shorter than snapfit because latch arms are wider and stiffer. 12 mm balances finger accessibility with stiffness.,False
+snaplatch_arm_thick,mm,1.80,0.18,Arm thickness. Slightly thicker than snapfit for durability under repeated cycling. 4x fdm_line_width = clean perimeter fill.,False
+snaplatch_arm_width,mm,8.00,0.8,Arm width. Wider than snapfit for better grip surface and lateral stability. User must be able to pinch and lift the latch.,False
+snaplatch_hook_depth,mm,1.00,0.1,How far latch hook engages behind mating lip. 1 mm provides positive click-shut feel without requiring tools to open.,False
+snaplatch_lip_thick,mm,2.00,0.2,Thickness of mating lip on container body that latch catches behind. Must survive repeated latch impact without cracking. Minimum fdm_wall_structural.,False
+snaplatch_lift_tab_height,mm,3.00,0.30000000000000004,Height of finger lift tab extending past hook. User must get a fingernail under this to release. Minimum 2.5 mm for usability.,False
+snaplatch_clearance,mm,fdm_sliding_fit,0.015,Clearance between latch arm and guide slot walls. References fdm_sliding_fit.,False
+detent_ball_dia,mm,4.00,0.4,Steel ball bearing diameter. 4 mm is widely available and large enough for positive tactile click. 3 mm also common — scale bore accordingly.,False
+detent_bore_dia,mm,4.20,0.42,Bore that retains the ball. Ball must not fall through — bore is ball_dia + 2x fdm_hole_shrink. Lip retains ball at equator.,False
+detent_bore_depth,mm,6.00,0.6000000000000001,Depth of ball bore behind mating surface. Accommodates ball + spring or flexure. 1.5x ball diameter minimum.,False
+detent_dimple_dia,mm,3.00,0.30000000000000004,Diameter of mating detent dimple (cone/sphere indent). Smaller than ball so ball seats positively. 75% of ball dia is standard.,False
+detent_dimple_depth,mm,0.80,0.08,Depth of dimple indent. Controls retention force — deeper = stronger click but harder to pop out. 0.8 mm gives moderate detent feel with 4 mm ball.,False
+detent_spring_thick,mm,1.20,0.12,Thickness of printed leaf spring behind ball (if using printed flexure instead of metal spring). Thinner = lighter detent click.,False
+detent_spring_length,mm,10.00,1.0,Free length of printed leaf spring. Longer = softer spring rate = lighter click. At 1.2 mm thick and 10 mm long PLA gives ~2-4 N preload.,False
+quarterturn_stud_dia,mm,8.00,0.8,Stud shaft diameter. 8 mm provides sufficient shear strength in PLA for panel retention. Must clear the keyhole slot width.,False
+quarterturn_head_dia,mm,14.00,1.4,Stud head diameter (locking flange that catches behind panel). Extends past keyhole to provide bearing area. Minimum 1.5x stud_dia.,False
+quarterturn_head_thick,mm,2.50,0.25,Thickness of locking head flange. Must resist bending from pull-out loads. Minimum fdm_wall_structural.,False
+quarterturn_keyhole_width,mm,8.50,0.85,Width of keyhole entry slot in panel. Stud shaft passes through this. stud_dia + 2x fdm_sliding_fit + margin.,False
+quarterturn_keyhole_length,mm,14.50,1.45,Length of keyhole slot (allows head to pass through during insertion). head_dia + 2x fdm_sliding_fit + margin.,False
+quarterturn_panel_thick,mm,3.00,0.30000000000000004,Nominal panel thickness the fastener is designed for. Stud shoulder height matches this so head sits flush behind panel.,False
+quarterturn_clearance,mm,fdm_sliding_fit,0.015,Radial clearance between stud and keyhole for smooth rotation. References fdm_sliding_fit.,False
+quarterturn_detent_depth,mm,0.50,0.05,Depth of 90-degree detent notch that holds fastener in locked position. Provides tactile click at lock. Shallow = easy release.,False
+camlock_cam_dia,mm,15.00,1.5,Outer diameter of cam disc. 15 mm is standard for furniture-style cam locks. Larger = more clamping force at same eccentricity.,False
+camlock_eccentricity,mm,1.50,0.15000000000000002,Offset between cam center and pivot bore center. This IS the total clamping travel. 1.5 mm provides firm clamp without excessive torque.,False
+camlock_cam_thick,mm,6.00,0.6000000000000001,Cam disc thickness. Determines bearing area against mating slot. 6 mm prevents cam from cocking/tilting under load.,False
+camlock_pivot_dia,mm,5.00,0.5,Pivot shaft diameter through cam center bore. 5 mm aligns with common dowel pin or M5 bolt sizes.,False
+camlock_slot_width,mm,6.50,0.65,Width of slot the cam bears against in mating part. cam_thick + 2x fdm_sliding_fit + margin for smooth rotation.,False
+camlock_lever_length,mm,20.00,2.0,Length of operating lever arm (if integrated). Provides mechanical advantage for hand operation. Can be replaced with screwdriver slot.,False
+camlock_clearance,mm,fdm_sliding_fit,0.015,Radial clearance between cam disc and housing pocket. References fdm_sliding_fit for smooth rotation.,False
+tool_dewalt_dcs391_blade_dia,mm,165.0,16.5,DeWalt DCS391 circular saw blade diameter (6.5 inch).,True
+pip_socket_ratio,,0.65,0.65,Socket opening diameter / sphere diameter (dimensionless ratio). 0.65 = equator is above the socket lip.,True
+bayonet_tab_count,,3,3.0,Number of tabs/channels in a twist-lock lid (dimensionless count). 3 gives 120 deg spacing.,True
+dovetail_mount_width,mm,24.0,2.4,"BB3D house mount-rail dovetail width at the wide (face) edge. Load-bearing wall-holder rail, larger than the generic dovetail_* joint. Lock once - never change.",True
+dovetail_mount_depth,mm,6.0,0.6,House mount-rail dovetail engagement depth. Narrow-edge width = 24 - 2*(depth/tan(angle)) ~= 17.1 mm at 60 deg.,True
+dovetail_mount_angle,deg,60,1.0471975511965976,"House mount-rail flank angle measured from the part face (mating plane). 60 deg = 30 deg undercut from vertical: strong lock, prints clean without support.",True
+dovetail_mount_clearance,mm,0.20,0.02,Per-surface slide clearance for the mount rail. Looser than dovetail_clearance (0.12) because the rail is larger and longer-travel.,True
