@@ -21,7 +21,7 @@ OUT_DIR = Path("BakedBean3D_MasterParams_v4/split")
 
 # Tier 1 — Always Import
 DESIGN_RULES_PREFIXES = {
-    "fdm_", "tol_", "pip_", "bayonet_", "dovetail_", "spring_clip_",
+    "fdm_", "tol_", "pip_", "bayonet_", "dovetail_", "spring_clip_", "hinge_",
     "container_", "snapfit_", "snaplatch_", "detent_", "quarterturn_", "camlock_",
     "asm_",
 }

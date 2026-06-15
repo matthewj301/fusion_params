@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Append fidget-toy design parameters to the master CSV (idempotent).
 
-Three families:
+Families:
   gear_*     -> motion_mechanical  (FDM spur-gear design: sizing + spacing)
   bearing_*  -> motion_mechanical  (R188 compact fidget bearing; 608 already present)
-  fidget_*   -> household_hobby     (bearing seats + snap/click kinematics)
+  hinge_*    -> design_rules        (print-in-place pin hinge; builds on pip_hinge_clearance)
+  fidget_*   -> household_hobby     (bearing seats, snap/click kinematics, infinity hinge, buttons)
 
 Sources: meta-matic & EngineerDog FDM gear guides, AGMA/ISO gear standards,
 Boca Bearings fidget guide, Printables print-in-place planetary-fidget makers.
@@ -42,6 +43,18 @@ NEW = [
     ("fidget_click_pitch", "mm", "6.0", "APPROX - tune. Center-to-center spacing between click/detent stops on a slider or dial fidget; sets the travel-per-click feel."),
     ("fidget_click_bump", "mm", "0.4", "APPROX - tune. Ride-over bump/notch height that produces the tactile snap as a stop passes a detent. ~0.3-0.6 mm in PLA; bigger = stiffer click. See detent_* for a ball-detent click."),
     ("fidget_magnet_snap_gap", "mm", "0.6", "APPROX - tune. Air gap held between moving and fixed magnets at a magnetic-slider click stop so they snap without contacting. Scale with magnet strength; see magnet_* sizes."),
+
+    # --- Print-in-place hinge family (general; builds on pip_hinge_clearance radial) ---
+    ("hinge_pin_dia", "mm", "3.0", "Default print-in-place hinge pin diameter. Below ~2 mm gets fragile. Barrel bore = pin + 2x pip_hinge_clearance. Source: Snapmaker/Printables PIP hinge guides."),
+    ("hinge_pin_bore", "mm", "hinge_pin_dia + 2 * pip_hinge_clearance", "Print-in-place hinge barrel bore ID = pin dia + 2x radial clearance (pip_hinge_clearance 0.25). 3.0 -> 3.5 mm.", "0.35"),
+    ("hinge_knuckle_gap", "mm", "0.40", "Axial (Z) air gap between stacked hinge knuckles so they do not fuse/bind. Use >= 1-2 layer heights; larger than XY pin clearance since Z is discrete. Source: Snapmaker PIP hinge guide."),
+    ("hinge_barrel_wall", "mm", "1.6", "Min wall around a hinge barrel bore (~4x line width) for strength."),
+
+    # --- Fidget hinges + clicky buttons ---
+    ("fidget_infinity_hinge_gap", "mm", "0.40", "All-around air gap for infinity-cube folding hinges - loose fit so cubes fold freely without separating. Source: Fusion 360 infinity-cube tutorials."),
+    ("fidget_button_travel", "mm", "1.0", "APPROX - tune. Depression distance of a printed fidget-cube clicky button before bottoming/clicking. 0.5-1.5 mm; more travel = bigger throw."),
+    ("fidget_button_cap_dia", "mm", "8.0", "APPROX. Typical fidget-cube button cap diameter."),
+    ("fidget_button_snap_height", "mm", "0.5", "APPROX - tune. Snap-through lip/dome height the button rides over to produce the click. See snapfit_*/detent_* for the underlying mechanism."),
 ]
 
 

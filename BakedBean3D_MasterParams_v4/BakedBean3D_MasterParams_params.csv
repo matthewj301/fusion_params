@@ -988,3 +988,11 @@ fidget_r188_bearing_press,mm,bearing_r188_od - 0.10,1.26,R188 bearing press-fit 
 fidget_click_pitch,mm,6.0,0.6,APPROX - tune. Center-to-center spacing between click/detent stops on a slider or dial fidget; sets the travel-per-click feel.,True
 fidget_click_bump,mm,0.4,0.04,APPROX - tune. Ride-over bump/notch height that produces the tactile snap as a stop passes a detent. ~0.3-0.6 mm in PLA; bigger = stiffer click. See detent_* for a ball-detent click.,True
 fidget_magnet_snap_gap,mm,0.6,0.06,APPROX - tune. Air gap held between moving and fixed magnets at a magnetic-slider click stop so they snap without contacting. Scale with magnet strength; see magnet_* sizes.,True
+hinge_pin_dia,mm,3.0,0.3,Default print-in-place hinge pin diameter. Below ~2 mm gets fragile. Barrel bore = pin + 2x pip_hinge_clearance. Source: Snapmaker/Printables PIP hinge guides.,True
+hinge_pin_bore,mm,hinge_pin_dia + 2 * pip_hinge_clearance,0.35,Print-in-place hinge barrel bore ID = pin dia + 2x radial clearance (pip_hinge_clearance 0.25). 3.0 -> 3.5 mm.,True
+hinge_knuckle_gap,mm,0.40,0.04,Axial (Z) air gap between stacked hinge knuckles so they do not fuse/bind. Use >= 1-2 layer heights; larger than XY pin clearance since Z is discrete. Source: Snapmaker PIP hinge guide.,True
+hinge_barrel_wall,mm,1.6,0.16,Min wall around a hinge barrel bore (~4x line width) for strength.,True
+fidget_infinity_hinge_gap,mm,0.40,0.04,All-around air gap for infinity-cube folding hinges - loose fit so cubes fold freely without separating. Source: Fusion 360 infinity-cube tutorials.,True
+fidget_button_travel,mm,1.0,0.1,APPROX - tune. Depression distance of a printed fidget-cube clicky button before bottoming/clicking. 0.5-1.5 mm; more travel = bigger throw.,True
+fidget_button_cap_dia,mm,8.0,0.8,APPROX. Typical fidget-cube button cap diameter.,True
+fidget_button_snap_height,mm,0.5,0.05,APPROX - tune. Snap-through lip/dome height the button rides over to produce the click. See snapfit_*/detent_* for the underlying mechanism.,True

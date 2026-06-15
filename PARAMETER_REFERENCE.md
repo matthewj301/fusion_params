@@ -2,7 +2,7 @@
 
 Coverage map of the Fusion 360 master parameter library. **Check here (or grep the CSV) before researching new dimensions** — avoid duplicating existing coverage.
 
-- **Total parameters:** 989 (regenerated 2026-06-15)
+- **Total parameters:** 997 (regenerated 2026-06-15)
 - **Source of truth:** `BakedBean3D_MasterParams_v4/BakedBean3D_MasterParams_params.csv` (6-column Fusion format: Name, Unit, Expression, Value, Comment, Favorite)
 - **This file is generated** — do not hand-edit. Run `python gen_reference.py` after `split_params.py`. Edit the `WISHLIST` block in the generator to change coverage-gap notes.
 - **Naming:** component-first, snake_case, no `_mm`/ISO suffixes (e.g. `m3_button_head_dia`, `iphone16pro_width`). See `migration_mapping.csv` for old→new.
@@ -11,7 +11,7 @@ Params are imported per project from the themed split CSVs (`split/`). Tiers bel
 
 ---
 
-## `design_rules` — 145 params  ·  _Tier 1 · always import_
+## `design_rules` — 149 params  ·  _Tier 1 · always import_
 
 FDM tolerances, fit classes, walls, fillets, chamfers, overhangs, bridges, joints, locking mechanisms, materials
 
@@ -27,6 +27,7 @@ FDM tolerances, fit classes, walls, fillets, chamfers, overhangs, bridges, joint
 - **tol** (5) — `tol_angular`, `tol_coarse`, `tol_fine`, `tol_h7g6_running`, `tol_medium`
 - **abs** (4) — `abs_chamber_temp`, `abs_shrink`, `abs_tensile`, `abs_tg`
 - **container** (4) — `container_base`, `container_corner_r`, `container_rim_width`, `container_wall`
+- **hinge** (4) — `hinge_barrel_wall`, `hinge_knuckle_gap`, `hinge_pin_bore`, `hinge_pin_dia`
 - **pip** (4) — `pip_hinge_clearance`, `pip_socket_ratio`, `pip_sphere_clearance`, `pip_sphere_min_dia`
 - **spring** (4) — `spring_clip_hook_depth`, `spring_clip_max_flex`, `spring_clip_thick`, `spring_clip_width`
 - **petg** (3) — `petg_shrink`, `petg_tensile`, `petg_tg`
@@ -186,17 +187,17 @@ pegboard & wall systems (Multiboard/SKADIS/Gridfinity/HSW/French cleat), shop st
 
 ---
 
-## `household_hobby` — 147 params  ·  _Tier 2 · per project_
+## `household_hobby` — 151 params  ·  _Tier 2 · per project_
 
 drinkware, EDC, cards, coins, paint, Warhammer, foam darts, bottles, cables, storage
 
 - **wh** (14) — `wh_base_25mm_od`, `wh_base_32mm_od`, `wh_base_40mm_od`, `wh_base_50mm_od`, `wh_base_60mm_od`, `wh_base_height`, `wh_base_slot_clearance`, `wh_flying_post_clearance_hole` … (+6 more)
+- **fidget** (9) — `fidget_608_bearing_press`, `fidget_button_cap_dia`, `fidget_button_snap_height`, `fidget_button_travel`, `fidget_click_bump`, `fidget_click_pitch`, `fidget_infinity_hinge_gap`, `fidget_magnet_snap_gap` … (+1 more)
 - **sata** (7) — `sata_25_height_std`, `sata_25_height_thin`, `sata_25_length`, `sata_25_width`, `sata_35_height`, `sata_35_length`, `sata_35_width`
 - **bic** (6) — `bic_lighter_depth`, `bic_lighter_height`, `bic_lighter_width`, `bic_pen_hole_dia`, `bic_pen_length`, `bic_pen_width`
 - **glasses** (6) — `glasses_case_height`, `glasses_case_length`, `glasses_case_width`, `glasses_folded_depth`, `glasses_folded_height`, `glasses_folded_width`
 - **nerf** (6) — `nerf_flywheel_gap_half_dart_standard`, `nerf_flywheel_motor_can_worker_artifact_od`, `nerf_plunger_id_19mm`, `nerf_plunger_id_25mm`, `nerf_plunger_wall_thickness`, `nerf_spring_guide_rod_diameter_standard`
 - **pill** (6) — `pill_13dram_dia`, `pill_13dram_height`, `pill_20dram_dia`, `pill_20dram_height`, `pill_30dram_dia`, `pill_30dram_height`
-- **fidget** (5) — `fidget_608_bearing_press`, `fidget_click_bump`, `fidget_click_pitch`, `fidget_magnet_snap_gap`, `fidget_r188_bearing_press`
 - **halfdart** (5) — `halfdart_barrel_performance`, `halfdart_barrel_slam_fire`, `halfdart_body_length`, `halfdart_body_outer_diameter`, `halfdart_tip_outer_diameter`
 - **usb** (5) — `usb_a_plug_height`, `usb_a_plug_width`, `usb_c_cable_od`, `usb_c_plug_height`, `usb_c_plug_width`
 - **credit** (4) — `credit_card_corner_radius`, `credit_card_height`, `credit_card_thick`, `credit_card_width`

@@ -144,3 +144,7 @@ dovetail_mount_width,mm,24.0,2.4,"BB3D house mount-rail dovetail width at the wi
 dovetail_mount_depth,mm,6.0,0.6,House mount-rail dovetail engagement depth. Narrow-edge width = 24 - 2*(depth/tan(angle)) ~= 17.1 mm at 60 deg.,True
 dovetail_mount_angle,deg,60,1.0471975511965976,"House mount-rail flank angle measured from the part face (mating plane). 60 deg = 30 deg undercut from vertical: strong lock, prints clean without support.",True
 dovetail_mount_clearance,mm,0.20,0.02,Per-surface slide clearance for the mount rail. Looser than dovetail_clearance (0.12) because the rail is larger and longer-travel.,True
+hinge_pin_dia,mm,3.0,0.3,Default print-in-place hinge pin diameter. Below ~2 mm gets fragile. Barrel bore = pin + 2x pip_hinge_clearance. Source: Snapmaker/Printables PIP hinge guides.,True
+hinge_pin_bore,mm,hinge_pin_dia + 2 * pip_hinge_clearance,0.35,Print-in-place hinge barrel bore ID = pin dia + 2x radial clearance (pip_hinge_clearance 0.25). 3.0 -> 3.5 mm.,True
+hinge_knuckle_gap,mm,0.40,0.04,Axial (Z) air gap between stacked hinge knuckles so they do not fuse/bind. Use >= 1-2 layer heights; larger than XY pin clearance since Z is discrete. Source: Snapmaker PIP hinge guide.,True
+hinge_barrel_wall,mm,1.6,0.16,Min wall around a hinge barrel bore (~4x line width) for strength.,True
