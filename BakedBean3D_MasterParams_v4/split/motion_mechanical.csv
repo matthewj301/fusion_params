@@ -114,3 +114,16 @@ vslot_3030_extrusion_width,mm,30.0,3,3030 extrusion nominal width.,True
 vslot_3030_slot_width,mm,8.0,0.8,3030 slot width (often 8.2); M6 bolt. Some 3030 are 6 mm slot - verify.,True
 vslot_4040_extrusion_width,mm,40.0,4,4040 extrusion nominal width.,True
 vslot_4040_slot_width,mm,8.0,0.8,4040 slot width; M8 bolt. Some makers do 10 mm slot - verify.,True
+gear_pressure_angle,deg,20,0.3490658503988659,"Involute pressure angle for FDM/industry gears. 20 deg = stronger teeth, tolerant of center-distance error; 14.5 deg is legacy. Source: AGMA/ISO.",True
+gear_module_fine,mm,1.0,0.1,Fine gear module (small toys/mechanisms). Pitch dia = module x teeth. Two-gear center distance (the 'spacing') = module x (z1+z2)/2. Source: meta-matic/EngineerDog.,True
+gear_module_standard,mm,1.5,0.15,"General-purpose FDM gear module (robots, DIY, fidget gear stacks).",True
+gear_module_coarse,mm,2.0,0.2,Coarse module for higher-torque / robust FDM gears.,True
+gear_backlash,mm,0.30,0.03,Total backlash between two meshing FDM gears printed SEPARATELY (~0.15 mm/gear). Apply as tooth thinning or +center distance; tune to printer. Source: FDM gear guides.,True
+gear_pip_clearance,mm,0.15,0.015,"Per-surface clearance for PRINT-IN-PLACE gears (planetary fidgets) at 0.2 mm layer / 0.4 mm nozzle. ~0.1-0.2: tighter binds, looser rattles. Source: Printables PIP-fidget makers.",True
+gear_addendum_factor,,1.0,1,Addendum (tooth height above pitch circle) = this x module. ISO standard 1.0. Dimensionless.,True
+gear_dedendum_factor,,1.25,1.25,Dedendum (depth below pitch circle) = this x module; includes root clearance. Dimensionless.,True
+gear_tip_clearance_factor,,0.25,0.25,Tip-to-root clearance = this x module. Whole tooth depth = (addendum+dedendum) = 2.25 x module. Dimensionless.,True
+gear_min_teeth,,12,12,"Min teeth to avoid undercut on FDM 20 deg gears (theoretical 17; 12-14 OK printed, profile-shift below ~17). Dimensionless count.",True
+bearing_r188_id,mm,6.35,0.635,R188 bearing bore (1/4 in). Compact fidget-spinner bearing vs the larger 608.,True
+bearing_r188_od,mm,12.7,1.27,R188 bearing OD (1/2 in). Source: Boca Bearings fidget guide.,True
+bearing_r188_width,mm,4.76,0.476,R188 bearing width (3/16 in). Verify - some R188 ship 1/8 in (3.18 mm) wide.,True

@@ -2,7 +2,7 @@
 
 Coverage map of the Fusion 360 master parameter library. **Check here (or grep the CSV) before researching new dimensions** — avoid duplicating existing coverage.
 
-- **Total parameters:** 971 (regenerated 2026-06-14)
+- **Total parameters:** 989 (regenerated 2026-06-15)
 - **Source of truth:** `BakedBean3D_MasterParams_v4/BakedBean3D_MasterParams_params.csv` (6-column Fusion format: Name, Unit, Expression, Value, Comment, Favorite)
 - **This file is generated** — do not hand-edit. Run `python gen_reference.py` after `split_params.py`. Edit the `WISHLIST` block in the generator to change coverage-gap notes.
 - **Naming:** component-first, snake_case, no `_mm`/ISO suffixes (e.g. `m3_button_head_dia`, `iphone16pro_width`). See `migration_mapping.csv` for old→new.
@@ -57,12 +57,13 @@ M2-M10 hardware, heat-set inserts, nut traps, counterbores, magnets, zip ties
 
 ---
 
-## `motion_mechanical` — 115 params  ·  _Tier 2 · per project_
+## `motion_mechanical` — 128 params  ·  _Tier 2 · per project_
 
 MGN rails, GT2 belts, ball bearings, NEMA motors, extrusion, CNC process params
 
 - **cnc** (50) — `cnc_5mm_press_fit_pin`, `cnc_blank_oversize`, `cnc_datum_face_depth`, `cnc_drilled_oversize`, `cnc_edge_break`, `cnc_em_2mm_dia`, `cnc_em_3175_corner_r`, `cnc_em_3175_dia` … (+42 more)
-- **bearing** (18) — `bearing_608_id`, `bearing_608_od`, `bearing_608_width`, `bearing_623_id`, `bearing_623_od`, `bearing_623_width`, `bearing_625_id`, `bearing_625_od` … (+10 more)
+- **bearing** (21) — `bearing_608_id`, `bearing_608_od`, `bearing_608_width`, `bearing_623_id`, `bearing_623_od`, `bearing_623_width`, `bearing_625_id`, `bearing_625_od` … (+13 more)
+- **gear** (10) — `gear_addendum_factor`, `gear_backlash`, `gear_dedendum_factor`, `gear_min_teeth`, `gear_module_coarse`, `gear_module_fine`, `gear_module_standard`, `gear_pip_clearance` … (+2 more)
 - **gt2** (7) — `gt2_belt_pitch`, `gt2_belt_width`, `gt2_clamp_extra`, `gt2_pulley_16t_od`, `gt2_pulley_20t_od`, `gt2_pulley_80t_od`, `gt2_pulley_bore`
 - **nema17** (7) — `nema17_body_width`, `nema17_bolt_pattern_center_to_center`, `nema17_bolt_size`, `nema17_face_boss_diameter`, `nema17_shaft_diameter`, `nema17_shaft_flat_depth`, `nema17_shaft_length_standard`
 - **vslot** (7) — `vslot_2020_extrusion_width`, `vslot_2020_slot_width`, `vslot_2040_extrusion_width`, `vslot_3030_extrusion_width`, `vslot_3030_slot_width`, `vslot_4040_extrusion_width`, `vslot_4040_slot_width`
@@ -185,7 +186,7 @@ pegboard & wall systems (Multiboard/SKADIS/Gridfinity/HSW/French cleat), shop st
 
 ---
 
-## `household_hobby` — 142 params  ·  _Tier 2 · per project_
+## `household_hobby` — 147 params  ·  _Tier 2 · per project_
 
 drinkware, EDC, cards, coins, paint, Warhammer, foam darts, bottles, cables, storage
 
@@ -195,6 +196,7 @@ drinkware, EDC, cards, coins, paint, Warhammer, foam darts, bottles, cables, sto
 - **glasses** (6) — `glasses_case_height`, `glasses_case_length`, `glasses_case_width`, `glasses_folded_depth`, `glasses_folded_height`, `glasses_folded_width`
 - **nerf** (6) — `nerf_flywheel_gap_half_dart_standard`, `nerf_flywheel_motor_can_worker_artifact_od`, `nerf_plunger_id_19mm`, `nerf_plunger_id_25mm`, `nerf_plunger_wall_thickness`, `nerf_spring_guide_rod_diameter_standard`
 - **pill** (6) — `pill_13dram_dia`, `pill_13dram_height`, `pill_20dram_dia`, `pill_20dram_height`, `pill_30dram_dia`, `pill_30dram_height`
+- **fidget** (5) — `fidget_608_bearing_press`, `fidget_click_bump`, `fidget_click_pitch`, `fidget_magnet_snap_gap`, `fidget_r188_bearing_press`
 - **halfdart** (5) — `halfdart_barrel_performance`, `halfdart_barrel_slam_fire`, `halfdart_body_length`, `halfdart_body_outer_diameter`, `halfdart_tip_outer_diameter`
 - **usb** (5) — `usb_a_plug_height`, `usb_a_plug_width`, `usb_c_cable_od`, `usb_c_plug_height`, `usb_c_plug_width`
 - **credit** (4) — `credit_card_corner_radius`, `credit_card_height`, `credit_card_thick`, `credit_card_width`

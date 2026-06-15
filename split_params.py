@@ -36,7 +36,7 @@ FASTENERS_PREFIXES = {
 
 # Tier 2 — Import Per Project
 MOTION_MECHANICAL_PREFIXES = {
-    "mgn", "gt2_", "f695_", "bearing_", "nema", "vslot_", "tslot_",
+    "mgn", "gt2_", "gear_", "f695_", "bearing_", "nema", "vslot_", "tslot_",
     "beacon_", "orbiter_", "chube_", "canbus_", "toolhead_",
     "cnc_", "alu_",
 }
@@ -85,7 +85,7 @@ HOUSEHOLD_HOBBY_PREFIXES = {
     "penny_", "nickel_", "dime_", "quarter_", "half_dollar_", "dollar_coin_",
     "citadel_", "vallejo_", "army_painter_", "craft_paint_",
     "gopro", "wh_",
-    "halfdart_", "fulldart_", "nerf_",
+    "halfdart_", "fulldart_", "nerf_", "fidget_",
     "pill_", "nalgene_", "eyedrop_", "spray_",
     "usb_a_plug_", "usb_c_plug_", "usb_c_cable_",
     "lightning_cable_", "hdmi_plug_", "dp_plug_",

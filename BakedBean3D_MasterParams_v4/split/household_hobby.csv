@@ -141,3 +141,8 @@ glasses_folded_depth,mm,48.0,4.800000000000001,Folded eyeglasses depth envelope 
 drink_max_body_dia,mm,yeti30oz_lip_dia,10.200000000000001,Largest drinkware diameter � Yeti 30 oz at 102 mm.,True
 drink_max_height,mm,stanley40oz_height,26.0,Tallest drinkware � Stanley Quencher 40 oz at 260 mm.,True
 bic_pen_hole_dia,mm,10.4,1.04,BIC Cristal hex pen across-corners diameter (9 mm / cos 30). Use for round holder holes.,True
+fidget_608_bearing_press,mm,bearing_608_od - 0.10,2.19,"608 bearing press-fit pocket ID for fidget-spinner caps (0.10 mm interference, FDM). For a slip-fit use bearing_608_od + 0.10 instead.",True
+fidget_r188_bearing_press,mm,bearing_r188_od - 0.10,1.26,R188 bearing press-fit pocket ID for compact fidgets (0.10 mm interference).,True
+fidget_click_pitch,mm,6.0,0.6,APPROX - tune. Center-to-center spacing between click/detent stops on a slider or dial fidget; sets the travel-per-click feel.,True
+fidget_click_bump,mm,0.4,0.04,APPROX - tune. Ride-over bump/notch height that produces the tactile snap as a stop passes a detent. ~0.3-0.6 mm in PLA; bigger = stiffer click. See detent_* for a ball-detent click.,True
+fidget_magnet_snap_gap,mm,0.6,0.06,APPROX - tune. Air gap held between moving and fixed magnets at a magnetic-slider click stop so they snap without contacting. Scale with magnet strength; see magnet_* sizes.,True

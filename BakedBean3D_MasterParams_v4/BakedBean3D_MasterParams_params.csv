@@ -970,3 +970,21 @@ dovetail_mount_width,mm,24.0,2.4,"BB3D house mount-rail dovetail width at the wi
 dovetail_mount_depth,mm,6.0,0.6,House mount-rail dovetail engagement depth. Narrow-edge width = 24 - 2*(depth/tan(angle)) ~= 17.1 mm at 60 deg.,True
 dovetail_mount_angle,deg,60,1.0471975511965976,"House mount-rail flank angle measured from the part face (mating plane). 60 deg = 30 deg undercut from vertical: strong lock, prints clean without support.",True
 dovetail_mount_clearance,mm,0.20,0.02,Per-surface slide clearance for the mount rail. Looser than dovetail_clearance (0.12) because the rail is larger and longer-travel.,True
+gear_pressure_angle,deg,20,0.3490658503988659,"Involute pressure angle for FDM/industry gears. 20 deg = stronger teeth, tolerant of center-distance error; 14.5 deg is legacy. Source: AGMA/ISO.",True
+gear_module_fine,mm,1.0,0.1,Fine gear module (small toys/mechanisms). Pitch dia = module x teeth. Two-gear center distance (the 'spacing') = module x (z1+z2)/2. Source: meta-matic/EngineerDog.,True
+gear_module_standard,mm,1.5,0.15,"General-purpose FDM gear module (robots, DIY, fidget gear stacks).",True
+gear_module_coarse,mm,2.0,0.2,Coarse module for higher-torque / robust FDM gears.,True
+gear_backlash,mm,0.30,0.03,Total backlash between two meshing FDM gears printed SEPARATELY (~0.15 mm/gear). Apply as tooth thinning or +center distance; tune to printer. Source: FDM gear guides.,True
+gear_pip_clearance,mm,0.15,0.015,"Per-surface clearance for PRINT-IN-PLACE gears (planetary fidgets) at 0.2 mm layer / 0.4 mm nozzle. ~0.1-0.2: tighter binds, looser rattles. Source: Printables PIP-fidget makers.",True
+gear_addendum_factor,,1.0,1,Addendum (tooth height above pitch circle) = this x module. ISO standard 1.0. Dimensionless.,True
+gear_dedendum_factor,,1.25,1.25,Dedendum (depth below pitch circle) = this x module; includes root clearance. Dimensionless.,True
+gear_tip_clearance_factor,,0.25,0.25,Tip-to-root clearance = this x module. Whole tooth depth = (addendum+dedendum) = 2.25 x module. Dimensionless.,True
+gear_min_teeth,,12,12,"Min teeth to avoid undercut on FDM 20 deg gears (theoretical 17; 12-14 OK printed, profile-shift below ~17). Dimensionless count.",True
+bearing_r188_id,mm,6.35,0.635,R188 bearing bore (1/4 in). Compact fidget-spinner bearing vs the larger 608.,True
+bearing_r188_od,mm,12.7,1.27,R188 bearing OD (1/2 in). Source: Boca Bearings fidget guide.,True
+bearing_r188_width,mm,4.76,0.476,R188 bearing width (3/16 in). Verify - some R188 ship 1/8 in (3.18 mm) wide.,True
+fidget_608_bearing_press,mm,bearing_608_od - 0.10,2.19,"608 bearing press-fit pocket ID for fidget-spinner caps (0.10 mm interference, FDM). For a slip-fit use bearing_608_od + 0.10 instead.",True
+fidget_r188_bearing_press,mm,bearing_r188_od - 0.10,1.26,R188 bearing press-fit pocket ID for compact fidgets (0.10 mm interference).,True
+fidget_click_pitch,mm,6.0,0.6,APPROX - tune. Center-to-center spacing between click/detent stops on a slider or dial fidget; sets the travel-per-click feel.,True
+fidget_click_bump,mm,0.4,0.04,APPROX - tune. Ride-over bump/notch height that produces the tactile snap as a stop passes a detent. ~0.3-0.6 mm in PLA; bigger = stiffer click. See detent_* for a ball-detent click.,True
+fidget_magnet_snap_gap,mm,0.6,0.06,APPROX - tune. Air gap held between moving and fixed magnets at a magnetic-slider click stop so they snap without contacting. Scale with magnet strength; see magnet_* sizes.,True
