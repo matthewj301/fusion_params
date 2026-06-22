@@ -45,7 +45,7 @@ ELECTRONICS_MOUNTING_PREFIXES = {
     "rpi", "octopus_", "skr_mini_", "pcb_", "din_rail_",
     "jst_", "usb_a_panel_", "usb_c_panel_", "xt30_", "xt60_",
     "wago", "esp32_", "d1mini_", "header_",
-    "gang_box_", "decora_", "conduit_", "sonoff_",
+    "gang_box_", "decora_", "conduit_", "sonoff_", "wallplate_",
 }
 
 DEVICES_PREFIXES = {

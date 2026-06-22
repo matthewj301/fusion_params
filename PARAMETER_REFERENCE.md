@@ -2,7 +2,7 @@
 
 Coverage map of the Fusion 360 master parameter library. **Check here (or grep the CSV) before researching new dimensions** — avoid duplicating existing coverage.
 
-- **Total parameters:** 997 (regenerated 2026-06-15)
+- **Total parameters:** 1011 (regenerated 2026-06-22)
 - **Source of truth:** `BakedBean3D_MasterParams_v4/BakedBean3D_MasterParams_params.csv` (6-column Fusion format: Name, Unit, Expression, Value, Comment, Favorite)
 - **This file is generated** — do not hand-edit. Run `python gen_reference.py` after `split_params.py`. Edit the `WISHLIST` block in the generator to change coverage-gap notes.
 - **Naming:** component-first, snake_case, no `_mm`/ISO suffixes (e.g. `m3_button_head_dia`, `iphone16pro_width`). See `migration_mapping.csv` for old→new.
@@ -84,11 +84,13 @@ MGN rails, GT2 belts, ball bearings, NEMA motors, extrusion, CNC process params
 
 ---
 
-## `electronics_mounting` — 46 params  ·  _Tier 2 · per project_
+## `electronics_mounting` — 60 params  ·  _Tier 2 · per project_
 
 PCBs, header pitch, connectors, panel cutouts, DIN rail, home automation
 
 - **rpi** (12) — `rpi_board_length`, `rpi_board_width`, `rpi_mount_hole_dia`, `rpi_pico_board_length`, `rpi_pico_board_width`, `rpi_pico_mount_hole_dia`, `rpi_pico_mount_pitch_x`, `rpi_pico_mount_pitch_y` … (+4 more)
+- **wallplate** (9) — `wallplate_jumbo_height`, `wallplate_jumbo_width`, `wallplate_screw_clearance`, `wallplate_screw_pitch`, `wallplate_std_height`, `wallplate_std_width`, `wallplate_thickness`, `wallplate_toggle_slot_height` … (+1 more)
+- **gang** (7) — `gang_box_depth_max`, `gang_box_depth_min`, `gang_box_internal_height`, `gang_box_internal_width`, `gang_box_single_height`, `gang_box_single_width`, `gang_box_yoke_screw_span`
 - **usb** (4) — `usb_a_panel_height`, `usb_a_panel_width`, `usb_c_panel_height`, `usb_c_panel_width`
 - **din** (3) — `din_rail_clip_depth`, `din_rail_depth`, `din_rail_width`
 - **wago221** (3) — `wago221_body_depth`, `wago221_body_height`, `wago221_body_width_2way`
@@ -96,7 +98,6 @@ PCBs, header pitch, connectors, panel cutouts, DIN rail, home automation
 - **d1mini** (2) — `d1mini_board_length`, `d1mini_board_width`
 - **decora** (2) — `decora_cutout_height`, `decora_cutout_width`
 - **esp32** (2) — `esp32_board_length`, `esp32_board_width`
-- **gang** (2) — `gang_box_internal_height`, `gang_box_internal_width`
 - **jst** (2) — `jst_xh_2pin_width`, `jst_xh_height`
 - **octopus** (2) — `octopus_mount_pitch_x`, `octopus_mount_pitch_y`
 - **rpi4** (2) — `rpi4_mount_pitch_x`, `rpi4_mount_pitch_y`

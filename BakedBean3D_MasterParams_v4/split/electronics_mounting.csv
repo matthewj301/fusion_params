@@ -45,3 +45,17 @@ rpi_zero_mount_pitch_x,mm,58.0,5.8,Pi Zero mounting hole pitch (long axis).,True
 rpi_zero_mount_pitch_y,mm,23.0,2.3,Pi Zero mounting hole pitch (short axis).,True
 din_rail_depth,mm,7.5,0.75,TS35 top-hat DIN rail depth (also a 15 mm deep variant). Source: EN 60715,True
 header_pitch,mm,2.54,0.254,Standard 0.1 in header/breadboard/protoboard pin pitch.,True
+wallplate_std_width,mm,70.0,7,US standard single-gang switch/outlet cover plate width (2.75 in).,True
+wallplate_std_height,mm,114.0,11.4,US standard cover plate height (4.50 in).,True
+wallplate_jumbo_width,mm,79.5,7.95,US oversized/jumbo cover plate width (3.13 in).,True
+wallplate_jumbo_height,mm,124.0,12.4,US oversized/jumbo cover plate height (4.88 in).,True
+wallplate_thickness,mm,3.0,0.3,"Cover plate thickness, nominal. Typical range 2.5-5 mm (0.10-0.20 in).",True
+wallplate_screw_pitch,mm,70.0,7,"Cover-plate mounting screw spacing, vertical center-to-center (2.756 in). Same for toggle and Decora/rocker plates. Screw thread = #6-32.",True
+wallplate_screw_clearance,mm,3.7,0.37,Clearance hole for the #6-32 device screw (major dia ~3.5 mm). ~0.144 in close clearance; open to 3.8 for printed parts.,True
+wallplate_toggle_slot_width,mm,10.0,1,Classic toggle-switch opening width (0.40 in).,True
+wallplate_toggle_slot_height,mm,25.4,2.54,Classic toggle-switch opening height (1.00 in).,True
+gang_box_yoke_screw_span,mm,83.3,8.33,"Single-gang device yoke (strap) mounting-ear screw spacing, hole-to-hole (3.28 in). This is the bracket that screws into the box; #6-32.",True
+gang_box_single_width,mm,50.0,5,"Single-gang box opening width, approximate (2.0 in).",True
+gang_box_single_height,mm,76.0,7.6,"Single-gang box opening height, approximate (3.0 in).",True
+gang_box_depth_min,mm,63.5,6.35,"Single-gang box depth, shallow end (2.5 in). Depth varies 2.5-3.5 in by box.",True
+gang_box_depth_max,mm,88.9,8.89,"Single-gang box depth, deep end (3.5 in).",True

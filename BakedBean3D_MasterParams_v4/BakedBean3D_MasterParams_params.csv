@@ -996,3 +996,17 @@ fidget_infinity_hinge_gap,mm,0.40,0.04,All-around air gap for infinity-cube fold
 fidget_button_travel,mm,1.0,0.1,APPROX - tune. Depression distance of a printed fidget-cube clicky button before bottoming/clicking. 0.5-1.5 mm; more travel = bigger throw.,True
 fidget_button_cap_dia,mm,8.0,0.8,APPROX. Typical fidget-cube button cap diameter.,True
 fidget_button_snap_height,mm,0.5,0.05,APPROX - tune. Snap-through lip/dome height the button rides over to produce the click. See snapfit_*/detent_* for the underlying mechanism.,True
+wallplate_std_width,mm,70.0,7,US standard single-gang switch/outlet cover plate width (2.75 in).,True
+wallplate_std_height,mm,114.0,11.4,US standard cover plate height (4.50 in).,True
+wallplate_jumbo_width,mm,79.5,7.95,US oversized/jumbo cover plate width (3.13 in).,True
+wallplate_jumbo_height,mm,124.0,12.4,US oversized/jumbo cover plate height (4.88 in).,True
+wallplate_thickness,mm,3.0,0.3,"Cover plate thickness, nominal. Typical range 2.5-5 mm (0.10-0.20 in).",True
+wallplate_screw_pitch,mm,70.0,7,"Cover-plate mounting screw spacing, vertical center-to-center (2.756 in). Same for toggle and Decora/rocker plates. Screw thread = #6-32.",True
+wallplate_screw_clearance,mm,3.7,0.37,Clearance hole for the #6-32 device screw (major dia ~3.5 mm). ~0.144 in close clearance; open to 3.8 for printed parts.,True
+wallplate_toggle_slot_width,mm,10.0,1,Classic toggle-switch opening width (0.40 in).,True
+wallplate_toggle_slot_height,mm,25.4,2.54,Classic toggle-switch opening height (1.00 in).,True
+gang_box_yoke_screw_span,mm,83.3,8.33,"Single-gang device yoke (strap) mounting-ear screw spacing, hole-to-hole (3.28 in). This is the bracket that screws into the box; #6-32.",True
+gang_box_single_width,mm,50.0,5,"Single-gang box opening width, approximate (2.0 in).",True
+gang_box_single_height,mm,76.0,7.6,"Single-gang box opening height, approximate (3.0 in).",True
+gang_box_depth_min,mm,63.5,6.35,"Single-gang box depth, shallow end (2.5 in). Depth varies 2.5-3.5 in by box.",True
+gang_box_depth_max,mm,88.9,8.89,"Single-gang box depth, deep end (3.5 in).",True
