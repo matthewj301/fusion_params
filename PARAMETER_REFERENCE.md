@@ -2,7 +2,7 @@
 
 Coverage map of the Fusion 360 master parameter library. **Check here (or grep the CSV) before researching new dimensions** — avoid duplicating existing coverage.
 
-- **Total parameters:** 1011 (regenerated 2026-06-22)
+- **Total parameters:** 1011 (regenerated 2026-06-23)
 - **Source of truth:** `BakedBean3D_MasterParams_v4/BakedBean3D_MasterParams_params.csv` (6-column Fusion format: Name, Unit, Expression, Value, Comment, Favorite)
 - **This file is generated** — do not hand-edit. Run `python gen_reference.py` after `split_params.py`. Edit the `WISHLIST` block in the generator to change coverage-gap notes.
 - **Naming:** component-first, snake_case, no `_mm`/ISO suffixes (e.g. `m3_button_head_dia`, `iphone16pro_width`). See `migration_mapping.csv` for old→new.

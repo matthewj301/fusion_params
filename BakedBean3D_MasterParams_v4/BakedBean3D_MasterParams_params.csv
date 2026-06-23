@@ -240,9 +240,9 @@ cnc_stock_to_leave,mm,0.20,0.02,Radial stock-to-leave for finish passes. Removed
 cnc_stock_to_leave_z,mm,0.10,0.01,Axial (floor) stock-to-leave for finish passes.,True
 cnc_max_pocket_depth_ratio,,4,4.0,Maximum pocket depth as multiple of tool diameter. Beyond this deflection and chip evacuation degrade.,True
 cnc_vise_grip_min,mm,5.00,0.5,Minimum material height below vise jaw tops for secure clamping. Less risks part pulling out.,True
-cnc_tab_height,mm,0.50,0.05,Holding tab height for blank cutout contour operations.,True
-cnc_tab_width,mm,3.00,0.3,Holding tab width along contour. Wide enough to resist cutting forces but easy to file off.,True
-cnc_tab_count_min,,2,2.0,Minimum holding tabs per cutout contour. Use 3 for parts longer than 100mm.,True
+cnc_tab_height,mm,1.50,0.15,Holding tab height (floor-referenced) for full-depth cutout contours. REAL-CUT 2026-06-22: 0.8mm snapped on a ~9.5mm Al cutout and the freed part wrecked the cut edge (scrapped). ~0.3mm is breakthrough below the part so real holding material is ~1.2mm. Saw/file off; do not hand-snap.,True
+cnc_tab_width,mm,5.00,0.5,Holding tab width along the contour. >=5mm for full-depth Al cutouts (3mm tore out 2026-06-22). Sturdy enough to saw rather than hand-snap.,True
+cnc_tab_count_min,,4,4.0,Minimum holding tabs per full-depth cutout contour. Place at well-supported edge midpoints; more tabs beat fewer.,True
 cnc_blank_oversize,mm,4.00,0.4,Blank oversize per side beyond finished part envelope. Provides clamping and datum material.,True
 cnc_datum_face_depth,mm,0.30,0.03,Facing depth to establish datum surface on raw stock. Removes mill marks and creates a flat reference.,True
 cnc_work_area_x,mm,200,20.0,Carvera Air maximum X travel.,True
