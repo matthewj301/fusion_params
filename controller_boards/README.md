@@ -1,84 +1,68 @@
-# Controller board dimensions
+# Controller board dimensions — moved to the hardware database
 
-Mechanical/mounting dataset for **78** 3D-printer controller, toolhead, SBC, and
-accessory boards — built for parametric CAD mount design. Researched 2026-06-25.
+The 3D-printer **controller / toolhead / SBC / accessory board mounting dimensions**
+(95 boards: BTT, Fysetc, Duet, MKS, Mellow, LDO, Huvud, and Voron/Klipper community
+PCBs) now live in the dedicated, canonical hardware-database repo:
 
-## Files
+> **`3d-printer-hardware-database`** → `controller_boards/`
+> https://github.com/BakedBean3D/3d-printer-hardware-database
 
-| File | Role |
-|---|---|
-| `btt.yaml` | BigTreeTech — mainboards, EBB toolhead CAN, CB1/CB2, U2C, KNOMI (23) |
-| `fysetc.yaml` | Fysetc — Spider/Cheetah/S6/Catalyst/SB CAN/UCAN/Mini12864 (13) |
-| `other_manufacturers.yaml` | Duet, MKS, Mellow, LDO, Huvud (22) |
-| `expansion_accessory.yaml` | TMC drivers, PT100/PT1000 amps, accelerometers, relays, SSR, buck/MOSFET (20) |
-| `controller_boards.json` | **Generated** aggregate of all of the above — use this in code/scripts |
-| `CONTROLLER_BOARDS.md` | **Generated** human-readable reference (summary table + per-board detail) |
-| `gen_boards.py` | Regenerates the `.json` and `.md` from the YAML. Run after editing any YAML. |
+That repo is the **single source of truth.** This data was previously duplicated here
+in a nested YAML format; it was removed to prevent the two copies drifting apart.
 
-**The YAML files are the source of truth.** Edit them, then run `python gen_boards.py`.
-Do not hand-edit the `.json` / `.md`.
+## Consuming the data from this repo
 
-## Schema (per board)
+### Option A — local symlink (default on this machine)
 
-```yaml
-- id:            # unique, snake_case, manufacturer-prefixed
-  manufacturer:
-  name:
-  category:      # mainboard | toolhead_can | sbc | usb_can_bridge | driver_module
-                 # | thermocouple_amp | accelerometer | relay | ssr | buck_converter
-                 # | mosfet | sensor | accessory
-  pcb:
-    length_mm:   # X = longer edge
-    width_mm:    # Y = shorter edge
-    thickness_mm:
-  mounting:
-    screw:           # M-size that fits the holes (null if header-mounted only)
-    hole_dia_mm:
-    pattern:         # rectangular | L-shaped | linear | 2-hole | 3-hole | none | other
-    pitch_x_mm:      # center-to-center along X
-    pitch_y_mm:      # center-to-center along Y
-    hole_count:
-    holes_xy_mm:     # optional: [[x,y], ...] from PCB bottom-left corner (read notes — some use a drawing datum)
-    inset_from_edge_mm:
-    notes:
-  thickness_clearance:
-    standoff_height_mm:        # recommended clearance under the board
-    component_height_top_mm:   # tallest component / module body height above board
-  connectors:
-    notes:           # which edge carries power / steppers / USB / etc.
-  sources: []        # datasheet / GitHub hardware repo / drawing URLs
-  confidence:        # high | medium | low
-  verify_notes:      # what the human should double-check before cutting
+Both repos are siblings under `~/git`, so this directory contains a relative symlink:
+
+```
+controller_boards/canonical -> ../../3d-printer-hardware-database/controller_boards
 ```
 
-## Reading the data — important conventions
+Read the data through it directly:
 
-- **`confidence`** is load-bearing:
-  - `high` — from a vendor CAD file or dimensioned drawing. Print-ready.
-  - `medium` — PCB outline authoritative, but hole **pitch** inferred / not vendor-published.
-  - `low` — size and/or holes not found in any authoritative source. **Measure before cutting.**
-- **`hole_dia_mm`** is usually inferred from the screw callout (M3→3.2, M2.5→2.7); vendor SIZE
-  drawings rarely annotate the bore. Treat as nominal clearance.
-- **`thickness_mm`** defaults to 1.6 (standard PCB) where unstated.
-- **`holes_xy_mm`** origin is the PCB bottom-left corner *unless the board's notes say it is
-  referenced to a drawing datum* (several BTT toolhead boards are) — always read the note.
-- For tight-tolerance work, pull the vendor **STEP/Gerber** named in `sources` — the dataset
-  captures the design intent, not a substitute for the manufacturer's CAD.
+```python
+import yaml
+boards = []
+import glob
+for f in glob.glob("controller_boards/canonical/*.yaml"):
+    boards += yaml.safe_load(open(f)) or []
+# or the prebuilt aggregate:
+import json
+boards = json.load(open("controller_boards/canonical/controller_boards.json"))
+```
 
-## Known shared / copied footprints (call-outs in the data)
+If the sibling repo isn't checked out, clone it next to this one:
 
-- BTT **Octopus** and **Octopus Pro** share one footprint (160×100 outline, 150×90 pitch).
-- Fysetc **Spider** line copies the **Voron 2.4/Trident** mount; **Cheetah V2/V3** copies the
-  **Creality Ender 3/5** mount; **Catalyst** is a **Voron 0** board.
-- The **StepStick / Pololu** carrier (15.24×20.32 mm, header-mounted) is shared by TMC2208/2209/5160
-  plug-ins and the BTT MAX31865.
-- The **43.84 mm 2-hole** spacing recurs on Mellow SHT36 and LDO Nitehawk-36 (a real toolhead-PCB
-  standard); the **NEMA17 31×31** pattern is confirmed only for SHT42, MKS THR42, HuvudTiny, EBB42.
+```bash
+git clone git@github.com:BakedBean3D/3d-printer-hardware-database.git ~/git/3d-printer-hardware-database
+```
 
-## Coverage gaps flagged by research (low confidence — verify with calipers)
+### Option B — git submodule (portable, for other machines)
 
-- BTT **U2C V3** appears not to exist (V1.x / V2.x only); "3" in listings = 3 CAN outputs.
-- BTT **EBB SB2209 RP2040** — no official size drawing; dims inferred from CAN sibling.
-- Fysetc **Catalyst**, **SB CAN toolhead**, **Spider King** hole pitch — not authoritatively published.
-- Mellow **Fly-UTOC**, **Gemini/CDY**, LDO **Nitehawk-SB/36** — STEP/PDF didn't yield clean PCB outlines.
-- 1-/2-channel relay clones, Fotek SSR exact bore, heatbed MOSFET hole pitch — non-standardized clones.
+```bash
+git submodule add git@github.com:BakedBean3D/3d-printer-hardware-database.git hardware-db
+# data at: hardware-db/controller_boards/
+```
+
+## Format
+
+Flat-list YAML per manufacturer (`bigtreetech.yaml`, `fysetc.yaml`, `community.yaml`,
+`modules.yaml`, …), plus a generated `controller_boards.json` aggregate and
+`CONTROLLER_BOARDS.md` reference. Schema and conventions are documented in the hardware
+database's `README.md` ("Controller board fields") and its `controller_boards/` directory.
+
+Key conventions for parametric CAD use:
+- `pcb_length_mm` = X (longer edge), `pcb_width_mm` = Y (shorter edge).
+- `mount_holes_xy` = `[[x,y], …]` from the PCB bottom-left corner (read each entry's `notes`).
+- `null` = genuinely unknown — **never assume 0**.
+- `confidence`: `high` (vendor/community CAD) · `medium` (outline firm, pitch inferred) ·
+  `low` (measure before cutting).
+
+## Note on the Fusion master-parameter library
+
+A handful of board mounting pitches already live as flat Fusion parameters in
+`BakedBean3D_MasterParams_v4/split/electronics_mounting.csv` (e.g. `octopus_mount_pitch_x`,
+`skr_mini_mount_pitch_y`). Those stay as-is for direct Fusion import; the hardware database
+is the richer, authoritative geometry source for everything else.
